@@ -1,0 +1,2351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Donate | Nexo Girls</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #274001;
+  overflow-x: hidden;
+  left: 0;
+  right: 0;
+}
+
+/* ================= HEADER ================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #ffcc00;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 4px 4px 10px gray;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: white;
+  text-decoration: none;
+}
+nav {
+    align-items: center;
+    justify-content: center;
+     display:flex;
+    align-items:center;
+
+   
+}
+/* NAV */
+nav ul {
+  display: flex;
+  gap: 20px;
+  
+  right: 0;
+  align-items: center;
+
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #274001;
+  font-weight: 500;
+  position: relative;
+}
+
+/* underline animation */
+nav ul li a:not(.donate)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 3px;
+  background: #274001;
+  transition: 0.3s ease;
+}
+
+nav ul li a:not(.donate):hover::after {
+  width: 100%;
+}
+
+/* donate button */
+.donate {
+  background: #274001;
+  color: #ffcc00;
+  width: 200px;
+  height: 100px;
+  padding: 10px 15px;
+  border-radius: 13px;
+}
+
+.donate:hover {
+  background: #5d6d3e;
+  color: #274001;
+}
+.dropdown{
+    position:relative;
+}
+
+.dropdown-menu{
+
+    position:absolute;
+    top:100%;
+    left:0;
+
+    background:white;
+
+    width:220px;
+
+    border-radius:10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    list-style:none;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(15px);
+
+    transition:.3s;
+
+    z-index:1000;
+
+}
+
+.dropdown:hover .dropdown-menu{
+
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+
+}
+
+.dropdown-menu li{
+    background:#fff;
+    width:100%;
+
+}
+
+.dropdown-menu li a{
+
+    display:block;
+
+    padding:15px 20px;
+
+    color:#274001;
+
+    text-decoration:none;
+
+}
+
+.dropdown-menu li a:hover{
+
+    background:#274001;
+
+    color:#ffcc00;
+
+}
+ /* HERO SECTION */
+
+.hero{
+    width: 100%;
+    height: 100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("img/slide4.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     margin-top:40px;
+     padding-top: 140px;
+     overflow:visible;
+position:relative;
+z-index:2;
+    padding: 20px;
+}
+
+.dropdown{
+    position:relative;
+}
+
+.dropdown-menu{
+
+    position:absolute;
+
+    border-radius:10px;
+     display: flex;
+    flex-direction: column;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    list-style:none;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(15px);
+
+    transition:.3s;
+
+    
+    top:100%;
+    left:0;
+    background:#fff;
+    min-width:220px;
+    padding:8px 0;
+    border-radius:10px;
+    z-index:9999;
+
+}
+
+.dropdown:hover .dropdown-menu{
+
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+
+}
+
+.dropdown-menu li{
+
+    width:100%;
+
+}
+
+.dropdown-menu li a{
+
+    display:block;
+
+    padding:15px 20px;
+
+    color:#274001;
+
+    text-decoration:none;
+
+}
+
+.dropdown-menu li a:hover{
+
+    background:#274001;
+
+    color:#ffcc00;
+
+}
+
+.hero-image{
+    position:relative;
+    z-index:5;
+}
+
+.next-section{
+    position: relative;
+    z-index: 1;
+}
+.hero{
+    width:100%;
+    min-height:100vh;
+
+    background:
+        linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+        url("img/slide6.PNG");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:140px 8% 80px;
+    position:relative;
+
+    overflow:visible;
+}
+.hero-content{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    align-items:center;
+
+    gap:60px;
+
+    width:100%;
+    max-width:1300px;
+
+    margin:auto;
+}
+
+.tag{
+
+    display:inline-flex;
+
+    gap:10px;
+
+    align-items:center;
+
+    background:#274001;
+
+    color:#ffcc00;
+
+    padding:12px 20px;
+
+    border-radius:40px;
+
+    font-weight:600;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+.hero h1{
+
+    font-size:64px;
+
+    line-height:1.1;
+
+    margin:25px 0;
+    color: #ffcc00;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+    color:#ffcc00;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn-primary{
+
+    padding:16px 35px;
+
+    background:#274001;
+
+    color: #ffcc00;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+.hero-text{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    align-items:flex-start;
+
+    text-align:left;
+
+    margin:0;
+}
+.btn-primary:hover{
+
+    background:#467402;
+
+    transform:translateY(-4px);
+
+}
+.btn-secondary:hover{
+
+    background:#467402;
+
+    transform:translateY(-4px);
+
+}
+
+.btn-secondary{
+
+    padding:16px 35px;
+    border:2px solid #ffcc00;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:#ffcc00;
+
+    font-weight:600;
+
+}
+
+.hero-features{
+
+    display:flex;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+    color:#ffcc00;
+
+}
+
+.hero-image{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
+}
+
+
+.box{
+    background-color: white;
+    width:100%;
+    max-width:500px;
+    border-radius: 13px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: 0.4s ease;
+    padding-bottom: 40px;
+}
+
+/* HOVER EFFECT */
+.box:hover{
+    transform: translateY(-10px);
+}
+
+/* IMAGES */
+.box img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* TITLES */
+.box h2{
+    font-size: 28px;
+    color: darkgreen;
+    margin: 20px;
+    font-weight: 700;
+}
+
+/* PARAGRAPHS */
+.box p{
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin: 0 20px 20px;
+}
+
+.impact{
+
+    padding:100px 8%;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:60px;
+
+}
+
+.section-title h2{
+
+    font-size:45px;
+
+    color:#222;
+
+}
+
+.section-title p{
+
+    margin-top:15px;
+
+    color:#666;
+
+}
+
+.impact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:30px;
+
+}
+
+.impact-card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:40px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.07);
+
+}
+
+.impact-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.impact-card i{
+
+    font-size:42px;
+
+    color:#274001;
+
+    margin-bottom:20px;
+
+}
+
+.impact-card h3{
+
+    font-size:42px;
+
+    color: #274001;
+
+}
+
+.impact-card span{
+
+    display:block;
+
+    margin-top:10px;
+
+    color:#666;
+
+}
+.donate-options{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+       justify-content: center;
+   align-items: center;
+    margin:25px 20px;
+}
+
+
+.impact {
+    color: #274001;
+}
+
+/* Impact Section */
+#impact {
+    padding: 80px 8%;
+    background: #f8f7f4;
+}
+
+/* Grid Layout */
+.impact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Card */
+.card {
+    position: relative;
+    background: #fff;
+    border: 1px solid #ececec;
+    border-radius: 22px;
+    padding: 35px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    transition: 0.35s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,.08);
+}
+
+/* Circular Icon */
+.card svg {
+    width: 55px;
+    height: 55px;
+    padding: 16px;
+    border: 1px solid #e8e8e8;
+    border-radius: 50%;
+    background: #fff;
+    margin-bottom: 30px;
+}
+
+/* Category Label */
+.card::before {
+    content: "IMPACT";
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    background: #f3f3f3;
+    color: #555;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: .70rem;
+    font-weight: 500;
+    letter-spacing: .5px;
+}
+
+/* Different labels for each card */
+.card1::before {
+    content: "ADVOCACY";
+}
+
+.card2::before {
+    content: "COMMUNITY";
+}
+
+.card3::before {
+    content: "EMPOWERMENT";
+}
+
+.card4::before {
+    content: "TRAINING";
+}
+
+/* Number */
+.card h3 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 28px;
+    color: #274001;
+}
+
+/* Orange Numbers */
+.card3 h3,
+.card4 h3,
+.card1 h3,
+.card2 h3,
+.card5 h3 {
+    color: #ffcc00;
+}
+
+/* Heading inside paragraph */
+.card p strong {
+    display: block;
+    font-size: 1em;
+    color: #222;
+    margin-bottom: 12px;
+    line-height: 1;
+}
+
+/* Description */
+.card p {
+    color: #666;
+    line-height: 1.25;
+    font-size: 0.8em;
+}
+
+/* Divider */
+.card::after {
+    content: "";
+    position: absolute;
+    bottom: 80px;
+    left: 35px;
+    width: calc(100% - 130px);
+    height: 1px;
+    background: #ececec;
+}
+
+
+.card:hover i {
+    background: #274001;
+    color: #fff;
+    border-color: #274001;
+}
+#ostory{
+    text-align: center;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+#ostory h2{
+    font-size: 40px;
+   
+    margin-bottom: 3px;
+    font-weight: 700;
+    
+}
+
+/* UNDERLINE NOW BELOW */
+.overline{
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: #ffcc00;
+    border-radius: 20px;
+    margin: 0 auto 10px;
+}
+.impact-cards .card .bx {
+    padding: 10px;
+    background: #274001;
+    color: orange;
+    border-radius: 5rem;
+    margin-top: 2rem;
+    position: absolute;
+    bottom: 8%;
+    display: none;
+}
+.impact-cards .card .bx:hover{
+    background: orange;
+    transition: 0,2s all linear;
+}
+.impact-cards .card:hover .bx{
+    display:block ;
+    transition: 0,2s all linear;
+}
+/* FEATURED PROGRAMS SECTION */
+.services{
+    width: 100%;
+    padding: 80px 8%;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+.footer-box li {
+    list-style: none;
+}
+.bttn{
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+}
+.footer-box h1{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.navbar li {
+    width: 100%;
+}
+.navbar a {
+    width: 100%;
+}
+.menubutton {
+    visibility: hidden;
+}
+
+.donate-options a{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    width:50%;
+    padding:16px;
+
+    text-decoration:none;
+    border-radius:12px;
+
+    font-weight:600;
+    font-size:16px;
+}
+.btn-primary1{
+    background:#274001;
+    color:#ffcc00;
+    border:2px solid #ffcc00;
+    justify-content: center;
+    align-self: center;
+}
+
+.btn-primary1:hover{
+    background:#467402;
+}
+
+.btn-secondary1{
+    background:#fff;
+    color: #ffcc00;
+    border:2px solid #ffcc00;
+}
+
+.btn-secondary1:hover{
+    background:#274001;
+    color:#ffcc00;
+}
+/* Gallery Section */
+
+.gallery{
+    padding:80px 8%;
+   
+}
+
+.gallery-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.gallery-title h2{
+    font-size:42px;
+    color:#ffcc00;
+    margin-bottom:10px;
+}
+
+.gallery-title p{
+    color:#F1F1F1;
+    font-size:17px;
+}
+
+/* Images */
+
+.gallery-container{
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:20px;
+}
+
+.gallery-item{
+    overflow:hidden;
+    border-radius:18px;
+    box-shadow:0 8px 25px rgba(0,0,0,.12);
+    transition:.4s ease;
+}
+
+.gallery-item img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+}
+
+.gallery-item:hover{
+    transform:translateY(-8px);
+}
+
+.gallery-item:hover img{
+    transform:scale(1.08);
+
+}.footer{
+    width: 100%;
+    padding: 80px 8%;
+    background: #ffcc00;
+    color: #274001;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}.footer-box h2{
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #274001;
+}
+
+.footer-box p{
+    font-size: 15px;
+    line-height: 1.7;
+    color: #274001;
+}
+
+.footer-box a{
+    display: inline-block;
+    color: #274001;
+    margin: 8px 0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+h2 {
+    color: #ffcc00;
+}
+.title {
+    color: #274001;
+}
+.footer-box{
+    display: flex;
+    flex-direction: column;
+   
+}
+.footer-box a{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #274001;
+    margin: 10px 0;
+}
+
+.footer-box a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #274001;
+    transition: width 0.3s ease;
+}
+
+.footer-box a:hover::after{
+    width: 100%;
+}
+
+.footer-box a:hover{
+    color: #274001;
+    padding-left: 5px;
+}
+#ready-to-rise {
+    color: #ffcc00;
+   
+}
+.social {
+    margin-top: 10px;
+    align-items: center;
+    column-gap: 0.5rem;
+}.social a{
+    font-size: 30px;
+    color: #274001;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+.social a i {
+    font-size: 25px;
+}
+
+.social a:hover{
+    color: darkgreen;
+}
+.footer-box form{
+    display: flex;
+    align-items: center;
+    background: rgb(230, 229, 229);
+    padding: 8px;
+    height: 40px;
+    width: 300px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.footer-box form input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: transparent;
+    color: #274001;
+}
+.footer-box h2 {
+    color: #274001;
+}
+.footer-box li {
+    list-style: none;
+}
+
+.footer-box form i{
+    color: #274001;
+    margin: 0 10px;
+}
+.copyright{
+    text-align: center;
+    padding: 20px;
+    background: #274001;
+    color: #aaa;
+    font-size: 14px;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 40vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgb(218, 216, 216);
+    backdrop-filter: blur(10px) ;
+    box-shadow: -10px 0 10px rgb(105, 104, 104);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.footer-box li {
+    list-style: none;
+}
+.bttn{
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+}
+.footer-box h1{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.navbar li {
+    width: 100%;
+}
+.navbar a {
+    width: 100%;
+}
+.menubutton {
+    visibility: hidden;
+}
+@media (max-width:900px){
+
+.gallery-container{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.gallery-item img{
+    height:190px;
+}
+
+}
+@media (max-width:600px){
+
+.gallery{
+    padding:60px 5%;
+}
+
+.gallery-title h2{
+    font-size:32px;
+}
+
+.gallery-container{
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.gallery-item{
+    border-radius:15px;
+}
+
+.gallery-item img{
+    height:160px;
+}
+
+}
+@media (max-width:400px){
+
+.gallery-container{
+    grid-template-columns:1fr;
+}
+
+.gallery-item img{
+    height:240px;
+}
+
+}
+
+@media (max-width: 800px) {
+    .impact-cards {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+       align-items: center;
+
+    }
+    .card svg {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .card {
+        min-height: auto;
+        width: 250px;
+
+    }
+
+    .card h3 {
+        font-size: 1.5em;
+    }
+
+    .card p strong {
+        font-size: 0.8em;
+        margin-bottom: 8px;
+        margin-top: 5px;
+    }
+}
+#impact {
+    background: linear-gradient(to bottom, #fcfbf4, #e2e2d5);
+}
+@media(max-width: 900px){
+    .text{
+        width: 100%;
+        max-width: 350px;
+    }
+   .footer-box form {
+        width: 270px;
+        
+    }
+     .footer {
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .services h2{
+        font-size: 34px;
+    }
+    .footer {
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+@media (max-width: 1024px) {
+
+    .button {
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+   
+.hero-features {
+    display: flex;
+   
+}
+.box .btn-primary1,
+.box .btn-secondary1 {
+    width: 100%;
+}
+.hero-content p {
+    font-size: 0.9em;
+}
+.hero-content h1 {
+    font-size: 2em;
+}
+
+}
+/* ================= TABLET FIXES ================= */
+
+@media (max-width: 1024px) {
+    .hero {
+        min-height: auto;
+        padding: 120px 6% 60px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .hero-text {
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        margin-bottom: 0;
+    }
+
+    .box {
+        max-width: 420px;
+        width: 100%;
+    }
+
+    .box img {
+        height: 200px;
+    }
+
+    #impact {
+        padding: 60px 6%;
+    }
+
+    .impact-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .card {
+        min-height: 260px;
+        padding: 28px;
+    }
+
+    .card h3 {
+        font-size: 1.8em;
+    }
+
+    .card p {
+        font-size: 0.9em;
+    }
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .button {
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+      .footer-box h1{
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+.footer-box li{
+    font-size: 1em;
+    
+}
+.footer-box .social a{
+    font-size: 1em;
+}
+.footer-box form{
+    width: 300px;
+}
+.footer-box p {
+    font-size: 0.8em;
+}
+}
+
+@media (max-width: 900px) {
+    .hero {
+        padding: 110px 5% 50px;
+        min-height: auto;
+    }
+
+    .hero-content {
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .box {
+        max-width: 400px;
+    }
+
+    .box img {
+        height: 200px;
+    }
+  .impact {
+    margin-top: 100px;
+  }
+
+    .card {
+        min-height: auto;
+        padding: 24px;
+    }
+
+    .card h3 {
+        font-size: 1.6em;
+    }
+}
+
+@media (max-width: 800px) {
+    .hero {
+        padding: 100px 5% 45px;
+        min-height: auto;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+
+    .hero-features {
+        gap: 15px;
+        justify-content: center;
+        text-align: center;
+    }
+    .impact {
+    margin-top: 200px;
+  }
+
+    .box {
+        max-width: 350px;
+    }
+
+    .box img {
+        height: 145px;
+    }
+
+    #impact {
+        padding: 50px 5%;
+    }
+
+    .impact-cards {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .card {
+        padding: 22px;
+        min-height: auto;
+    }
+
+    .card h3 {
+        font-size: 1.5em;
+    }
+
+    .card p {
+        font-size: 0.85em;
+        line-height: 1.4;
+    }
+}
+@media (max-width: 800px) {
+
+    .hideOnMobile {
+        display:  none;
+        visibility: hidden;
+
+    }
+    .menubutton {
+        display: block;
+        visibility: visible;
+    }
+    .hero-content {
+        display: flex;
+        flex-direction:column;
+      justify-content: center;
+      align-items: center;
+      text-align: center  ;
+    }
+    .hero-text{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+     .hero-image img{
+        width:90%;
+        max-width:400px;
+        height:auto;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        width: 100%;
+        display: flex;
+        background: white;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        height: auto;
+        padding: 20px 30px;
+        padding-bottom: 50px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .footer1 h2 {
+        font-size: 2em;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .footer-box form {
+        width: 300px;
+    }
+
+   
+    
+
+    nav ul.active {
+        display: flex;
+    }
+
+    
+    .footer1 h2 {
+        font-size: 2em;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .footer-box form {
+        width: 300px;
+    }
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-image {
+    margin-right: 10px;
+    width: 100%;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    justify-content: center;
+    align-items: center;
+}
+
+   
+    
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+@media(max-width:768px){
+
+.hero{
+
+padding:50px 6%;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+}
+@media (max-width:400px){
+
+.footer{
+
+    grid-template-columns:1fr;
+    padding:50px 20px;
+    gap:35px;
+
+}
+
+.footer-box{
+
+    width:100%;
+    text-align:center;
+    align-items:center;
+
+}
+
+.footer-box h1{
+
+    font-size:24px;
+
+}
+
+.footer-box p,
+.footer-box li,
+.footer-box a{
+
+    font-size:15px;
+
+}
+
+.footer-box ul{
+
+    padding:0;
+    margin:0;
+
+}
+
+.footer-box form{
+
+    width:100%;
+    max-width:280px;
+
+}
+
+.footer-box input{
+
+    width:100%;
+
+}
+
+.footer-box img{
+
+    width:110px;
+    height:auto;
+
+}
+
+.social{
+
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+
+}
+
+}
+/* =========================================================
+   FINAL RESPONSIVE FIX
+   1240px - 380px
+   ========================================================= */
+
+/* ---------- LARGE TABLET / SMALL LAPTOP ---------- */
+
+@media (max-width: 1240px) {
+
+    .hero {
+        min-height: auto;
+        padding: 130px 6% 80px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 450px;
+    }
+
+    .impact-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+
+    header {
+        height: 80px;
+        padding: 0 15px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 120px 5% 70px;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        width: 100%;
+    }
+
+    .hero-text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        line-height: 1.15;
+    }
+
+    .hero p {
+        max-width: 700px;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-features {
+        justify-content: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .box img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    /* IMPORTANT:
+       Remove the old 100px/200px impact margin */
+    .impact {
+        margin-top: 0 !important;
+    }
+
+    #impact {
+        position: relative;
+        z-index: 2;
+        padding: 70px 5%;
+    }
+
+    .impact-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+
+/* =========================================================
+   HERO IMAGE + IMPACT SECTION MOBILE FIX
+   Keep hero image fully visible and push Impact downward
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+        min-height: auto;
+        height: auto;
+        padding: 100px 5% 90px;
+        overflow: visible;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        width: 100%;
+    }
+
+    .hero-text {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        /* Keep it visible */
+        position: relative;
+        z-index: 5;
+
+        /* IMPORTANT */
+        margin-bottom: 30px;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        position: relative;
+        z-index: 5;
+    }
+
+    .box img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    /*
+       Don't pull Impact upwards.
+       Let it start after the entire hero.
+    */
+    #impact,
+    .impact {
+        margin-top: 0 !important;
+        position: relative;
+        z-index: 10;
+        clear: both;
+    }
+}
+
+
+/* ================= 600px ================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 90px 5% 100px;
+    }
+
+    .hero-content {
+        gap: 40px;
+    }
+
+    .hero-image {
+        margin-bottom: 40px;
+    }
+
+    .box {
+        max-width: 450px;
+    }
+
+    .box img {
+        height: 190px;
+    }
+
+    #impact,
+    .impact {
+        padding-top: 70px;
+    }
+}
+
+
+/* ================= 500px ================= */
+
+@media (max-width: 500px) {
+
+    .hero {
+        padding: 85px 5% 110px;
+    }
+
+    .hero-content {
+        gap: 35px;
+    }
+
+    .hero-image {
+        margin-bottom: 45px;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .box img {
+        height: 180px;
+    }
+
+    .box h2 {
+        font-size: 22px;
+    }
+
+    #impact,
+    .impact {
+        padding-top: 65px;
+    }
+}
+
+
+/* ================= 400px ================= */
+
+@media (max-width: 400px) {
+
+    .hero {
+        padding: 80px 15px 120px;
+    }
+
+    .hero-content {
+        gap: 35px;
+    }
+
+    /*
+       The card remains completely visible.
+       We are NOT hiding or reducing it.
+    */
+    .hero-image {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+
+    .box {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .box img {
+        height: 170px;
+    }
+
+    .box h2 {
+        font-size: 20px;
+        margin: 18px 10px;
+    }
+
+    .donate-options {
+        margin: 20px 15px;
+    }
+
+    .donate-options a {
+        width: 100%;
+    }
+
+    /*
+       Impact starts AFTER the hero.
+       Extra top padding gives it breathing room.
+    */
+    #impact,
+    .impact {
+        margin-top: 0 !important;
+        padding-top: 75px;
+    }
+}
+
+
+/* ================= 380px ================= */
+
+@media (max-width: 380px) {
+
+    .hero {
+        padding: 75px 12px 125px;
+    }
+
+    .hero-image {
+        margin-bottom: 55px;
+    }
+
+    .box img {
+        height: 160px;
+    }
+
+    .box h2 {
+        font-size: 18px;
+    }
+
+    #impact,
+    .impact {
+        padding-top: 70px;
+    }
+}
+        </style>
+
+</head>
+
+<body>
+<header>
+  <a class="logo" href="#"><img src="img/Nexo-Girls_No_background.png" alt="logo" width="80px" height=""></a>
+
+  <nav>
+            
+            <ul class="navbar"  id="navLinks">
+                <li class="logo"></li>
+                <li onclick="hidenavbar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                 <li><a href="home.html">Home</a></li>
+                 <li class="dropdown">
+
+    <a href="about.html">
+        About Us
+        <i class="fa-solid fa-chevron-down"></i>
+    </a>
+
+    <ul class="dropdown-menu">
+
+        <li><a href="about.html">About Nexo Girls</a></li>
+
+        <li><a href="milestone.html">Milestones</a></li>
+
+        <li><a href="meet_team.html">Meet Our Team</a></li></ul></li>
+                 <li><a href="Program.html">Program</a></li>
+                 <li class=" dropdown">
+
+
+
+    <a href="#">
+
+        Get Involved
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+
+    <ul class="dropdown-menu">
+
+
+<li><a href="getinvolve.html">Get Involved</a></li>
+        <li><a href="donate.html">Donate</a></li>
+
+
+
+        <li><a href="partnership.html">Partners</a></li>
+
+
+
+        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
+
+
+
+    </ul>
+
+
+
+</li>
+                 <li><a href="contact.html">Contact us</a></li>
+                 <li> <a class="donate" href="donate.html">Donate to us</a></li>
+                
+                 </ul>
+               <div class="hideOnMobile">
+                 <ul>
+                  <li class="hideOnMobile"><a href="home.html">Home</a></li>
+                  <li class="hideOnMobile dropdown">
+
+    <a href="about.html">
+        About Us
+        <i class="fa-solid fa-chevron-down"></i>
+    </a>
+
+    <ul class="dropdown-menu">
+        <li><a href="about.html">About Nexo Girls</a></li>
+        <li><a href="milestone.html">Milestones</a></li>
+        <li><a href="meet_team.html">Meet Our Team</a></li>
+    </ul>
+
+</li>
+                 <li class="hideOnMobile"><a href="Program.html">Program</a></li>
+                <li class="hideOnMobile dropdown">
+
+
+
+    <a href="#">
+
+        Get Involved
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+
+    <ul class="dropdown-menu">
+
+
+     <li><a href="getinvolve.html">Get Involved</a></li>
+        <li><a href="donate.html">Donate</a></li>
+
+
+
+        <li><a href="partnership.html">Partners</a></li>
+
+
+
+        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
+
+
+
+    </ul>
+
+
+
+</li>
+                 <li class="hideOnMobile"><a href="contact.html">Contact us</a></li>
+                 <li class="hideOnMobile"> <a class="donate" href="donate.html">Donate to us</a></li>
+                 </div>
+                <li class="menubutton" onclick="shownavbar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            
+           </ul>
+        </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-text">
+
+            <span class="tag">
+
+                <i class="fa-solid fa-heart"></i>
+
+                Empowering Girls Through Technology
+
+            </span>
+
+            <h1>
+
+                Invest in the Future of Girls.
+
+            </h1>
+
+            <p>
+
+                Your generosity helps Nexo Girls equip girls and young women
+                with digital skills, leadership training, mentorship,
+                and life-changing opportunities across Africa and beyond.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#donation" class="btn-primary">
+
+                    Donate Now
+
+                </a>
+
+                <a href="#impact" class="btn-secondary">
+
+                    See Our Impact
+
+                </a>
+
+            </div>
+
+            <div class="hero-features">
+
+                <div>
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    Secure Donations
+
+                </div>
+
+                <div>
+
+                    <i class="fa-solid fa-earth-africa"></i>
+
+                    Global Impact
+
+                </div>
+
+                <div>
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Community Driven
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+<div class="box box1">
+
+    <img src="img/slide2.jpg" alt="Orphans">
+
+    <h2>How would you love to donate?</h2>
+
+    <div class="donate-options">
+
+        <a href="#donation" class="btn-primary1">
+            <i class="fa-solid fa-user"></i> 
+            As an Individual
+        </a>
+
+        <a href="#organization" class="btn-secondary1">
+            <i class="fa-solid fa-building"></i> 
+            As an Organization
+        </a>
+
+    </div>
+
+</div>
+
+
+
+    </div>
+
+</section>
+
+<!-- ================= IMPACT ================= -->
+
+ <section id="impact" class="impact">
+
+            <div id="ostory">
+
+                <h2 class="title">Our Impact</h2>
+
+                <span class="overline"></span>
+    <div class="impact-cards">
+        <div class="card card3">
+            <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#F19E39"><path d="M120-120v-80l80-80v160h-80Zm160 0v-240l80-80v320h-80Zm160 0v-320l80 81v239h-80Zm160 0v-239l80-80v319h-80Zm160 0v-400l80-80v480h-80ZM120-327v-113l280-280 160 160 280-280v113L560-447 400-607 120-327Z"/></svg>
+            <h3 class="impact-number" data-target="70000">0+</h3>
+            <p> <strong>Girls Empowered Globally</strong> <br></p>
+            <i class="bx bx-right-arrow-alt"></i>
+        </div>
+
+        <div class="card card1">
+            <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#274001"><path d="M38-428q-18-36-28-73T0-576q0-112 76-188t188-76q63 0 120 26.5t96 73.5q39-47 96-73.5T696-840q112 0 188 76t76 188q0 38-10 75t-28 73q-11-19-26-34t-35-24q9-23 14-45t5-45q0-78-53-131t-131-53q-81 0-124.5 44.5T480-616q-48-56-91.5-100T264-760q-78 0-131 53T80-576q0 23 5 45t14 45q-20 9-35 24t-26 34ZM0-80v-63q0-44 44.5-70.5T160-240q13 0 25 .5t23 2.5q-14 20-21 43t-7 49v65H0Zm240 0v-65q0-65 66.5-105T480-290q108 0 174 40t66 105v65H240Zm540 0v-65q0-26-6.5-49T754-237q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v63H780ZM480-210q-57 0-102 15t-53 35h311q-9-20-53.5-35T480-210Zm-320-70q-33 0-56.5-23.5T80-360q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-280Zm640 0q-33 0-56.5-23.5T720-360q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-280Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-440q0 50-34.5 85T480-320Zm0-160q-17 0-28.5 11.5T440-440q0 17 11.5 28.5T480-400q17 0 28.5-11.5T520-440q0-17-11.5-28.5T480-480Zm0 40Zm1 280Z"/></svg>
+            <h3 class="impact-number" data-target="56000">0+</h3>
+            <p> <strong>Reached through our global Advocacy Campaigns</strong> </p>
+            <i class="bx bx-right-arrow-alt"></i>
+        </div>
+
+        <div class="card card4">
+            <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#F19E39"><path d="M640-80v-90q-56-18-94-64t-44-106h80q8 43 40.5 71.5T700-240h120q25 0 42.5 17.5T880-180v100H640Zm120-200q-33 0-56.5-23.5T680-360q0-33 23.5-56.5T760-440q33 0 56.5 23.5T840-360q0 33-23.5 56.5T760-280ZM360-400q0-150 105-255t255-105v80q-117 0-198.5 81.5T440-400h-80Zm160 0q0-83 58.5-141.5T720-600v80q-50 0-85 35t-35 85h-80ZM80-520v-100q0-25 17.5-42.5T140-680h120q45 0 77.5-28.5T378-780h80q-6 60-44 106t-94 64v90H80Zm120-200q-33 0-56.5-23.5T120-800q0-33 23.5-56.5T200-880q33 0 56.5 23.5T280-800q0 33-23.5 56.5T200-720Z"/></svg>
+            <h3 class="impact-number" data-target="1300">0+</h3>
+            <p> <strong>Trained through our STEAM bootcamps</strong> <br></p>
+            <i class="bx bx-right-arrow-alt"></i>
+        </div>
+
+        <div class="card card2">
+            <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#274001"><path d="M617.5-587.5Q600-605 600-630t17.5-42.5Q635-690 660-690t42.5 17.5Q720-655 720-630t-17.5 42.5Q685-570 660-570t-42.5-17.5Zm-360 0Q240-605 240-630t17.5-42.5Q275-690 300-690t42.5 17.5Q360-655 360-630t-17.5 42.5Q325-570 300-570t-42.5-17.5Zm180 110Q420-495 420-520t17.5-42.5Q455-580 480-580t42.5 17.5Q540-545 540-520t-17.5 42.5Q505-460 480-460t-42.5-17.5Zm0-220Q420-715 420-740t17.5-42.5Q455-800 480-800t42.5 17.5Q540-765 540-740t-17.5 42.5Q505-680 480-680t-42.5-17.5Zm2 534.5q-20.5-3-39.5-8v-143q0-35 23.5-60.5T480-400q33 0 56.5 25.5T560-314v143q-19 5-39.5 8t-40.5 3q-20 0-40.5-3ZM340-192q-20-8-38.5-18T266-232q-28-20-44.5-52T205-352q0-26-5.5-48.5T180-443q-10-13-37.5-39.5T92-532q-11-11-11-28t11-28q11-11 28-11t28 11l153 145q20 18 29.5 42.5T340-350v158Zm280 0v-158q0-26 10-51t29-42l153-145q12-11 28.5-11t27.5 11q11 11 11 28t-11 28q-23 23-50.5 49T780-443q-14 20-19.5 42.5T755-352q0 36-16.5 68.5T693-231q-16 11-34.5 21T620-192Z"/></svg>
+           <h3 class="impact-number" data-target="20">20+</h3>
+            <p><strong>Countries reached across Africa and beyond</strong> <br></p>
+            <i class="bx bx-right-arrow-alt"></i>
+        </div>
+
+         <div class="card card2">
+            <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#274001"><path d="M617.5-587.5Q600-605 600-630t17.5-42.5Q635-690 660-690t42.5 17.5Q720-655 720-630t-17.5 42.5Q685-570 660-570t-42.5-17.5Zm-360 0Q240-605 240-630t17.5-42.5Q275-690 300-690t42.5 17.5Q360-655 360-630t-17.5 42.5Q325-570 300-570t-42.5-17.5Zm180 110Q420-495 420-520t17.5-42.5Q455-580 480-580t42.5 17.5Q540-545 540-520t-17.5 42.5Q505-460 480-460t-42.5-17.5Zm0-220Q420-715 420-740t17.5-42.5Q455-800 480-800t42.5 17.5Q540-765 540-740t-17.5 42.5Q505-680 480-680t-42.5-17.5Zm2 534.5q-20.5-3-39.5-8v-143q0-35 23.5-60.5T480-400q33 0 56.5 25.5T560-314v143q-19 5-39.5 8t-40.5 3q-20 0-40.5-3ZM340-192q-20-8-38.5-18T266-232q-28-20-44.5-52T205-352q0-26-5.5-48.5T180-443q-10-13-37.5-39.5T92-532q-11-11-11-28t11-28q11-11 28-11t28 11l153 145q20 18 29.5 42.5T340-350v158Zm280 0v-158q0-26 10-51t29-42l153-145q12-11 28.5-11t27.5 11q11 11 11 28t-11 28q-23 23-50.5 49T780-443q-14 20-19.5 42.5T755-352q0 36-16.5 68.5T693-231q-16 11-34.5 21T620-192Z"/></svg>
+            <h3 class="impact-number" data-target="1940">0</h3>
+            <p><strong>Active community members (#nexogirlies)</strong> <br></p>
+            <i class="bx bx-right-arrow-alt"></i>
+        </div>
+    </div>
+</section>
+
+
+<section class="gallery">
+    <div class="gallery-title">
+        <h2>Our Gallery</h2>
+        <p>Capturing moments of impact, learning, leadership and community.</p>
+    </div>
+
+    <div class="gallery-container">
+
+        <div class="gallery-item">
+            <img src="img/S1 (2).jpg" alt="Gallery Image 1">
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/S2.jpg" alt="Gallery Image 2">
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/S3.PNG" alt="Gallery Image 3">
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/S4.PNG" alt="Gallery Image 4">
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/S5.PNG" alt="Gallery Image 5">
+        </div>
+
+        <div class="gallery-item">
+            <img src="img/S6 (2).jpg" alt="Gallery Image 6">
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- Donation section starts here in Part 2 -->
+<footer>
+<script src="donate.js"></script>
+ <section class="footer" id="footer">
+        <div class="footer-box">
+            <a href="#" class="logo"><i class="bx bxs-basket"></i></a>
+            <h1>Contact & Location</h1>
+            <ul>
+         <li> <a href=""><i class="fa-solid fa-phone"></i> +233245210865</a> </li>
+           <li>  <a href="#"><i class="fa-solid fa-envelope"></i>info@nexogirls.org</a></li>
+          <li> <a href="https://lnk.bio/nexogirls "><i class="fa-solid fa-globe"></i>www.nexogirls.org</a> </li> 
+          </ul><a href="#"><strong>Follow Us On Social Media</strong><Br></Br>
+            <li> <div class="social">
+             <a href="https://www.facebook.com/nexogirls"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/nexogirls"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/nexogirls/posts/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@nexogirls"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://x.com/nexogirls"><i class="fa-brands fa-x-twitter"></i></a> 
+            </div>
+            <li>
+    </ul>
+        </div>
+        
+        <div class="footer-box">
+            <h1>About Us</h1>
+          <ul>
+             <li>  <a href="about.html#ourstory">Our Story</a></li>
+              <li> <a href="home.html#impact">Our Impact</a></li>
+             <li> <a href="home.html#Partners">Our Patners</a> </li> 
+             <li> <a href="meet_team.html">Meet the Team</a> </li>  
+            
+            
+            </ul>
+        </div>
+        <div class="footer-box">
+            <h1>Useful Links</h1>
+         <ul>
+         <li> <a href="donate.html">Donating To us</a> </li> 
+          <li> <a href="volunteer.html">Applying to Volunteer</a> </li> 
+          <li> <a href="partnership.html">Become A Partner</a> </li> 
+           <li><a href="ambassador.html">Become An Ambassador</a> </li> 
+           
+            </ul> 
+        </div>
+        <div class="footer-box">
+            <h1>Make Suggestion</h1>
+            <p>You can make a suggestion or ask question<br>By sending us an email</p>
+                       <iframe src="https://hacth.substack.com/embed?transparent=1" width="100%" height="150" style="border: 0; background: transparent; color:#ffcc00" frameborder="0" scrolling="no"></iframe>
+            <img src="img/climi1.png" alt="" height="150px" width="150px">
+        </div>
+         
+          
+    </section>
+    <div class="copyright">
+        <p>Al-Ayan copyright@</p>
+    </div>
+    </footer>
+
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+    const impactSection = document.querySelector("#impact");
+    const numbers = document.querySelectorAll(".impact-number");
+
+    let hasAnimated = false;
+
+    function animateNumbers() {
+
+        if (hasAnimated) return;
+
+        hasAnimated = true;
+
+        numbers.forEach(number => {
+
+            const target = parseInt(number.dataset.target);
+            const suffix = number.textContent.includes("+") ? "+" : "";
+
+            let current = 0;
+
+            const duration = 2000; // 2 seconds
+            const startTime = performance.now();
+
+            function updateNumber(currentTime) {
+
+                const elapsed = currentTime - startTime;
+
+                const progress = Math.min(elapsed / duration, 1);
+
+                // Makes the animation start slowly and finish smoothly
+                const easeOut = 1 - Math.pow(1 - progress, 3);
+
+                current = Math.floor(easeOut * target);
+
+                number.textContent =
+                    current.toLocaleString() + suffix;
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateNumber);
+                } else {
+                    number.textContent =
+                        target.toLocaleString() + suffix;
+                }
+            }
+
+            requestAnimationFrame(updateNumber);
+        });
+    }
+
+
+    /* Start animation when the section enters the screen */
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+                    animateNumbers();
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.3
+        }
+    );
+
+
+    if (impactSection) {
+        observer.observe(impactSection);
+    }
+
+});
+
+</script>
+<script src="script.js"></script>
+</body>
+
+</html>

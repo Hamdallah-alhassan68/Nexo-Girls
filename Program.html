@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+<style>
+    /* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #274001;
+  overflow-x: hidden;
+  left: 0;
+  right: 0;
+}
+
+/* ================= HEADER ================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #ffcc00;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 4px 4px 10px gray;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: white;
+  text-decoration: none;
+}
+nav {
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+/* NAV */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #274001;
+  font-weight: 500;
+  position: relative;
+}
+
+/* underline animation */
+nav ul li a:not(.donate)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 3px;
+  background: #274001;
+  transition: 0.3s ease;
+}
+
+nav ul li a:not(.donate):hover::after {
+  width: 100%;
+}
+
+/* donate button */
+.donate {
+  background: #274001;
+  color: #ffcc00;
+  width: 200px;
+  height: 100px;
+  padding: 10px 15px;
+  border-radius: 13px;
+}
+
+.donate:hover {
+  background: #5d6d3e;
+  color: #274001;
+}
+.dropdown{
+    position:relative;
+}
+
+.dropdown-menu{
+
+    position:absolute;
+    top:100%;
+    left:0;
+
+    background:white;
+
+    width:220px;
+
+    border-radius:10px;
+     display: flex;
+    flex-direction: column;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    list-style:none;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(15px);
+
+    transition:.3s;
+
+    z-index:1000;
+
+}
+
+.dropdown:hover .dropdown-menu{
+
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+
+}
+
+.dropdown-menu li{
+
+    width:100%;
+
+}
+
+.dropdown-menu li a{
+
+    display:block;
+
+    padding:15px 20px;
+
+    color:#274001;
+
+    text-decoration:none;
+
+}
+
+.dropdown-menu li a:hover{
+
+    background:#274001;
+
+    color:#ffCC00;
+
+}
+ /* HERO SECTION */
+
+.hero{
+    width: 100%;
+    height: 80vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("img/slide7.PNG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+/* OVERLAY CONTENT */
+
+.overlay{
+    max-width: 850px;
+}
+
+/* TITLE */
+
+.overlay h1{
+    font-size: 68px;
+    color:#ffCC00;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 12px rgba(0,0,0,0.7);
+}
+
+/* TEXT */
+
+.overlay p{
+    font-size: 24px;
+    color: #ffCC00;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+section {
+    padding: 60px 0;
+}
+
+
+.btn {
+    padding: 15px 35px;
+    border: none;
+    text-decoration: none;
+    border-radius: 40px;
+    background: darkgreen;
+    color:#ffCC00;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.btn:hover{
+    background: #ffcc00;
+    color: #274001;
+    transform: translateY(-5px);
+}
+#ostory{
+    text-align: center;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+#ostory h2{
+    font-size: 40px;
+    color: white;
+    margin-bottom: 3px;
+    font-weight: 700;
+    
+}
+
+/* UNDERLINE NOW BELOW */
+.overline{
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: #ffcc00;
+    border-radius: 20px;
+    margin: 0 auto 10px;
+}
+
+/* MISSION */
+.mission-text{
+    font-size: 15px;
+    line-height: 1.8;
+    color: #c2c1c1;
+    max-width: 680px;
+    margin-bottom:10px;
+}
+/* ================= PROGRAMS SECTION ================= */
+
+.programs-section{
+    width: 100%;
+    padding: 100px 10%;
+    background: #274001;
+}
+
+/* FILTER BUTTONS */
+.program-filters{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 40px 0 60px;
+}
+
+.filter-btn{
+    padding: 12px 26px;
+    border: none;
+    border-radius: 30px;
+    background: #e9e9e9;
+    color: #274001;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+    background: #ffcc00;
+    color: white;
+}
+
+/* PROGRAM GRID */
+.programs-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 35px;
+}
+
+/* CARD */
+.program-card{
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.4s ease;
+}
+
+.program-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 18px 35px rgba(0,0,0,0.12);
+}
+
+/* IMAGE */
+.program-card img{
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+/* CONTENT */
+.program-content{
+    padding: 25px;
+}
+
+/* TAG */
+.tag{
+    display: inline-block;
+    padding: 7px 16px;
+    background: #ffe5c2;
+    color: #ff9900;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* TITLE */
+.program-content h3{
+    font-size: 24px;
+    color: #274001;
+    margin-bottom: 15px;
+}
+
+/* TEXT */
+.program-content p{
+    color: #555;
+    line-height: 1.8;
+    font-size: 15px;
+}
+.footer{
+    width: 100%;
+    margin-top: 80px;
+    padding: 80px 8%;
+    background: #ffcc00;
+    color: #274001;
+    display: grid;
+     grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}.footer-box h2{
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #274001;
+}
+
+.footer-box p{
+    font-size: 15px;
+    line-height: 1.7;
+    color: #274001;
+}
+
+.footer-box a{
+    display: block;
+    color: #274001;
+    margin: 8px 0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-box a:hover{
+    color: #ccff66;
+    padding-left: 5px;
+}
+.socials {
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}.socials a{
+    font-size: 20px;
+    color: #274001;
+    margin-right: 10px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.socials a i{
+    font-size: 25px;
+    color: #274001;
+    align-items: center;
+    margin-right: 10px;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.social a:hover{
+    color: darkgreen;
+}
+.footer-box form{
+    display: flex;
+    align-items: center;
+    background: rgb(230, 229, 229);
+    padding: 8px;
+    height: 40px;
+    width: 300px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.footer-box form input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: transparent;
+    color: #274001;
+}
+.footer-box{
+    display: flex;
+    flex-direction: column;
+   
+}
+.footer-box a{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #274001;
+    margin: 10px 0;
+}
+
+.footer-box a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #274001;
+    transition: width 0.3s ease;
+}
+
+.footer-box a:hover::after{
+    width: 100%;
+}
+
+.footer-box a:hover{
+    color: #274001;
+    padding-left: 5px;
+}
+#ready-to-rise {
+    color: #ffcc00;
+}
+.socials {
+    margin-top: 10px;
+    align-items: center;
+    column-gap: 0.3rem;
+}.socials a{
+    font-size: 10px;
+    color: #274001;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.socials a:hover{
+    color: darkgreen;
+}
+.footer-box form{
+    display: flex;
+    align-items: center;
+    background: rgb(230, 229, 229);
+    padding: 8px;
+    height: 40px;
+    width: 300px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+.footer-box li {
+    list-style: none;
+}
+
+.footer-box h1{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.footer-box form i{
+    color: #274001;
+    margin: 0 10px;
+}
+.copyright{
+    text-align: center;
+    padding: 20px;
+    background: #274001;
+    color: #aaa;
+    font-size: 14px;
+}
+.footer{
+    width: 100%;
+    margin-top: 80px;
+    padding: 80px 8%;
+    background: #ffcc00;
+    color: #274001;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 40vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgb(218, 216, 216);
+    backdrop-filter: blur(10px) ;
+    box-shadow: -10px 0 10px rgb(105, 104, 104);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.navbar li {
+    width: 100%;
+}
+.navbar a {
+    width: 100%;
+}
+.menubutton {
+    visibility: hidden;
+}
+/* ===========================
+      Floating Donation Popup
+=========================== */
+
+.donation-popup{
+    position:fixed;
+    bottom:25px;
+    right:25px;
+
+    width:350px;
+    background:#fff;
+
+    border-radius:18px;
+    padding:25px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+    z-index:9999;
+
+    transform:translateY(120%);
+    opacity:0;
+
+    transition:.6s ease;
+}
+
+.donation-popup.show{
+    transform:translateY(0);
+    opacity:1;
+}
+
+.popup-close{
+    position:absolute;
+    top:12px;
+    right:12px;
+
+    width:34px;
+    height:34px;
+
+    border:none;
+    background:#ffcc00;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.popup-close:hover{
+    background:#274001;
+    color:#ffcc00;
+}
+
+.popup-icon{
+    width:60px;
+    height:60px;
+
+    background:#f1f1f1;
+
+    color:#274001;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    font-size:30px;
+
+    margin-bottom:18px;
+}
+
+.donation-popup h3{
+    color:#222;
+    margin-bottom:10px;
+    font-size:24px;
+}
+
+.donation-popup p{
+    color:#666;
+    line-height:1.6;
+    margin-bottom:22px;
+}
+
+.popup-buttons{
+    display:flex;
+}
+
+.donate-btn{
+    flex:1;
+
+    text-align:center;
+
+    background:#274001;
+    color:#fff;
+
+    text-decoration:none;
+
+    padding:13px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.donate-btn:hover{
+    background:#274001;
+}
+
+@media(max-width: 1000px){
+     .footer-box form {
+        width: 270px;
+        
+    }
+    .footer {
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 992px){
+
+    .footer{
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+        padding: 50px 40px;
+    }
+
+    .footer-box{
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .footer-box form{
+        width:100%;
+    }
+
+    .footer-box img{
+        width:130px;
+        height:auto;
+    }
+
+}
+@media (max-width:768px){
+
+    .footer{
+        grid-template-columns: 1fr;
+        padding:40px 25px;
+        gap:35px;
+    }
+
+    .footer-box{
+        width:100%;
+        text-align:left;
+        align-items:flex-start;
+        border-bottom:1px solid rgba(39,64,1,.15);
+        padding-bottom:25px;
+    }
+
+    .footer-box:last-child{
+        border-bottom:none;
+    }
+
+    .footer-box h1,
+    .footer-box h2{
+        font-size:24px;
+        margin-bottom:15px;
+    }
+
+    .footer-box a{
+        margin:8px 0;
+    }
+
+    .footer-box form{
+        width:100%;
+        max-width:100%;
+    }
+
+    .footer-box input{
+        width:100%;
+    }
+
+    .footer-box img{
+        width:120px;
+        height:auto;
+        margin-top:20px;
+    }
+
+    .socials{
+        display:flex;
+        justify-content:flex-start;
+        flex-wrap:wrap;
+        gap:15px;
+        margin-top:15px;
+    }
+
+}
+@media (max-width: 1024px) {
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+   
+    .button {
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+     .footer-box h1{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+}
+@media (max-width: 800px) {
+
+    .hideOnMobile {
+        display:  none;
+        visibility: hidden;
+
+    }
+    .menubutton {
+        display: block;
+        visibility: visible;
+    }
+     .footer-box h1{
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+ .footer-box li{
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+@media (max-width: 800px){
+
+    .footer{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        padding: 40px 20px;
+    }
+
+    .footer-box{
+        margin-bottom: 20px;
+    }
+
+    .footer-box h1,
+    .footer-box h2{
+        font-size: 22px;
+    }
+
+    .footer-box ul li{
+        margin: 8px 0;
+    }
+
+    .socials{
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .footer-box form{
+        width: 100%;
+    }
+
+    .footer-box input{
+        width: 100%;
+        padding: 12px;
+    }
+
+    .footer-box img{
+        width: 120px;
+        height: auto;
+        margin-top: 20px;
+    }
+
+}
+
+    nav ul {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        width: 100%;
+        display: flex;
+        background: white;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 30px;
+        padding-bottom: 50px;
+        height: auto;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        
+    }
+   
+    
+
+    nav ul.active {
+        display: flex;
+    }
+}
+@media (max-width:400px){
+
+.footer{
+
+    grid-template-columns:1fr;
+    padding:50px 20px;
+    gap:35px;
+
+}
+
+.footer-box{
+
+    width:100%;
+    text-align:center;
+    align-items:center;
+
+}
+
+.footer-box h1{
+
+    font-size:24px;
+
+}
+
+.footer-box p,
+.footer-box li,
+.footer-box a{
+
+    font-size:15px;
+
+}
+
+.footer-box ul{
+
+    padding:0;
+    margin:0;
+
+}
+
+.footer-box form{
+
+    width:100%;
+    max-width:280px;
+
+}
+
+.footer-box input{
+
+    width:100%;
+
+}
+
+.footer-box img{
+
+    width:110px;
+    height:auto;
+
+}
+
+.social{
+
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+
+}
+
+}
+/* ================= PROGRAMS RESPONSIVE ================= */
+
+/* Tablets and smaller screens */
+@media (max-width: 768px){
+
+    .programs-section{
+        padding: 70px 5%;
+    }
+
+    .program-filters{
+        gap: 12px;
+        margin: 30px 0 40px;
+    }
+
+    .filter-btn{
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .programs-container{
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .program-card img{
+        height: 240px;
+    }
+
+    .program-content{
+        padding: 22px;
+    }
+
+    .program-content h3{
+        font-size: 22px;
+    }
+}
+
+
+/* ================= 400px SCREENS ================= */
+
+@media (max-width: 400px){
+
+    .programs-section{
+        width: 100%;
+        padding: 55px 15px;
+        box-sizing: border-box;
+    }
+
+    .program-filters{
+        width: 100%;
+        gap: 10px;
+        margin: 25px 0 35px;
+        box-sizing: border-box;
+    }
+
+    .filter-btn{
+        padding: 9px 16px;
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+    .programs-container{
+        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 22px;
+    }
+
+    .program-card{
+        width: 100%;
+        min-width: 0;
+        border-radius: 14px;
+        box-sizing: border-box;
+    }
+
+    .program-card img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .program-content{
+        padding: 18px;
+    }
+
+    .tag{
+        padding: 6px 13px;
+        font-size: 12px;
+        margin-bottom: 12px;
+    }
+
+    .program-content h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .program-content p{
+        font-size: 14px;
+        line-height: 1.7;
+    }
+}
+
+
+/* ================= 380px SCREENS ================= */
+
+@media (max-width: 380px){
+
+    .programs-section{
+        padding: 45px 12px;
+    }
+
+    .program-filters{
+        gap: 8px;
+        margin-bottom: 30px;
+    }
+
+    .filter-btn{
+        padding: 8px 13px;
+        font-size: 12px;
+    }
+
+    .programs-container{
+        gap: 18px;
+    }
+
+    .program-card{
+        border-radius: 12px;
+    }
+
+    .program-card img{
+        height: 180px;
+    }
+
+    .program-content{
+        padding: 16px;
+    }
+
+    .program-content h3{
+        font-size: 18px;
+    }
+
+    .program-content p{
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .tag{
+        font-size: 11px;
+        padding: 5px 11px;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+  <a class="logo" href="#"><img src="img/Nexo-Girls_No_background.png" alt="logo" width="80px" height="UTF-8"></a>
+
+  <nav>
+            
+            <ul class="navbar"  id="navLinks">
+                <li class="logo"></li>
+                <li onclick="hidenavbar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                 <li><a href="home.html">Home</a></li>
+                 <li class="dropdown">
+
+    <a href="about.html">
+        About Us
+        <i class="fa-solid fa-chevron-down"></i>
+    </a>
+
+    <ul class="dropdown-menu">
+
+        <li><a href="about.html">About Nexo Girls</a></li>
+
+        <li><a href="milestone.html">Milestones</a></li>
+
+        <li><a href="meet_team.html">Meet Our Team</a></li></ul></li>
+                 <li><a href="Program.html">Program</a></li>
+                 <li class=" dropdown">
+
+
+
+    <a href="#">
+
+        Get Involved
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+
+    <ul class="dropdown-menu">
+
+
+<li><a href="getinvolve.html">Get Involved</a></li>
+        <li><a href="donate.html">Donate</a></li>
+
+
+
+        <li><a href="partnership.html">Partners</a></li>
+
+
+
+        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
+
+
+
+    </ul>
+
+
+
+</li>
+                 <li><a href="contact.html">Contact us</a></li>
+                 <li> <a class="donate" href="donate.html">Donate to us</a></li>
+                
+                 </ul>
+               <div class="hideOnMobile">
+                 <ul>
+                  <li class="hideOnMobile"><a href="home.html">Home</a></li>
+                  <li class="hideOnMobile dropdown">
+
+    <a href="about.html">
+        About Us
+        <i class="fa-solid fa-chevron-down"></i>
+    </a>
+
+    <ul class="dropdown-menu">
+        <li><a href="about.html">About Nexo Girls</a></li>
+        <li><a href="milestone.html">Milestones</a></li>
+        <li><a href="meet_team.html">Meet Our Team</a></li>
+    </ul>
+
+</li>
+                 <li class="hideOnMobile"><a href="Program.html">Program</a></li>
+                <li class="hideOnMobile dropdown">
+
+
+
+    <a href="#">
+
+        Get Involved
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+
+    <ul class="dropdown-menu">
+
+
+<li><a href="getinvolve.html">Get Involved</a></li>
+        <li><a href="donate.html">Donate</a></li>
+
+
+
+        <li><a href="partnership.html">Partners</a></li>
+
+
+
+        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
+
+
+
+    </ul>
+
+
+
+</li>
+                 <li class="hideOnMobile"><a href="contact.html">Contact us</a></li>
+                 <li class="hideOnMobile"> <a class="donate" href="donate.html">Donate to us</a></li>
+                 </div>
+                <li class="menubutton" onclick="shownavbar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            
+           </ul>
+        </nav>
+</header>
+<div class="hero">
+
+    <div class="overlay">
+        <h1>Nexo Girls</h1>
+
+        <p>
+            Empower . Connect . Thrive
+        </p>
+
+  <a class="btn" href="getinvolve.html">Get Invovled</a>
+    </div>
+    
+        
+            
+        </p>
+    </div>
+    
+
+
+</div>
+<!-- ================= PROGRAMS SECTION ================= -->
+
+<section class="programs-section">
+
+    <div id="ostory">
+        <h2>Our Programs</h2>
+        <span class="overline"></span>
+
+        <p class="mission-text">
+            
+        </p>
+    </div>
+
+    <!-- FILTER BUTTONS -->
+   <div class="program-filters">
+
+    <button class="filter-btn active" data-filter="all">All</button>
+
+    <button class="filter-btn" data-filter="tech">
+        Tech
+    </button>
+
+    <button class="filter-btn" data-filter="advocacy">
+        Advocacy
+    </button>
+
+    <button class="filter-btn" data-filter="community">
+         Community Projects
+    </button>
+
+    <button class="filter-btn" data-filter="mentorship">
+        Mentorship
+    </button>
+
+</div>
+
+    <!-- PROGRAM CARDS -->
+   <!-- ================= PROGRAM CARDS ================= -->
+<div class="programs-container">
+
+    <!-- ================= TECH ================= -->
+
+    <div class="program-card tech">
+        <img src="img/upskill1.jpg" alt="Upskills 1.0">
+        <div class="program-content">
+            <span class="tag">Tech</span>
+            <h3>Upskills 1.0</h3>
+            <p>
+                The first cohort introducing girls to digital literacy,
+                coding, innovation, and essential technology skills.
+            </p>
+        </div>
+    </div>
+
+    <div class="program-card tech">
+        <img src="img/upskills.jpg" alt="Upskills 2.0">
+        <div class="program-content">
+            <span class="tag">Tech</span>
+            <h3>Upskills 2.0</h3>
+            <p>
+                Expanded hands-on training in programming, problem-solving,
+                leadership, and digital innovation.
+            </p>
+        </div>
+    </div>
+
+    <div class="program-card tech">
+        <img src="img/upcoming.jpg" alt="Upskills 3.0">
+        <div class="program-content">
+            <span class="tag">Tech</span>
+            <h3>Upskills 3.0</h3>
+            <p>
+                Preparing girls with future-ready digital skills,
+                innovation, and emerging technology knowledge.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="program-card tech">
+        <img src="img/tech1.png" alt="Tech Summer Camp">
+        <div class="program-content">
+            <span class="tag">Tech</span>
+            <h3>Tech Summer Camp</h3>
+            <p>
+                A fun and engaging summer experience where girls learn,
+                build projects, and explore technology creatively.
+            </p>
+        </div>
+    </div>
+
+    <div class="program-card tech">
+        <img src="img/tech1.png" alt="Girls in STEM">
+        <div class="program-content">
+            <span class="tag">Tech</span>
+            <h3>Girls in STEM</h3>
+            <p>
+                Inspiring girls to confidently pursue careers in Science,
+                Technology, Engineering, and Mathematics.
+            </p>
+        </div>
+    </div>
+
+    <div class="program-card tech">
+        <img src="img/techsummer.jpeg" alt="Digital Literacy Training">
+        <div class="program-content">
+            <span class="tag">Tech</span>
+            <h3>Digital Literacy Training</h3>
+            <p>
+                Equipping girls with essential digital skills to safely,
+                confidently, and effectively use technology.
+            </p>
+        </div>
+    </div>
+
+    
+    
+
+
+
+    <!-- ================= ADVOCACY ================= -->
+
+    <div class="program-card advocacy">
+        <img src="img/raise-her-voice-68.jpg" alt="Raise Her Voice">
+        <div class="program-content">
+            <span class="tag">Advocacy</span>
+            <h3>Raise Her Voice</h3>
+            <p>
+                Empowering girls and young women to confidently advocate
+                for themselves, their rights, and their communities.
+            </p>
+        </div>
+    </div>
+
+  <!-- ================= ADVOCACY ================= -->
+
+<div class="program-card advocacy">
+    <img src="img/My_body_my_pride.JPG" alt="Raise Her Voice">
+
+    <div class="program-content">
+        <span class="tag">Advocacy</span>
+
+        <h3>My body My Pride</h3>
+
+        <p>
+          A project focused on body autonomy, menstrual hygiene, and self-awareness.  
+        </p>
+    </div>
+</div>
+
+<div class="program-card advocacy">
+    <img src="img/instasave.website_432757859_829781808889646_4875836339539165059_n.heic" alt="Women Art Advocacy">
+
+    <div class="program-content">
+        <span class="tag">Advocacy</span>
+
+        <h3>Women Art Advocacy</h3>
+
+        <p>
+            Harnessing the power of art and creativity to promote gender
+            equality, inspire dialogue, and amplify women's voices.
+        </p>
+    </div>
+</div>
+
+<div class="program-card advocacy">
+    <img src="img/16 days Loud it quotes'24.png" alt="16 Days Loud It Quotes Campaign">
+
+    <div class="program-content">
+        <span class="tag">Advocacy</span>
+
+        <h3>16 Days Loud It Quotes Campaign</h3>
+
+        <p>
+            A campaign held during the 16 Days of Activism against
+            Gender-Based Violence, using powerful quotes and storytelling
+            to raise awareness and inspire action.
+        </p>
+    </div>
+</div>
+
+<div class="program-card advocacy">
+    <img src="img/739245-NexoGirls-1.png" alt="International Day of the Girl Child Video Advocacy">
+
+    <div class="program-content">
+        <span class="tag">Advocacy</span>
+
+        <h3>International Day of the Girl Child Video Advocacy</h3>
+
+        <p>
+            A digital advocacy campaign celebrating girls' achievements
+            while highlighting the importance of equal opportunities,
+            education, and empowerment.
+        </p>
+    </div>
+</div>
+
+<div class="program-card advocacy">
+    <img src="img/women.jpg" alt="Women's History Month Campaign">
+
+    <div class="program-content">
+        <span class="tag">Advocacy</span>
+
+        <h3>Women's History Month Campaign</h3>
+
+        <p>
+            Celebrating the achievements of women throughout history while
+            inspiring the next generation of girls.
+        </p>
+    </div>
+</div>
+
+
+
+<div class="program-card advocacy">
+    <img src="img/GenderBased.jpg" alt="Gender Equality Campaigns">
+
+    <div class="program-content">
+        <span class="tag">Advocacy</span>
+
+        <h3>Gender Equality Campaigns</h3>
+
+        <p>
+            Raising awareness on gender equality through community
+            engagement, education, and digital advocacy initiatives that
+            encourage inclusion and equal opportunities.
+        </p>
+    </div>
+</div>
+
+
+
+    <!-- ================= COMMUNITY PROJECTS ================= -->
+
+    <div class="program-card community">
+        <img src="img/free.jpg" alt="Free Write">
+        <div class="program-content">
+            <span class="tag">Community Project</span>
+            <h3>Free Write</h3>
+            <p>
+                A volunteer-led literacy initiative encouraging reading,
+                writing, creativity, and self-expression among children.
+            </p>
+        </div>
+    </div>
+
+    <div class="program-card community">
+        <img src="img/feel.jpg" alt="School Outreach">
+        <div class="program-content">
+            <span class="tag">Community Project</span>
+            <h3>School Outreach</h3>
+            <p>
+                Volunteers engage schools through mentorship, educational
+                talks, and interactive learning experiences.
+            </p>
+        </div>
+    </div>
+
+
+    <div class="program-card community">
+        <img src="img/gski.jpg" alt="Community Engagement">
+        <div class="program-content">
+            <span class="tag">Community Project</span>
+            <h3>Community Engagement</h3>
+            <p>
+                Bringing volunteers and communities together to create
+                sustainable and inclusive social impact.
+            </p>
+        </div>
+    </div>
+
+    <div class="program-card community">
+        <img src="img/FF2Write Nexo Girls - CRF.jpg" alt="Book Drive">
+        <div class="program-content">
+            <span class="tag">Community Project</span>
+            <h3>Book & Learning Materials Drive</h3>
+            <p>
+                Collecting and donating books and educational materials to
+                improve learning opportunities for children.
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- ================= MENTORSHIP ================= -->
+
+    <div class="program-card mentorship">
+        <img src="img/slide5.JPG" alt="ProperHer">
+        <div class="program-content">
+            <span class="tag">Mentorship</span>
+            <h3>ProperHer</h3>
+            <p>
+                Connecting girls with mentors who provide career guidance,
+                leadership development, and personal growth support.
+            </p>
+        </div>
+    </div>
+
+    <div class="program-card mentorship">
+        <img src="img/gski.jpg" alt="GS Kimironko">
+        <div class="program-content">
+            <span class="tag">Mentorship</span>
+            <h3>GS Kimironko</h3>
+            <p>
+                Supporting girls through mentorship, innovation,
+                leadership, and educational opportunities.
+            </p>
+        </div>
+    </div>
+
+    <div class="program-card mentorship">
+        <img src="img/slide4.jpeg" alt="Career Mentorship">
+        <div class="program-content">
+            <span class="tag">Mentorship</span>
+            <h3>Career Mentorship</h3>
+            <p>
+                Helping girls explore career pathways through professional
+                guidance, networking, and skills development.
+            </p>
+        </div>
+    </div>
+
+   
+
+</div> 
+</section>
+<footer>
+        
+            
+       <section class="footer" id="footer">
+         <div class="footer-box">
+            <a href="#" class="logo"><i class="bx bxs-basket"></i></a>
+            <h1>Contact & Location</h1>
+            <ul>
+         <li> <a href=""><i class="fa-solid fa-phone"></i> +233245210865</a> </li>
+           <li>  <a href="#"><i class="fa-solid fa-envelope"></i>info@nexogirls.org</a></li>
+          <li> <a href="https://lnk.bio/nexogirls "><i class="fa-solid fa-globe"></i>www.nexogirls.org</a> </li> 
+          </ul><a href="#"><strong>Follow Us On Social Media</strong><Br></Br>
+            <li> <div class="social">
+             <a href="https://www.facebook.com/nexogirls"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/nexogirls"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/nexogirls/posts/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@nexogirls"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://x.com/nexogirls"><i class="fa-brands fa-x-twitter"></i></a> 
+            </div>
+            <li>
+    </ul>
+        </div>
+       <div class="footer-box">
+            <h1>About Us</h1>
+          <ul>
+             <li>  <a href="about.html#ourstory">Our Story</a></li>
+              <li> <a href="home.html#impact">Our Impact</a></li>
+             <li> <a href="home.html#Partners">Our Patners</a> </li> 
+             <li> <a href="meet_team.html">Meet the Team</a> </li>  
+            
+            </ul>
+        </div>
+        <div class="footer-box">
+            <h1>Useful Links</h1>
+         <ul>
+         <li> <a href="donate.html">Donating To us</a> </li> 
+          <li> <a href="volunteer.html">Applying to Volunteer</a> </li> 
+          <li> <a href="partnership.html">Become A Partner</a> </li> 
+           <li><a href="ambassador.html">Become An Ambassador</a> </li> 
+           
+            </ul> 
+        </div>
+        <div class="footer-box">
+            <h1>Make Suggestion</h1>
+            <p>You can make a suggestion or ask question<br>By sending us an email</p>
+                      <iframe src="https://hacth.substack.com/embed?transparent=1" width="100%" height="150" style="border: 0; background: transparent; color:#ffcc00" frameborder="0" scrolling="no"></iframe>
+            <img src="img/climi1.png" alt="" height="150px" width="150px">
+        </div>
+         
+         
+          
+    </section>
+    <div class="copyright">
+        <p>Al-Ayan copyright@</p>
+    </div>
+    </footer>
+    
+<script>
+    const filterButtons = document.querySelectorAll(".program-filters button");
+const cards = document.querySelectorAll(".program-card");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+
+        // remove active class
+        document
+            .querySelector(".program-filters .active")
+            .classList.remove("active");
+
+        button.classList.add("active");
+
+        const filter = button.dataset.filter;
+
+        cards.forEach(card => {
+
+            if (filter === "all") {
+                card.style.display = "grid";
+            } else if (card.classList.contains(filter)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+
+        });
+
+    });
+});
+
+</script>
+<script src="script.js"></script>
+<!-- Donation Popup -->
+<div class="donation-popup" id="donationPopup">
+
+    <button class="popup-close" id="closePopup">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="popup-icon">
+       🤝
+    </div>
+
+    <h3>Support the Next Generation</h3>
+
+    <p>
+        Every contribution helps Nexo Girls provide digital skills,
+        mentorship, leadership training, and STEM opportunities for girls.
+    </p>
+
+    <div class="popup-buttons">
+        <a href="donate.html" class="donate-btn">Donate Now</a>
+    </div>
+
+</div>
+
+<script>
+    const popup = document.getElementById("donationPopup");
+const closeBtn = document.getElementById("closePopup");
+
+// Show popup after 5 seconds
+window.addEventListener("load", () => {
+
+    if(!sessionStorage.getItem("popupClosed")){
+
+        setTimeout(() => {
+            popup.classList.add("show");
+        },5000);
+
+    }
+
+});
+
+// Close popup
+closeBtn.addEventListener("click", () => {
+
+    popup.classList.remove("show");
+
+    sessionStorage.setItem("popupClosed","true");
+
+});
+</script>
+</body>
+</html>

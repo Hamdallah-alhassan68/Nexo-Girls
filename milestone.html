@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #274001;
+  overflow-x: hidden;
+  left: 0;
+  padding-top:90px;
+  right: 0;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #ffcc00;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 4px 4px 10px gray;
+  margin-bottom: 30px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: white;
+  text-decoration: none;
+}
+nav {
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+/* NAV */
+nav ul {
+  display: flex;
+  gap: 20px;
+   
+   
+    top: 90px;
+  right: 0;
+  align-items:center;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #274001;
+  font-weight: 500;
+  position: relative;
+}
+
+/* underline animation */
+nav ul li a:not(.donate)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 3px;
+  background: #274001;
+  transition: 0.3s ease;
+}
+
+nav ul li a:not(.donate):hover::after {
+  width: 100%;
+}
+
+.hero{
+    width: 100%;
+    height: 80vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("img/slide7.PNG");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.overlay{
+    color: white;
+    max-width: 500px;
+}
+/* donate button */
+.donate {
+  background: #274001;
+  color: #ffcc00;
+  width: 200px;
+  height: 100px;
+  padding: 10px 15px;
+  border-radius: 13px;
+  
+}
+.donate:hover {
+  background: #5d6d3e;
+  color: #ffcc00;
+}
+.dropdown{
+    position:relative;
+}
+.overlay h1 {
+    COLOR: #ffcc00;
+}
+
+.dropdown-menu{
+
+    position:absolute;
+    top:100%;
+    left:0;
+
+    background:white;
+
+    width:220px;
+
+    border-radius:10px;
+     display: flex;
+    flex-direction: column;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    list-style:none;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(15px);
+
+    transition:.3s;
+
+    z-index:9999;
+
+}
+
+.dropdown:hover .dropdown-menu{
+
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+
+}
+
+.dropdown-menu li{
+   background:#fff;
+    width:100%;
+
+}
+
+.dropdown-menu li a{
+
+    display:block;
+
+    padding:15px 20px;
+
+    color:#274001;
+
+    text-decoration:none;
+
+}
+
+.dropdown-menu li a:hover{
+
+    background:#274001;
+
+    color:#ffcc00;
+
+}
+
+.nexo-timeline {
+  width: min(1400px, 92%);
+  margin: 0 auto;
+  padding: 140px 0 80px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.timeline-header h2 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+  margin: 0;
+  font-weight: 800;
+}
+
+.timeline-header h2 span {
+  color: #ffcc00;
+}
+
+.subtitle {
+  max-width: 760px;
+  margin: 18px auto 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #f1f1f1;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.timeline-side {
+  display: grid;
+  gap: 44px;
+}
+
+.story-card {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  min-height: 220px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.story-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 18px 18px 16px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.72), rgba(0, 0, 0, 0.02));
+  color: #fff;
+}
+
+.card-overlay h3 {
+  margin: 10px 0 0;
+  font-size: 1.2rem;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.82);
+  color: #274001;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.timeline-center {
+  position: relative;
+  padding-top: 10px;
+}
+
+.timeline-center::before {
+  content: "";
+  position: absolute;
+  left: 116px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #ffcc00, #ffcc00);
+  border-radius: 999px;
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 92px 38px 1fr;
+  gap: 0;
+  align-items: start;
+  padding-bottom: 34px;
+}
+
+.year {
+  color: #ffcc00;
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 1.1;
+}
+
+.node {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #274001;
+  background: #fff;
+  z-index: 1;
+  margin-top: 2px;
+}
+
+.content {
+  padding-left: 6px;
+}
+
+.content h3 {
+  margin: 0 0 10px;
+  color: #ffcc00;
+  font-size: 1.35rem;
+}
+
+.content p {
+  margin: 0;
+  color: #f1f1f1;
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.footer-box li {
+    list-style: none;
+}
+.bttn{
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+}
+.footer{
+    width: 100%;
+    padding: 80px 8%;
+    background: #ffcc00;
+    color: #274001;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}.footer-box h2{
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #274001;
+}
+
+.footer-box p{
+    font-size: 15px;
+    line-height: 1.7;
+    color: #274001;
+}
+
+.footer-box a{
+    display: inline-block;
+    color: #274001;
+    margin: 8px 0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+h2 {
+    color: #ffcc00;
+}
+.title {
+    color: #274001;
+}
+.footer-box{
+    display: flex;
+    flex-direction: column;
+   
+}
+.footer-box a{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #274001;
+    margin: 10px 0;
+}
+
+.footer-box a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #274001;
+    transition: width 0.3s ease;
+}
+
+.footer-box a:hover::after{
+    width: 100%;
+}
+
+.footer-box a:hover{
+    color: #274001;
+    padding-left: 5px;
+}
+#ready-to-rise {
+    color: #ffcc00;
+   
+}
+.social {
+    margin-top: 10px;
+    align-items: center;
+    column-gap: 0.5rem;
+}.social a{
+    font-size: 30px;
+    color: #274001;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+.social a i {
+    font-size: 25px;
+}
+
+.social a:hover{
+    color: darkgreen;
+}
+.footer-box form{
+    display: flex;
+    align-items: center;
+    background: rgb(230, 229, 229);
+    padding: 8px;
+    height: 40px;
+    width: 300px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+.footer-box form input{
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: transparent;
+    color: #274001;
+}
+.footer-box h2 {
+    color: #274001;
+}
+.footer-box li {
+    list-style: none;
+}
+
+.footer-box form i{
+    color: #274001;
+    margin: 0 10px;
+}
+.copyright{
+    text-align: center;
+    padding: 20px;
+    background: #274001;
+    color: #aaa;
+    font-size: 14px;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 40vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgb(218, 216, 216);
+    backdrop-filter: blur(10px) ;
+    box-shadow: -10px 0 10px rgb(105, 104, 104);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.footer-box h1{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+.navbar li {
+    width: 100%;
+}
+.navbar a {
+    width: 100%;
+}
+.menubutton {
+    visibility: hidden;
+}
+
+@media (max-width: 1024px) {
+ .timeline-grid{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+.timeline-side.righ .story-card {
+    display: none;
+}
+.right .story-card {
+    display: none;
+}
+ .year {
+    font-size: 0.8em;
+    padding-right: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nexo-timeline {
+    width: min(100%, 94%);
+    padding: 48px 0 60px;
+  }
+
+  .timeline-grid{
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 30px;
+}
+.timeline-side.right .story-card {
+    display: none;
+}
+.story-card {
+    width: 200px;
+}
+
+  .year {
+    font-size: 0.8em;
+    padding-right: 6px;
+  }
+
+  .content h3 {
+    font-size: 1em;
+  }
+
+  .content p {
+    font-size: 0.8em;
+  }
+ 
+}
+
+@media(max-width: 900px){
+    .text{
+        width: 100%;
+        max-width: 350px;
+    }
+    .footer-box form {
+        width: 270px;
+        
+    }
+   
+    .services h2{
+        font-size: 34px;
+    }
+    .footer {
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+}
+@media (max-width: 1024px) {
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .button {
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+      .footer-box h1{
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+.footer-box li{
+    font-size: 1em;
+    
+}
+.card-overlay h3 {
+    font-size: 1em;
+}
+.footer-box .social a{
+    font-size: 1em;
+}
+.footer-box form{
+    width: 300px;
+}
+.footer-box p {
+    font-size: 0.8em;
+}
+}
+@media (max-width: 800px) {
+
+    .hideOnMobile {
+        display:  none;
+        visibility: hidden;
+
+    }
+    .menubutton {
+        display: block;
+        visibility: visible;
+    }
+    .card-overlay h3 {
+        font-size: 0.9em;
+    }
+
+
+    nav ul {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        width: 100%;
+        display: flex;
+        background: white;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        height: auto;
+        padding: 20px 30px;
+        padding-bottom: 50px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .footer1 h2 {
+        font-size: 2em;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .footer-box form {
+        width: 300px;
+    }
+
+   
+    
+
+    nav ul.active {
+        display: flex;
+    }
+}
+@media (max-width:400px){
+
+.footer{
+
+    grid-template-columns:1fr;
+    padding:50px 20px;
+    gap:35px;
+
+}
+
+.footer-box{
+
+    width:100%;
+    text-align:center;
+    align-items:center;
+
+}
+
+.footer-box h1{
+
+    font-size:24px;
+
+}
+
+.footer-box p,
+.footer-box li,
+.footer-box a{
+
+    font-size:15px;
+
+}
+
+.footer-box ul{
+
+    padding:0;
+    margin:0;
+
+}
+
+.footer-box form{
+
+    width:100%;
+    max-width:280px;
+
+}
+
+.footer-box input{
+
+    width:100%;
+
+}
+
+.footer-box img{
+
+    width:110px;
+    height:auto;
+
+}
+
+.social{
+
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+
+}
+
+}
+@media (max-width:600px){
+
+    .nexo-timeline{
+        width:95%;
+        padding:50px 0;
+    }
+
+    .timeline-grid{
+        display:flex;
+        flex-direction:column;
+        gap:35px;
+    }
+     
+    .timeline-side{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:10px;
+    }
+
+    .story-card{
+        width:100%;
+        min-height:110px;
+        border-radius: 12px;
+    }
+
+    .story-card img{
+        height:110px;
+        width: 100%;
+    }
+
+    .timeline-center{
+        width:100%;
+    }
+
+    .timeline-center::before{
+        left:75px;
+    }
+
+    .timeline-item{
+        grid-template-columns:60px 30px 1fr;
+        column-gap:12px;
+        padding-bottom:28px;
+    }
+    .card-overlay h3 {
+        font-size: 0.7em;
+    }
+
+    .year{
+        font-size:0.8em;
+        text-align:right;
+        padding-right:8px;
+    }
+
+    .node{
+        width:18px;
+        height:18px;
+    }
+
+    .content h3{
+        font-size:0.9rem;
+    }
+
+    .content p{
+        max-width:100%;
+        font-size:0.7em;
+        line-height:1.6;
+    }
+    .card-overlay h3 {
+        font-family: 0.8em;
+    }
+
+}
+@media (max-width:400px){
+
+    .timeline-grid{
+        gap:25px;
+    }
+
+    .timeline-side{
+         display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:5px;
+    }
+
+    .story-card{
+        min-height:80px;
+        width: 100%;
+    }
+
+    .story-card img{
+        height:80px;
+        width: 100%;
+    }
+
+    .timeline-center::before{
+        left:58px;
+    }
+
+    .timeline-item{
+        grid-template-columns:45px 24px 1fr;
+        column-gap:10px;
+        padding-bottom:25px;
+    }
+
+    .year{
+        font-size:0.7rem;
+        padding-right:5px;
+    }
+
+    .node{
+        width:16px;
+        height:16px;
+    }
+
+    .content{
+        padding-left:0;
+    }
+
+    .content h3{
+        font-size:0.8em;
+        margin-bottom:8px;
+    }
+
+    .content p{
+        font-size:0.6em;
+        line-height:1.5;
+    }
+
+    .subtitle{
+        font-size:0.95rem;
+    }
+    .card-overlay h3 {
+        font-size: 0.7em;
+    }
+
+}
+
+
+    </style>
+</head>
+<body>
+    <header>
+  <a class="logo" href="#"><img src="img/Nexo-Girls_No_background.png" alt="logo" width="80px" height=""></a>
+
+  <nav>
+            
+            <ul class="navbar"  id="navLinks">
+                <li class="logo"></li>
+                <li onclick="hidenavbar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                 <li><a href="home.html">Home</a></li>
+                 <li class="dropdown">
+
+    <a href="about.html">
+        About Us
+        <i class="fa-solid fa-chevron-down"></i>
+    </a>
+
+    <ul class="dropdown-menu">
+
+        <li><a href="about.html">About Nexo Girls</a></li>
+
+        <li><a href="milestone.html">Milestones</a></li>
+
+        <li><a href="meet_team.html">Meet Our Team</a></li></ul></li>
+                 <li><a href="Program.html">Program</a></li>
+                 <li class=" dropdown">
+
+
+
+    <a href="#">
+
+        Get Involved
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+
+    <ul class="dropdown-menu">
+
+
+<li><a href="getinvolve.html">Get Involved</a></li>
+        <li><a href="donate.html">Donate</a></li>
+
+
+
+        <li><a href="partnership.html">Partners</a></li>
+
+
+
+        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
+
+
+
+    </ul>
+
+
+
+</li>
+                 <li><a href="contact.html">Contact us</a></li>
+                 <li> <a class="donate" href="donate.html">Donate to us</a></li>
+                
+                 </ul>
+               <div class="hideOnMobile">
+                 <ul>
+                  <li class="hideOnMobile"><a href="home.html">Home</a></li>
+                  <li class="hideOnMobile dropdown">
+
+    <a href="about.html">
+        About Us
+        <i class="fa-solid fa-chevron-down"></i>
+    </a>
+
+    <ul class="dropdown-menu">
+        <li><a href="about.html">About Nexo Girls</a></li>
+        <li><a href="milestone.html">Milestones</a></li>
+        <li><a href="meet_team.html">Meet Our Team</a></li>
+    </ul>
+
+</li>
+                 <li class="hideOnMobile"><a href="Program.html">Program</a></li>
+                <li class="hideOnMobile dropdown">
+
+
+
+    <a href="#">
+
+        Get Involved
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+
+    <ul class="dropdown-menu">
+
+<li><a href="getinvolve.html">Get Involved</a></li>
+
+        <li><a href="donate.html">Donate</a></li>
+
+
+
+        <li><a href="partnership.html">Partners</a></li>
+
+
+
+        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
+
+
+
+    </ul>
+
+
+
+</li>
+                 <li class="hideOnMobile"><a href="contact.html">Contact us</a></li>
+                 <li class="hideOnMobile"> <a class="donate" href="donate.html">Donate to us</a></li>
+                 </div>
+                <li class="menubutton" onclick="shownavbar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            
+           </ul>
+        </nav>
+</header>
+
+<div class="hero">
+
+    <div class="overlay">
+        <h1>Nexo Girls Journey</h1>
+         <h2>Milestones of <span>Impact</span></h2>
+        <p>
+            A story of growth, community, and empowering girls across Africa through technology.
+        </p>
+    </div>
+
+</div>
+
+    <section class="nexo-timeline">
+
+  <div class="timeline-grid">
+    <div class="timeline-side left">
+      <article class="story-card">
+        <img src="img/slide5.JPG">
+        <div class="card-overlay">
+          <span class="tag">2022</span>
+          <h3>The Beginning</h3>
+        </div>
+      </article>
+
+      <article class="story-card">
+        <img src="img/techcamp.jpeg">
+        <div class="card-overlay">
+          <span class="tag">2023</span>
+          <h3>Training Program</h3>
+        </div>
+      </article>
+
+      <article class="story-card">
+        <img src="img/slide6.PNG">
+        <div class="card-overlay">
+          <span class="tag">2026</span>
+          <h3>Community Growth</h3>
+        </div>
+      </article>
+    </div>
+  
+    <div class="timeline-center">
+      <div class="timeline-item">
+        <div class="year">2020-2021</div>
+        <div class="node"></div>
+        <div class="content">
+          <h3>The Beginning</h3>
+          <p>Nexo Girls started with a simple mission: To empower young girls to unlock their full potential and become 
+            catalysts for the change through comprehensive education, digital literacy programs, and strategic partnerships.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">2022-2024</div>
+        <div class="node"></div>
+        <div class="content">
+          <h3>Executing of Project</h3>
+          <p>A flagship digital skills training program designed to equip young women with basics of B career-ready skills in teach, leadership, and entrepreneurship, in 8 days.
+          A project focused on body autonomy, menstrual hygiene, and self awareness.
+          A video Advocacy Campaign amplifying girls visions for future</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="year">2024-2026</div>
+        <div class="node"></div>
+        <div class="content">
+          <h3>Expanding outreach</h3>
+          <p> A mentorship initiative matching young women with professionals for career and growth. Increasing our Impact to different countries. 
+            And partnering with potential organizations that supports our mission. Expanding our to 3 different countries: Nigeria, Rwanda and Kenya
+          </p>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="timeline-side right">
+      <article class="story-card">
+        <img src="img/Menstural_advocacy.jpg" alt="Girl presenting confidently">
+        <div class="card-overlay">
+          <span class="tag">2020</span>
+          <h3>Advocacy</h3>
+        </div>
+      </article>
+
+      <article class="story-card">
+        <img src="img/slide1.jpg">
+        <div class="card-overlay">
+          <span class="tag">2022</span>
+          <h3>Awards</h3>
+        </div>
+      </article>
+
+      <article class="story-card">
+        <img src="img/collaboration.jpg">
+        <div class="card-overlay">
+          <span class="tag">2025</span>
+          <h3>Future Forward</h3>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="footer" id="footer">
+        <div class="footer-box">
+            <a href="#" class="logo"><i class="bx bxs-basket"></i></a>
+            <h1>Contact & Location</h1>
+            <ul>
+         <li> <a href=""><i class="fa-solid fa-phone"></i> +233245210865</a> </li>
+           <li>  <a href="#"><i class="fa-solid fa-envelope"></i>info@nexogirls.org</a></li>
+          <li> <a href="https://lnk.bio/nexogirls "><i class="fa-solid fa-globe"></i>www.nexogirls.org</a> </li> 
+          </ul><a href="#"><strong>Follow Us On Social Media</strong><Br></Br>
+            <li> <div class="social">
+             <a href="https://www.facebook.com/nexogirls"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/nexogirls"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/nexogirls/posts/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@nexogirls"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://x.com/nexogirls"><i class="fa-brands fa-x-twitter"></i></a> 
+            </div>
+            <li>
+    </ul>
+        </div>
+        <div class="footer-box">
+            <h1>About Us</h1>
+          <ul>
+             <li>  <a href="about.html#ourstory">Our Story</a></li>
+              <li> <a href="home.html#impact">Our Impact</a></li>
+             <li> <a href="home.html#Partners">Our Patners</a> </li> 
+             <li> <a href="meet_team.html">Meet the Team</a> </li>  
+              
+            
+            </ul>
+        </div>
+        <div class="footer-box">
+            <h1>Useful Links</h1>
+         <ul>
+         <li> <a href="donate.html">Donating To us</a> </li> 
+          <li> <a href="volunteer.html">Applying to Volunteer</a> </li> 
+          <li> <a href="partnership.html">Become A Partner</a> </li> 
+           <li><a href="ambassador.html">Become An Ambassador</a> </li> 
+           
+            </ul> 
+        </div>
+        <div class="footer-box">
+            <h1>Make Suggestion</h1>
+            <p>You can make a suggestion or ask question<br>By sending us an email</p>
+                      <iframe src="https://hacth.substack.com/embed?transparent=1" width="100%" height="150" style="border: 0; background: transparent; color:#ffcc00" frameborder="0" scrolling="no"></iframe>
+            <img src="img/climi1.png" alt="" height="150px" width="150px">
+        </div>
+         
+          
+    </section>
+    <div class="copyright">
+        <p>Al-Ayan copyright@</p>
+    </div>
+    </footer>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>

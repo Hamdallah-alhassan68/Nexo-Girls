@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+<style>
+     * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #274001;
+  overflow-x: hidden;
+  left: 0;
+  right: 0;
+}
+
+/* ================= HEADER ================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  background-color: #ffcc00;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 1000;
+  box-shadow: 4px 4px 10px gray;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: white;
+  text-decoration: none;
+}
+nav {
+    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+/* NAV */
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #274001;
+  font-weight: 500;
+  position: relative;
+}
+
+/* underline animation */
+nav ul li a:not(.donate)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 3px;
+  background: #274001;
+  transition: 0.3s ease;
+}
+
+nav ul li a:not(.donate):hover::after {
+  width: 100%;
+}
+
+/* donate button */
+.donate {
+  background: #274001;
+  color: #ffcc00;
+  width: 200px;
+  height: 100px;
+  padding: 10px 15px;
+  border-radius: 13px;
+}
+.btn{
+    padding:15px 35px;
+
+    border:none;
+    border-radius:40px;
+
+    background:#1f5c1f;
+    color:#ffcc00;
+
+    font-size:18px;
+    font-weight:800;
+
+    cursor:pointer;
+    transition:0.4s ease;
+}
+.btn {
+    padding:15px 35px;
+    text-decoration: none;
+    border:none;
+    border-radius:40px;
+
+    background:#1f5c1f;
+    color:#ffcc00;
+
+    font-size:18px;
+    font-weight:800;
+
+    cursor:pointer;
+    transition:0.4s ease;
+}
+
+
+/* BUTTON HOVER */
+
+.btn:hover{
+    background:#ffcc00;
+    color:#1f5c1f;
+
+    transform:translateY(-5px);
+}
+.donate:hover {
+  background: #5d6d3e;
+  color: #274001;
+}
+.dropdown{
+    position:relative;
+}
+
+.dropdown-menu{
+
+    position:absolute;
+    top:100%;
+    left:0;
+
+    background:white;
+
+    width:220px;
+    display: flex;
+    flex-direction: column;
+    border-radius:10px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    list-style:none;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:translateY(15px);
+
+    transition:.3s;
+
+    z-index:1000;
+
+}
+
+.dropdown:hover .dropdown-menu{
+
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+
+}
+
+.dropdown-menu li{
+
+    width:100%;
+
+}
+
+.dropdown-menu li a{
+
+    display:block;
+
+    padding:15px 20px;
+
+    color:#274001;
+
+    text-decoration:none;
+
+}
+
+.dropdown-menu li a:hover{
+
+    background:#274001;
+
+    color:#ffcc00;
+
+}
+ /* HERO SECTION */
+
+.hero{
+    width: 100%;
+    height: 60vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+    url("img/slide2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.overlay h1{
+    font-size: 3.5em;
+    color:#ffcc00;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 12px rgba(0,0,0,0.7);
+}
+
+/* TEXT */
+
+.overlay p{
+    font-size: 1.1em;
+    color: #ffcc00;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    text-align: center;
+    max-width: 600px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+/* ================= APPLICATION FORM ================= */
+
+.application-section{
+    width:100%;
+    padding:100px 8%;
+    background:#274001;
+}
+
+.involve-form{
+    max-width:600px;
+    margin:auto;
+    background:rgb(207, 207, 207);
+    padding:50px;
+    border-radius:25px;
+    margin-top:50px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+    gap:20px;
+}
+
+.involve-form input,
+.involve-form select,
+.involve-form textarea{
+    width:100%;
+    padding:16px;
+    border:1px solid #ccc;
+    border-radius:12px;
+    outline:none;
+    font-family:"Montserrat", sans-serif;
+    margin-bottom:20px;
+}
+
+.involve-form textarea{
+    height:150px;
+    resize:none;
+}
+
+.submit-btn{
+    width:100%;
+    padding:16px;
+    border:none;
+    border-radius:40px;
+    background:#274001;
+    color:#ffcc00;
+    font-size:18px;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+.program-btn {
+    padding:10px;
+    border:none;
+    border-radius:20px;
+    background:#274001;
+    color:#ffcc00;
+    font-size:18px;
+    font-weight:200;
+    cursor:pointer;
+    margin-top: 10px;
+    transition:0.3s ease;
+    text-decoration: none;
+
+}
+
+.submit-btn:hover{
+    background:#ffcc00;
+    color:#274001;
+}
+
+/* ================= OPPORTUNITIES ================= */
+
+.opportunities-section{
+    width:100%;
+    padding:100px 8%;
+    background:#1f3200;
+}
+
+.opportunity-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.opportunity-card{
+    background: #ffcc00;
+    padding:35px 30px;
+    border-radius:20px;
+    transition:0.4s ease;
+}
+
+.opportunity-card:hover{
+    transform:translateY(-10px);
+}
+
+.opportunity-card h3{
+    color:#274001;
+    margin-bottom:18px;
+}
+
+.opportunity-card p{
+    color:#555;
+    line-height:1.8;
+}
+.overlay h1{
+    font-size: 50px;
+    color:#ffcc00;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 12px rgba(0,0,0,0.7);
+}
+footer {
+    background-color: #274001;
+    text-align: center;
+    justify-content: center;
+    color: #f1f1f1;
+}
+#ostory{
+    text-align: center;
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+#ostory h2{
+    font-size: 40px;
+    color: white;
+    margin-bottom: 3px;
+    font-weight: 700;
+    
+}
+
+/* UNDERLINE NOW BELOW */
+.overline{
+    display: block;
+    width: 120px;
+    height: 4px;
+    background: #ffcc00;
+    border-radius: 20px;
+    margin: 0 auto 10px;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 40vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgb(218, 216, 216);
+    backdrop-filter: blur(10px) ;
+    box-shadow: -10px 0 10px rgb(105, 104, 104);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.navbar li {
+    width: 100%;
+}
+.navbar a {
+    width: 100%;
+}
+.menubutton {
+    visibility: hidden;
+}
+
+/* TEXT */
+
+.overlay p{
+    font-size: 24px;
+    color: #ffcc00;
+    line-height: 1.7;
+    margin-bottom: 35px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+@media(max-width:768px){
+
+    .final-cta h2{
+        font-size:36px;
+    }
+
+    .involve-form{
+        padding:30px 20px;
+    }
+
+}
+@media (max-width: 800px) {
+
+    .hideOnMobile {
+        display:  none;
+        visibility: hidden;
+
+    }
+    .menubutton {
+        display: block;
+        visibility: visible;
+    }
+     .testimonial {
+        display: flex;
+        flex-wrap: wrap;    
+    }
+    .text {
+        width: 300px;
+    }
+
+
+    nav ul {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        width: 100%;
+        display: flex;
+        background: white;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        height: auto;
+        padding: 20px 30px;
+        padding-bottom: 50px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .involve-grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+       
+    }
+    .involve-card {
+        align-items: center;
+        width: 70%;
+        justify-content: center;
+    }
+   
+    
+
+    nav ul.active {
+        display: flex;
+    }
+}
+@media (max-width:400px){
+
+.footer{
+
+    grid-template-columns:1fr;
+    padding:50px 20px;
+    gap:35px;
+
+}
+
+.footer-box{
+
+    width:100%;
+    text-align:center;
+    align-items:center;
+
+}
+
+.footer-box h1{
+
+    font-size:24px;
+
+}
+
+.footer-box p,
+.footer-box li,
+.footer-box a{
+
+    font-size:15px;
+
+}
+
+.footer-box ul{
+
+    padding:0;
+    margin:0;
+
+}
+
+.footer-box form{
+
+    width:100%;
+    max-width:280px;
+
+}
+
+.footer-box input{
+
+    width:100%;
+
+}
+
+.footer-box img{
+
+    width:110px;
+    height:auto;
+
+}
+
+.social{
+
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+
+}
+
+}
+
+
+</style>
+</head>
+<body>
+    <header>
+  <a class="logo" href="#"><img src="img/Nexo-Girls_No_background.png" alt="logo" width="80px" height=""></a>
+
+  <nav>
+            
+            <ul class="navbar"  id="navLinks">
+                <li class="logo"></li>
+                <li onclick="hidenavbar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                 <li><a href="home.html">Home</a></li>
+                 <li class="dropdown">
+
+    <a href="about.html">
+        About Us
+        <i class="fa-solid fa-chevron-down"></i>
+    </a>
+
+    <ul class="dropdown-menu">
+
+        <li><a href="about.html">About Nexo Girls</a></li>
+
+        <li><a href="milestone.html">Milestones</a></li>
+
+        <li><a href="meet_team.html">Meet Our Team</a></li></ul></li>
+                 <li><a href="Program.html">Program</a></li>
+                 <li class=" dropdown">
+
+
+
+    <a href="#">
+
+        Get Involved
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+
+    <ul class="dropdown-menu">
+
+
+<li><a href="getinvolve.html">Get Involved</a></li>
+        <li><a href="donate.html">Donate</a></li>
+
+
+
+        <li><a href="partnership.html">Partners</a></li>
+
+
+
+        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
+
+
+
+    </ul>
+
+
+
+</li>
+                 <li><a href="contact.html">Contact us</a></li>
+                 <li> <a class="donate" href="donate.html">Donate to us</a></li>
+                
+                 </ul>
+               <div class="hideOnMobile">
+                 <ul>
+                  <li class="hideOnMobile"><a href="home.html">Home</a></li>
+                  <li class="hideOnMobile dropdown">
+
+    <a href="about.html">
+        About Us
+        <i class="fa-solid fa-chevron-down"></i>
+    </a>
+
+    <ul class="dropdown-menu">
+        <li><a href="about.html">About Nexo Girls</a></li>
+        <li><a href="milestone.html">Milestones</a></li>
+        <li><a href="meet_team.html">Meet Our Team</a></li>
+    </ul>
+
+</li>
+                 <li class="hideOnMobile"><a href="Program.html">Program</a></li>
+                <li class="hideOnMobile dropdown">
+
+
+
+    <a href="#">
+
+        Get Involved
+
+        <i class="fa-solid fa-chevron-down"></i>
+
+    </a>
+
+
+
+    <ul class="dropdown-menu">
+
+
+<li><a href="getinvolve.html">Get Involved</a></li>
+        <li><a href="donate.html">Donate</a></li>
+
+
+
+        <li><a href="partnership.html">Partners</a></li>
+
+
+
+        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
+
+
+
+    </ul>
+
+
+
+</li>
+                 <li class="hideOnMobile"><a href="contact.html">Contact us</a></li>
+                 <li class="hideOnMobile"> <a class="donate" href="donate.html">Donate to us</a></li>
+                 </div>
+                <li class="menubutton" onclick="shownavbar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+            
+           </ul>
+        </nav>
+</header>
+
+
+<section>
+    <div class="hero"><div class="hero">
+    <div class="overlay">
+        <h1>Volunteer</h1>
+
+         <p class="join">
+                Ready to Rise, Lead, and Make an Impact?
+            </p>
+
+        <a href="contact.html" class="btn primary-btn">Join Us</a>
+                
+    </div>
+    </div>
+    </section>
+    <!-- ================= APPLICATION FORM ================= -->
+
+<section class="application-section">
+
+    <div id="ostory">
+        <h2>Application Form</h2>
+        <span class="overline"></span>
+    </div>
+
+    <form class="involve-form">
+
+        <div class="form-grid">
+
+            <input type="text" placeholder="Full Name">
+
+            <input type="email" placeholder="Email Address">
+
+            <input type="tel" placeholder="Phone Number">
+
+            <input type="text" placeholder="Skills">
+
+            <input type="text" placeholder="Availability">
+
+            <select>
+                <option>Area of Interest</option>
+                <option>Community Management</option>
+                <option>People & Culture</option>
+                <option>Content Curation</option>
+                <option>Media & Documentation</option>
+                <option>Websit Development</option>
+                <option>Graphic Design</option>
+            </select>
+
+        </div>
+
+        <textarea placeholder="Why this role"></textarea>
+
+        <button type="submit" class="submit-btn">
+            Submit Application
+        </button>
+
+    </form>
+
+</section>
+<footer>
+    <div class="copyright">
+        <p>Al-Ayan copyright@</p>
+    </div>
+    </footer>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
