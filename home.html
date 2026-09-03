@@ -334,7 +334,7 @@ nav ul li a:not(.donate):hover::after {
     font-size: 15px;
     line-height: 1.8;
     color: #c2c1c1;
-    max-width: 620px;
+    max-width: 720px;
     padding: 0 20px;
     margin: auto;
 }
@@ -529,7 +529,7 @@ section {
 .card1 h3,
 .card2 h3,
 .card5 h3 {
-    color: #ffcc00;
+    color: #274001;
 }
 
 /* Heading inside paragraph */
@@ -596,6 +596,9 @@ section {
         font-size: 0.8em;
         margin-bottom: 8px;
         margin-top: 5px;
+    }
+    #ready-to-rise {
+        font-size: 1.5em;
     }
 }
 #impact {
@@ -972,9 +975,7 @@ section {
     cursor: pointer;
     transition: 0.3s ease;
 }
-
 /* ICON HOVER */
-
 .testimonial .text .bx {
     padding: 10px;
     background: #274001;
@@ -1011,7 +1012,7 @@ section {
     margin: auto;
 }
 .footer1 .text1 #ready-to-rise {
-    font-size: 2.2em;
+    font-size: 2em;
     color: #ffcc00;
     margin-bottom: 20px;
 }
@@ -1047,7 +1048,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 40px;
-}.footer-box h2{
+}.footer-box h3{
     font-size: 20px;
     margin-bottom: 15px;
     color: #274001;
@@ -1144,7 +1145,7 @@ h2 {
     background: transparent;
     color: #274001;
 }
-.footer-box h2 {
+.footer-box h3 {
     color: #274001;
 }
 .footer-box li {
@@ -1329,8 +1330,21 @@ h2 {
 .donate-btn:hover{
     background:#274001;
 }
+.btn, .btn-primary {
+    background-color: white;
+    border: 3px solid #274001;
+    color: #274001;
+}
+.btn-primary1 {
+    background-color: white;
+    border: 3px solid #ffcc00;
+    color: #274001;
+}
+
 
 /* Mobile */
+
+
 
 @media(max-width:480px){
 
@@ -1349,6 +1363,26 @@ h2 {
     font-weight: 900;
 
 }
+    .footer1 h2 {
+        font-size: 1.2em;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .text1 {
+        width: 100%;
+        max-width: 450px;
+    }
+    .btn-primary {
+        padding: 10px 10px;
+        font-size: 10px;
+    }
+    .footer-box form {
+        width: 300px;
+    }
+  
+   
 }  
 @media(max-width: 380px){
     .overlay h1{
@@ -1357,7 +1391,12 @@ h2 {
     font-weight: 800;
 
 }
+.btn-primary {
+        padding: 10px 10px;
+        font-size: 10px;
+    }
 }
+
 /* RESPONSIVE */
 @media(max-width: 900px){
     .text{
@@ -1399,6 +1438,9 @@ h2 {
         width: 100%;
         max-width: 400px;
     }
+    .footer1 .text1 #ready-to-rise {
+        font-size: 1.7em;
+    }
 }
 
 @media(max-width: 1240px){
@@ -1415,17 +1457,18 @@ h2 {
         font-size: 16px;
         line-height: 1.9;
     }
-
     .video-container{
         height: 400px;
     }
-    .footer-box h1{
+    .footer-box h3{
     font-size: 1.5em;
     margin-bottom: 20px;
 }
+ .footer1 .text1 #ready-to-rise {
+        font-size: 1.9em;
+    }
 }
 @media (max-width: 1024px) {
-
     .footer {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1433,7 +1476,7 @@ h2 {
         transform: translate(-50%, -50%);
         left: 50%;
     }
-      .footer-box h1{
+      .footer-box h3{
     font-size: 1.3em;
     margin-bottom: 20px;
 }
@@ -1450,6 +1493,9 @@ h2 {
 .footer-box p {
     font-size: 0.8em;
 }
+.footer1 .text1 #ready-to-rise {
+        font-size: 1.8em;
+    }
 }
 @media (max-width: 800px) {
 
@@ -1482,22 +1528,32 @@ h2 {
         justify-content: center;
         
     }
+    .footer1{
+    height: 40vh;
+}
     .footer1 h2 {
-        font-size: 2em;
+        font-size: 1.5em;
     }
     .footer {
         display: grid;
         grid-template-columns: 1fr;
     }
+    .text1 {
+        width: 100%;
+        max-width: 350px;
+    }
+    .btn-primary {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
     .footer-box form {
         width: 300px;
     }
-
-   
-    
-
     nav ul.active {
         display: flex;
+    }
+    .footer1 .text1 #ready-to-rise {
+        font-size: 1.7em;
     }
 }
 @media (max-width:400px){
@@ -1507,8 +1563,11 @@ h2 {
     grid-template-columns:1fr;
     padding:50px 20px;
     gap:35px;
-
 }
+.btn-primary {
+        padding: 10px 10px;
+        font-size: 10px;
+    }
 
 .footer-box{
 
@@ -1558,6 +1617,10 @@ h2 {
     height:auto;
 
 }
+.btn-primary {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
 
 .social{
 
@@ -1566,7 +1629,18 @@ h2 {
     gap:12px;
 
 }
+.text1 h2{
+    font-size: 0.6em;
+}
+.footer1 .text1 #ready-to-rise {
+        font-size: 1.2em;
+    }
 
+}
+@media (max-width: 600px) {
+   .footer1 .text1 #ready-to-rise {
+        font-size: 1.4em;
+    }
 }
 </style>
 </head>
@@ -1577,7 +1651,6 @@ h2 {
   <a class="logo" href="#"><img src="img/Nexo-Girls_No_background.png" alt="logo" width="80px" height="UTF-8"></a>
 
   <nav>
-            
             <ul class="navbar"  id="navLinks">
                 <li class="logo"></li>
                 <li onclick="hidenavbar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
@@ -1595,9 +1668,9 @@ h2 {
 Get Involved <i class="fa-solid fa-chevron-down"></i></a>
     <ul class="dropdown-menu">
 <li><a href="getinvolve.html">Get Involved</a></li>
-        <li><a href="donate.html">Donate</a></li>
+       
         <li><a href="partnership.html">Partners</a></li>
- <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
+
 
     </ul>
 </li>
@@ -1624,39 +1697,15 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
 </li>
                  <li class="hideOnMobile"><a href="Program.html">Program</a></li>
                 <li class="hideOnMobile dropdown">
-
-
-
     <a href="#">
-
         Get Involved
-
         <i class="fa-solid fa-chevron-down"></i>
-
     </a>
-
-
-
     <ul class="dropdown-menu">
-
-<li><a href="#">Get Involved</a></li>
-
-        <li><a href="donate.html">Donate</a></li>
-
-
-
+<li><a href="getinvolve.html">Get Involved</a></li>
+       
         <li><a href="partnership.html">Partners</a></li>
-
-
-
-        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
-
-
-
     </ul>
-
-
-
 </li>
                  <li class="hideOnMobile"><a href="contact.html">Contact us</a></li>
                  <li class="hideOnMobile"> <a class="donate" href="donate.html">Donate to us</a></li>
@@ -1671,9 +1720,9 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
 <div class="slider">
   <div class="slide slide1">
     <div class="overlay">
-      <h1>Empowering Young Women  </h1>
-      <p>Through Digital Literacy</p>
-      <a class="btn" href="getinvolve.html">Get Invovled</a>
+      <h1>Empowering Young Girls, Transforming Future </h1>
+      <p>And creating a more inclusive and equitable world</p>
+      <a class="getinvolve" href="getinvolve.html">Get Involved</a>
     </div>
   </div>
 
@@ -1681,7 +1730,7 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
     <div class="overlay">
       <h1>Empowering Young Women  </h1>
       <p>Through Digital Literacy</p>
-      <a class="btn" href="getinvolve.html">Get Invovled</a>
+      <a class="getinvolve" href="getinvolve.html">Get Involved</a>
     </div>
   </div>
 
@@ -1689,28 +1738,28 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
     <div class="overlay">
       <h1>Empowering Young Women  </h1>
       <p>Through Digital Literacy</p>
-      <a class="btn" href="getinvolve.html">Get Invovled</a>
+      <a class="getinvolve" href="getinvolve.html">Get Involved</a>
     </div>
   </div>
   <div class="slide slide4">
     <div class="overlay">
       <h1>Empowering Young Women  </h1>
       <p>Through Digital Literacy</p>
-      <a class="btn" href="getinvolve.html">Get Invovled</a>
+      <a class="getinvolve" href="getinvolve.html">Get Involved</a>
     </div>
   </div>
   <div class="slide slide5">
     <div class="overlay">
-      <h1>Empowering Young Women  </h1>
-      <p>Through Digital Literacy</p>
-     <a class="btn" href="getinvolve.html">Get Invovled</a>
+      <h1>Empowering Young Girls, Transfrom Future </h1>
+      <p> And create a more inclusive and equitable world</p>
+     <a class="getinvolve" href="getinvolve.html">Get Involved</a>
     </div>
   </div>
   <div class="slide slide6">
     <div class="overlay">
       <h1>Empowering Young Women  </h1>
       <p>Through Digital Literacy</p>
-      <a class="btn" href="getinvolve.html">Get Invovled</a>
+      <a class="getinvolve" href="getinvolve.html">Get Involved</a>
     </div>
   </div>
 </div>
@@ -1779,7 +1828,7 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
 
                 <span class="overline"></span>
                 <p class="mission-text">
-                     At NAEXO GIRLS, we believe every girl deserves the opportunity to dream, grow, and lead with confidence. 
+                     At Nexo Girls, we believe every girl deserves the opportunity to dream, grow, and lead with confidence. 
         We are committed to creating a supportive space where young girls are empowered through education, mentorship, 
         technology, and leadership opportunities that help them unlock their full potential and create lasting impact 
         in their communities.
@@ -1835,7 +1884,7 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
         <div class="card card1">
             <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#274001"><path d="M38-428q-18-36-28-73T0-576q0-112 76-188t188-76q63 0 120 26.5t96 73.5q39-47 96-73.5T696-840q112 0 188 76t76 188q0 38-10 75t-28 73q-11-19-26-34t-35-24q9-23 14-45t5-45q0-78-53-131t-131-53q-81 0-124.5 44.5T480-616q-48-56-91.5-100T264-760q-78 0-131 53T80-576q0 23 5 45t14 45q-20 9-35 24t-26 34ZM0-80v-63q0-44 44.5-70.5T160-240q13 0 25 .5t23 2.5q-14 20-21 43t-7 49v65H0Zm240 0v-65q0-65 66.5-105T480-290q108 0 174 40t66 105v65H240Zm540 0v-65q0-26-6.5-49T754-237q11-2 22.5-2.5t23.5-.5q72 0 116 26.5t44 70.5v63H780ZM480-210q-57 0-102 15t-53 35h311q-9-20-53.5-35T480-210Zm-320-70q-33 0-56.5-23.5T80-360q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T160-280Zm640 0q-33 0-56.5-23.5T720-360q0-34 23.5-57t56.5-23q34 0 57 23t23 57q0 33-23 56.5T800-280Zm-320-40q-50 0-85-35t-35-85q0-51 35-85.5t85-34.5q51 0 85.5 34.5T600-440q0 50-34.5 85T480-320Zm0-160q-17 0-28.5 11.5T440-440q0 17 11.5 28.5T480-400q17 0 28.5-11.5T520-440q0-17-11.5-28.5T480-480Zm0 40Zm1 280Z"/></svg>
              <h3 class="impact-number" data-target="56000">0+</h3>
-            <p> <strong>Reached through our global Advocacy Campaigns</strong> </p>
+            <p> <strong>Through our global Advocacy Campaigns</strong> </p>
             <i class="bx bx-right-arrow-alt"></i>
         </div>
 
@@ -1850,7 +1899,7 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
             <svg xmlns="http://www.w3.org/2000/svg" height="50px" viewBox="0 -960 960 960" width="50px" fill="#274001"><path d="M617.5-587.5Q600-605 600-630t17.5-42.5Q635-690 660-690t42.5 17.5Q720-655 720-630t-17.5 42.5Q685-570 660-570t-42.5-17.5Zm-360 0Q240-605 240-630t17.5-42.5Q275-690 300-690t42.5 17.5Q360-655 360-630t-17.5 42.5Q325-570 300-570t-42.5-17.5Zm180 110Q420-495 420-520t17.5-42.5Q455-580 480-580t42.5 17.5Q540-545 540-520t-17.5 42.5Q505-460 480-460t-42.5-17.5Zm0-220Q420-715 420-740t17.5-42.5Q455-800 480-800t42.5 17.5Q540-765 540-740t-17.5 42.5Q505-680 480-680t-42.5-17.5Zm2 534.5q-20.5-3-39.5-8v-143q0-35 23.5-60.5T480-400q33 0 56.5 25.5T560-314v143q-19 5-39.5 8t-40.5 3q-20 0-40.5-3ZM340-192q-20-8-38.5-18T266-232q-28-20-44.5-52T205-352q0-26-5.5-48.5T180-443q-10-13-37.5-39.5T92-532q-11-11-11-28t11-28q11-11 28-11t28 11l153 145q20 18 29.5 42.5T340-350v158Zm280 0v-158q0-26 10-51t29-42l153-145q12-11 28.5-11t27.5 11q11 11 11 28t-11 28q-23 23-50.5 49T780-443q-14 20-19.5 42.5T755-352q0 36-16.5 68.5T693-231q-16 11-34.5 21T620-192Z"/></svg>
             
         <h3 class="impact-number" data-target="20">20+</h3>
-            <p><strong>Countries reached across Africa and beyond</strong> <br></p>
+            <p><strong>Countries reached across Africa</strong> <br></p>
             <i class="bx bx-right-arrow-alt"></i>
         </div>
 
@@ -1882,8 +1931,8 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
       <div class="service">
         <img src="img/upskilss.jpg" alt="Massage Therapy">
         <h3>Upskill</h3>
-        <p> Digital skills training program designed to equip young women with basics of 8 carerr-ready  skills in teach, leadership,
-            and entrepreneurship, in 8 days.This include, digital marketing, data analysis, and more.
+        <p> Digital skills training program designed to equip young women with basics of 8 career-ready  skills in tech, leadership,
+            and entrepreneurship, in 8 days.This program empowers girls to gain practical skills.
         </p>
         <a class="donate2" href="Program.html">Learn more</a> 
         </p>
@@ -1893,8 +1942,8 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
       <div class="service">
         <img src="img/techer.jpg" alt="Meditation">
         <h3>Tech4Her</h3>
-        <p>A Nexo Girls initiative that equips young women with essential digital skills, technology awareness, and online safety knowledge to build confidence and thrive in the digital world.
-            
+        <p>An initiative that equips young women with essential digital skills, technology awareness, and online safety knowledge to build confidence and thrive in the digital world.
+            This includes worrkshops and mentorship.
         </p>
         <a class="donate2" href="Program.html">Learn more</a>
         </p>
@@ -1903,24 +1952,24 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
 
       <div class="service">
         <img src="img/slide1.jpg" alt="Health Walks">
-        <h3>ProperHer</h3>
-        <p>A Nexo Girls initiative that connects young women with experienced professionals who provide career guidance, personal development support, and mentorship to help them achieve their goals.</p>
+        <h3>PropelHer</h3>
+        <p>An initiative that connects young women with experienced professionals who provide career guidance, personal development support, and mentorship to help them achieve their goals.</p>
         <a class="donate2" href="Program.html">Learn more</a>
         </p>
         <i class="bx bx-right-arrow-alt"></i>
       </div>
       <div class="service">
-        <img src="img/techsummer.jpeg" alt="Massage Therapy">
+        <img src="img/girlshackforimapct.jpg" alt="Massage Therapy">
         <h3>Girls Hack for Impact</h3>
         <p>
- A Neo Girls initiative that empowers young women to use technology to solve community challenges, build innovative solutions, gain practical skills, and receive mentorship throughout the program.
+ An initiative that empowers young women to use technology to solve community challenges, build innovative solutions, gain practical skills, and receive mentorship throughout the program.
 </p>
         <a class="donate2" href="#">Learn more</a> 
         </p>
         <i class="bx bx-right-arrow-alt"></i>
       </div>
 
-      <a class="getinvolve" href="Program.html"> View more here</a>
+      <a class="btn btn-primary1" href="Program.html"> View more here</a>
     </div>
   </section>
  
@@ -1936,7 +1985,6 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
     <div class="partners-track">
 
         <!-- First Set -->
-        <div class="parts"><img src="img/original.png" alt=""></div>
         <div class="parts"><img src="img/ALU.png" alt=""></div>
         <div class="parts"><img src="img/alusive.png" alt=""></div>
         <div class="parts"><img src="img/suas.jpg" alt=""></div>
@@ -1947,7 +1995,6 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
         <div class="parts"><img src="img/EU Logo.png" alt=""></div>
 
         <!-- Duplicate Set -->
-        <div class="parts"><img src="img/original.png" alt=""></div>
         <div class="parts"><img src="img/ALU.png" alt=""></div>
         <div class="parts"><img src="img/alusive.png" alt=""></div>
         <div class="parts"><img src="img/suas.jpg" alt=""></div>
@@ -1976,14 +2023,14 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
   <section class="testimonials-section">
     <div class="testimonial">
         <div class="text">
-            <p>Being sponsored by Nexo Girls to attend the 2024 She Code Africa Summit was a turning point for me. The experience refueled my confidence, giving me the motivation to actively bring my skills and ideas to life. I highly recommend joining the Nexo Girls Metaverse for every Nexo Girlie. </p>
+            <p>Being sponsored by Nexo Girls to attend the 2024 She Code Africa Summit was a turning point for me. The experience refueled my confidence, giving me the motivation to actively bring my skills and ideas to life. I highly recommend joining the Nexo Girls Metaverse for every Girlie. </p>
                 <div class="display">
                 <h3><svg xmlns="http://www.w3.org/2000/svg" height="18x" viewBox="0 -960 960 960" width="18px" fill="#314D1C"><path d="M240-440v-80h480v80H240Z"/></svg>  Peace Roberts</h3></div>
                 <i class="bx bx-right-arrow-alt"></i>
         </div>
 
         <div class="text">
-            <p>Through the FYG Opski program, I gained valuable skills in web development, freelancing, and content writing. It strengthened my passion for technology, boosted my confidence, and showed me how to turn my skills into meaningful opportunities for personal and professional growth.</p>
+            <p>Through the upskill program, I gained valuable skills in web development, freelancing, and content writing. It strengthened my passion for technology, boosted my confidence, and showed me how to turn my skills into meaningful opportunities for personal and professional growth.</p>
                 <div class="display">
                 <h3> <svg xmlns="http://www.w3.org/2000/svg" height="18x" viewBox="0 -960 960 960" width="18px" fill="#314D1C"><path d="M240-440v-80h480v80H240Z"/></svg>Deborah Russell</h3></div>
                 <i class="bx bx-right-arrow-alt"></i>
@@ -2004,19 +2051,20 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
                 <h2 id="ready-to-rise">Ready to Rise, Lead, and Make an Impact?</h2>
                 <p>Take the first step toward empowerment, growth, and opportunity with Nexo Girls
                 </p>
+                <a class="btn btn-primary" href="getinvolve.html">Get Involved</a>  
                  
             </div>
             </div>
         </div>
        <section class="footer" id="footer">
          <div class="footer-box">
-            <a href="#" class="logo"><i class="bx bxs-basket"></i></a>
-            <h1>Contact & Location</h1>
+          
+            <h3>Contact</h3>
             <ul>
          <li> <a href=""><i class="fa-solid fa-phone"></i> +233245210865</a> </li>
            <li>  <a href="#"><i class="fa-solid fa-envelope"></i>info@nexogirls.org</a></li>
           <li> <a href="https://lnk.bio/nexogirls "><i class="fa-solid fa-globe"></i>www.nexogirls.org</a> </li> 
-          <a href="#"><strong>Follow Us On Social Media</strong><Br></Br>
+          <strong>Follow Us On Social Media</strong><Br>
            <li> <div class="social">
              <a href="https://www.facebook.com/nexogirls"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.instagram.com/nexogirls"><i class="fa-brands fa-instagram"></i></a>
@@ -2028,7 +2076,7 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
     </ul>
         </div>
         <div class="footer-box">
-            <h1>About Us</h1>
+            <h3>About Us</h3>
           <ul>
              <li>  <a href="about.html#ourstory">Our Story</a></li>
               <li> <a href="home.html#impact">Our Impact</a></li>
@@ -2038,7 +2086,7 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
             </ul>
         </div>
         <div class="footer-box">
-            <h1>Useful Links</h1>
+            <h3>Useful Links</h3>
          <ul>
          <li> <a href="donate.html">Donating To us</a> </li> 
           <li> <a href="volunteer.html">Applying to Volunteer</a> </li> 
@@ -2048,17 +2096,17 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
             </ul> 
         </div>
         <div class="footer-box">
-            <h1>Make Suggestion</h1>
-            <p>You can make a suggestion or ask question<br>By sending us an email. And Subscribe to our Newsletter</p>
+            <h3>Make Suggestion</h3>
+            <p>You can make a suggestion or ask question. By sending us an email. And Subscribe to our Newsletter</p>
             
            <iframe src="https://hacth.substack.com/embed?transparent=1" width="100%" height="150" style="border: 0; background: transparent; color:#ffcc00" frameborder="0" scrolling="no"></iframe>
-            <img src="img/climi1.png" alt="" height="150px" width="150px">
+            <img src="img/robert.png" alt="" height="100px" width="200px">
         </div>
          
           
     </section>
     <div class="copyright">
-        <p>Al-Ayan copyright@</p>
+        <p>All right reserved Nexo Girls©2026</p>
     </div>
     </footer>
 

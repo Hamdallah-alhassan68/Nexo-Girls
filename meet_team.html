@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    
     <style>
 * {
   margin: 0;
@@ -56,9 +57,7 @@ nav {
 nav ul {
   display: flex;
   gap: 20px;
-   
-   
-    top: 90px;
+  top: 90px;
   right: 0;
   align-items:center;
   list-style: none;
@@ -95,7 +94,6 @@ nav ul li a:not(.donate):hover::after {
   height: 100px;
   padding: 10px 15px;
   border-radius: 13px;
-  
 }
 .donate:hover {
   background: #5d6d3e;
@@ -403,6 +401,25 @@ section {
     margin-right: 10px;
     transition: 0.3s;
 }
+.social a i {
+    font-size: 25px;
+}
+
+.social a:hover{
+    color: darkgreen;
+}
+.footer-box form{
+    display: flex;
+    align-items: center;
+    background: rgb(230, 229, 229);
+    padding: 8px;
+    height: 40px;
+    width: 300px;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+
 #ostory{
     text-align: center;
     margin-bottom: 3px;
@@ -528,9 +545,15 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 40px;
-}.footer-box h2{
+}.footer-box h3{
     font-size: 20px;
     margin-bottom: 15px;
+    color: #274001;
+}
+
+.footer-box p{
+    font-size: 20px;
+    line-height: 1.7;
     color: #274001;
 }
 
@@ -604,9 +627,18 @@ footer {
     background: transparent;
     color: #274001;
 }
-.footer-box h2 {
+.footer-box h3 {
     color: #274001;
 }
+.footer-box li {
+    list-style: none;
+}
+
+.footer-box form i{
+    color: #274001;
+    margin: 0 10px;
+}
+
 
 .footer-box form i{
     color: #274001;
@@ -622,6 +654,14 @@ footer {
     border-radius: 15px;
     margin-top: 10px;
 }
+.copyright{
+    text-align: center;
+    padding: 20px;
+    background: #274001;
+    color: #aaa;
+    font-size: 14px;
+}
+
 .team-role{ 
     color: #ffcc00;
     font-size: 28px;
@@ -720,6 +760,41 @@ footer {
     margin-bottom: 18px;
 }
 
+
+.tab-btn{
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:#fff;
+    color:#274001;
+    font-weight:700;
+    cursor:pointer;
+    transition:0.3s ease;
+}
+
+.tab-btn:hover{
+    background:#ffcc00;
+}
+
+.tab-btn.active{
+    background:#ffcc00;
+    color:#274001;
+}
+.volunteer-group{
+    max-width:1200px;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+.volunteer-tabs{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin:30px 0;
+    flex-wrap:wrap;
+}
+
 .linkedin-link{
     display: inline-flex;
     justify-content: center;
@@ -765,6 +840,24 @@ footer {
     color: #aaa;
     font-size: 14px;
 }
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    align-items: center;
+    column-gap: 0.5rem;
+}.socials a{
+    font-size: 25px;
+    color: #274001;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.socials a:hover{
+    color: darkgreen;
+}
+
 /* ================================
    RESET
 ================================ */
@@ -820,7 +913,7 @@ footer {
 ================================ */
 
 .team-grid {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
 
     display: grid;
@@ -829,7 +922,16 @@ footer {
 
     gap: 40px;
 }
-
+.footer-box p {
+    line-height: 1.7;
+    font-size: 1em;
+    font-size: 20px;
+    color: #274001;
+    text-align: justify;
+ }
+.footer-box h3{
+    color: #274001;
+}
 
 /* ================================
    MEMBER CARD
@@ -867,7 +969,7 @@ footer {
 
 .member-card img {
     width: 100%;
-    height: 200px;
+    height: 300px;
 
     object-fit: cover;
 
@@ -899,6 +1001,15 @@ footer {
     line-height: 1.5;
 
     color: #666;
+}
+.footer-box p {
+    line-height: 1.8;
+    margin-top: 20px;
+    font-size: 1em;
+    text-align: justify;
+ }
+.footer-box h3{
+    color: #274001;
 }
 
 
@@ -937,6 +1048,9 @@ footer {
 
     .member-card img {
         height: 250px;
+    }
+    .overlay h1 {
+        font-size: 3em;
     }
 
 }
@@ -985,6 +1099,9 @@ footer {
     .member-info p {
         font-size: 0.72rem;
     }
+    .overlay h1 {
+        font-size: 2.5em;
+    }
 }
 
 
@@ -1016,32 +1133,11 @@ footer {
         }
 }
 @media (max-width: 1024px) {
-
-    .footer {
-        grid-template-columns: repeat(2, 1fr);
-    }
   
     .button {
         transform: translate(-50%, -50%);
         left: 50%;
     }
-      .footer-box h1{
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-.footer-box h1{
-    font-size: 1.3em;
-    
-}
-.footer-box .social a{
-    font-size: 1em;
-}
-.footer-box form{
-    width: 300px;
-}
-.footer-box p {
-    font-size: 0.9em;
-}
 .problems-container{
     display: flex;
     justify-content: center;
@@ -1051,6 +1147,9 @@ footer {
 }
 .problem-card {
     width: 300px;
+}
+.overlay h1 {
+    font-size: 3em; 
 }
 
  }
@@ -1064,13 +1163,6 @@ footer {
     .menubutton {
         display: block;
         visibility: visible;
-    }
-    .footer {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    .footer-box form {
-        width: 300px;
     }
 
     nav ul {
@@ -1091,17 +1183,202 @@ footer {
         justify-content: center;
         
     }
-    .footer-box form{
-    width: 250px;
-    gap: 0;
-    padding: 0;
-}
    
     .nav ul.active {
         display: flex;
     }
  }
  @media (max-width:400px){
+.overlay h1{
+    padding: 0 10px;
+    font-size: 3em;
+    font-weight: 900;
+
+}
+.overlay p{
+    padding: 0 10px;
+    font-size: 1em;
+}
+
+
+}
+@media(max-width: 1000px){
+
+    .team-container{
+        grid-template-columns: 1fr;
+    }
+
+    .team-card{
+        height: 500px;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    .mission-text {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: center;
+       
+    }
+    
+}
+@media(max-width: 380px){
+    .overlay h1{
+    padding: 0 10px;
+    font-size: 2.5em;
+    font-weight: 700;
+
+}
+.overlay p{
+    padding: 0 10px;
+    font-size: 0.8em;
+
+}
+}
+@media(max-width: 900px){
+    .text{
+        width: 100%;
+        max-width: 350px;
+    }
+    .footer-box form {
+        width: 270px;
+       
+    }
+    .service{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .partners h2{
+        font-size: 32px;
+    }
+
+    .services h2{
+        font-size: 34px;
+    }
+    .footer {
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .Aboutus-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box{
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+@media(max-width: 1240px){
+
+    .story-grid{
+        grid-template-columns: 1fr;
+    }
+
+    #ostory h2{
+        font-size: 34px;
+    }
+
+    .founder-quote{
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    .video-container{
+        height: 400px;
+    }
+    .footer-box h3{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+}
+@media (max-width: 1024px) {
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .button {
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+      .footer-box h3    {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+.footer-box li{
+    font-size: 1em;
+   
+}
+.footer-box .social a{
+    font-size: 1em;
+}
+.footer-box form{
+    width: 300px;
+}
+.footer-box p {
+    font-size: 0.8em;
+}
+}
+@media (max-width: 800px) {
+
+    .hideOnMobile {
+        display:  none;
+        visibility: hidden;
+
+    }
+    .menubutton {
+        display: block;
+        visibility: visible;
+    }
+
+
+    nav ul {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        width: 100%;
+        display: flex;
+        background: white;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        height: auto;
+        padding: 20px 30px;
+        padding-bottom: 40px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+       
+    }
+    .footer1 h2 {
+        font-size: 2em;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .footer-box form {
+        width: 300px;
+    }
+
+   
+   
+
+    nav ul.active {
+        display: flex;
+    }
+}
+@media (max-width:400px){
 
 .footer{
 
@@ -1160,73 +1437,17 @@ footer {
 
 }
 
-.social{
+.socials{
 
     justify-content:center;
     flex-wrap:wrap;
     gap:12px;
 
 }
-.overlay h1{
-    padding: 0 10px;
-    font-size: 3em;
-    font-weight: 900;
 
 }
-.overlay p{
-    padding: 0 10px;
-    font-size: 1em;
-}
+ 
 
-}
-@media(max-width: 1000px){
-
-    .team-container{
-        grid-template-columns: 1fr;
-    }
-
-    .team-card{
-        height: 500px;
-        width: 80%;
-        justify-content: center;
-        align-items: center;
-        margin-left: 50px;
-        margin-right: 50px;
-    }
-    .mission-text {
-        padding-left: 20px;
-        padding-right: 20px;
-        text-align: center;
-       
-    }
-     .footer-box form {
-        width: 270px;
-        
-    }
-    .footer {
-        justify-content: center;
-        align-items: center;
-    }
-    .footer-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-@media(max-width: 380px){
-    .overlay h1{
-    padding: 0 10px;
-    font-size: 2.5em;
-    font-weight: 700;
-
-}
-.overlay p{
-    padding: 0 10px;
-    font-size: 0.8em;
-
-}
-}
 </style>
 </head>
 <body>
@@ -1252,9 +1473,9 @@ footer {
 Get Involved <i class="fa-solid fa-chevron-down"></i></a>
     <ul class="dropdown-menu">
 <li><a href="getinvolve.html">Get Involved</a></li>
-        <li><a href="donate.html">Donate</a></li>
+        
         <li><a href="partnership.html">Partners</a></li>
- <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
+
 
     </ul>
 </li>
@@ -1298,7 +1519,7 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
 
 <li><a href="#">Get Involved</a></li>
 
-        <li><a href="donate.html">Donate</a></li>
+        <li><a href="getinvolve.html">Get Involved</a></li>
 
 
 
@@ -1306,7 +1527,7 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
 
 
 
-        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
+
 
 
 
@@ -1437,21 +1658,37 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
     
 
     <!-- ALL VOLUNTEERS -->
-    <div class="team-grid">
 
+    <div class="volunteer-tabs">
+    <button class="tab-btn active" onclick="showVolunteers('v2026', this)">
+        2026/2027
+    </button>
+
+    <button class="tab-btn" onclick="showVolunteers('v2025', this)">
+        2024/2025
+    </button>
+
+    <button class="tab-btn" onclick="showVolunteers('v2022', this)">
+        2021/2022
+    </button>
+</div>
+
+  
+        <div class="v2026 volunteer-group">
         <!-- 1. Benita -->
         <div class="member-card">
-            <img src="https://cdn.pixabay.com/photo/2022/05/05/01/13/woman-7175038_1280.jpg"
+            <img src="img/BENITA OLONIYO.JPG"
                  alt="Benita">
 
             <div class="member-info">
-                <h3>Benita</h3>
+                <h3>Benita Oloniyo</h3>
                 <p>Community Management — Lead</p>
             </div>
         </div>
 
 
         <!-- 2. Ann -->
+  
         <div class="member-card">
             <img src="https://img.freepik.com/premium-photo/confident-determined-west-african-woman-isolated-solid-background-copy-space-available_765582-11393.jpg"
                  alt="Ann">
@@ -1489,7 +1726,7 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
 
         <!-- 5. Eniola -->
         <div class="member-card">
-            <img src="https://static.vecteezy.com/system/resources/thumbnails/056/505/092/small_2x/a-young-black-woman-in-a-business-suit-free-photo.jpeg"
+            <img src="img/ENIOLA IBRAHIM .jpg"
                  alt="Eniola">
 
             <div class="member-info">
@@ -1584,21 +1821,227 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
 
     </div>
 
+
+ <div class="v2025 volunteer-group" style="display:none;">
+        <!-- 1. Benita -->
+        <div class="member-card">
+            <img src="img/Ezeliora Godsfavour .JPG"
+                 alt="Benita">
+
+            <div class="member-info">
+                <h3>Ezeliora Godsfavour</h3>
+                <p>Community Management</p>
+            </div>
+        </div>
+
+
+        <!-- 2. Ann -->
+        <div class="member-card">
+            <img src="img/Francisca Ogheneochuko Ogho.png"
+                 alt="Ann">
+
+            <div class="member-info">
+                <h3>Ogho Francisca Ogheneochuko</h3>
+                <p>Outreach team</p>
+            </div>
+        </div>
+
+
+        <!-- 3. Chinonso -->
+        <div class="member-card">
+            <img src="img/Theodora Omunizua.JPG"
+                 alt="Chinonso">
+
+            <div class="member-info">
+                <h3>Theodora Omunizua </h3>
+                <p>Events Coordinator</p>
+            </div>
+        </div>
+
+
+        <!-- 4. Chidimma -->
+        <div class="member-card">
+            <img src="img/IDARA PATRICK.JPG"
+                 alt="Chidimma">
+
+            <div class="member-info">
+                <h3>Idara Patrick Essien</h3>
+                <p>Outreach Coordinator </p>
+            </div>
+        </div>
+
+
+        <!-- 5. Eniola -->
+        <div class="member-card">
+            <img src="img/BENITA OLONIYO.JPG"
+                 alt="Eniola">
+
+            <div class="member-info">
+                <h3>Benita Oloniyo</h3>
+                <p>Community Management Lead</p>
+            </div>
+        </div>
+
+
+        <!-- 6. Scholastical -->
+        <div class="member-card">
+            <img src="img/Augustine Chinonso.jpg"
+                 alt="Scholastical">
+
+            <div class="member-info">
+                <h3>Augustine Chinonso Favour (Lunar)</h3>
+                <p>Content Curation Lead</p>
+            </div>
+        </div>
+
+
+        <!-- 7. Hamdallah -->
+        <div class="member-card">
+            <img src="img/ENIOLA IBRAHIM .jpg"
+                 alt="Hamdallah Alhassan">
+
+            <div class="member-info">
+                <h3>Eniola Ibrahim</h3>
+                <p>Content Curator (Asst.)</p>
+            </div>
+        </div>
+
+
+        <!-- 8. Moses -->
+        <div class="member-card">
+            <img src="img/Abigail Adeponle .jpg"
+                 alt="Moses">
+
+            <div class="member-info">
+                <h3>Abigail Adeponle </h3>
+                <p>Outreach team</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="v2022 volunteer-group" style="display:none;">
+        <!-- 1. Benita -->
+        <div class="member-card">
+            <img src="img/Salimat Bello.png"
+                 alt="Benita">
+
+            <div class="member-info">
+                <h3>Bello Salimat Morenikeji</h3>
+                <p>Acting CEO</p>
+            </div>
+        </div>
+
+
+        <!-- 2. Ann -->
+        <div class="member-card">
+            <img src="img/Mojolaoluwa Dada.jpg"
+                 alt="Ann">
+
+            <div class="member-info">
+                <h3>Dada Oluwabusola Mojolaoluwa </h3>
+                <p>Researcher</p>
+            </div>
+        </div>
+
+
+        <!-- 3. Chinonso -->
+        <div class="member-card">
+            <img src="img/Francisca Ogheneochuko Ogho.png"
+                 alt="Chinonso">
+
+            <div class="member-info">
+                <h3>Ogho Francisca Ogheneochuko </h3>
+                <p>Financial Analyst</p>
+            </div>
+        </div>
+
+
+        <!-- 4. Chidimma -->
+        <div class="member-card">
+            <img src="img/Blessing Bolaji.jpg"
+                 alt="Chidimma">
+
+            <div class="member-info">
+                <h3>Blessing Bolaji</h3>
+                <p>Partnerships & Blog Team Lead </p>
+            </div>
+        </div>
+
+
+        <!-- 5. Eniola -->
+        <div class="member-card">
+            <img src="img/David Victor.png"
+                 alt="Eniola">
+
+            <div class="member-info">
+                <h3>David Victor</h3>
+                <p>Graphic Designer</p>
+            </div>
+        </div>
+
+
+        <!-- 6. Scholastical -->
+        <div class="member-card">
+            <img src="img/Gladens Popoola.jpeg"
+                 alt="Scholastical">
+
+            <div class="member-info">
+                <h3>Gladens Popoola</h3>
+                <p>Programs Lead</p>
+            </div>
+        </div>
+
+
+        <!-- 7. Hamdallah -->
+        <div class="member-card">
+            <img src="img/Patience Dominic.jpg"
+                 alt="Hamdallah Alhassan">
+
+            <div class="member-info">
+                <h3>Patience Dominic</h3>
+                <p>Ambassador (Delta State)</p>
+            </div>
+        </div>
+
+
+        <!-- 8. Moses -->
+        <div class="member-card">
+            <img src="img/OMOJEMINIYI DAMILOLA.jpg"
+                 alt="Moses">
+
+            <div class="member-info">
+                <h3>OMOJEMINIYI DAMILOLA </h3>
+                <p>Content Creator</p>
+            </div>
+        </div>
+
+        <div class="member-card">
+            <img src="img/Joshua Chinanz David.jpg"
+                 alt="Moses">
+
+            <div class="member-info">
+                <h3>Joshua Chinaza David </h3>
+                <p>Social Media Manager</p>
+            </div>
+        </div>
+ 
+    </div>
+
 </section>
 
   <footer>
         
-            
-       <section class="footer" id="footer">
-          <div class="footer-box">
-            <a href="#" class="logo"><i class="bx bxs-basket"></i></a>
-            <h1>Contact & Location</h1>
+      <section class="footer" id="footer">
+         <div class="footer-box">
+          
+            <h3>Contact</h3>
             <ul>
          <li> <a href=""><i class="fa-solid fa-phone"></i> +233245210865</a> </li>
            <li>  <a href="#"><i class="fa-solid fa-envelope"></i>info@nexogirls.org</a></li>
           <li> <a href="https://lnk.bio/nexogirls "><i class="fa-solid fa-globe"></i>www.nexogirls.org</a> </li> 
-          </ul><a href="#"><strong>Follow Us On Social Media</strong><Br></Br>
-            <li> <div class="social">
+          <strong>Follow Us On Social Media</strong><Br>
+           <li> <div class="socials">
              <a href="https://www.facebook.com/nexogirls"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.instagram.com/nexogirls"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/company/nexogirls/posts/"><i class="fa-brands fa-linkedin"></i></a>
@@ -1609,7 +2052,7 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
     </ul>
         </div>
         <div class="footer-box">
-            <h1>About Us</h1>
+            <h3>About Us</h3>
           <ul>
              <li>  <a href="about.html#ourstory">Our Story</a></li>
               <li> <a href="home.html#impact">Our Impact</a></li>
@@ -1619,7 +2062,7 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
             </ul>
         </div>
         <div class="footer-box">
-            <h1>Useful Links</h1>
+            <h3>Useful Links</h3>
          <ul>
          <li> <a href="donate.html">Donating To us</a> </li> 
           <li> <a href="volunteer.html">Applying to Volunteer</a> </li> 
@@ -1629,17 +2072,20 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
             </ul> 
         </div>
         <div class="footer-box">
-            <h1>Make Suggestion</h1>
-            <p>You can make a suggestion or ask question<br>By sending us an email</p>
-                      <iframe src="https://hacth.substack.com/embed?transparent=1" width="100%" height="150" style="border: 0; background: transparentco; color:#ffcc00" frameborder="0" scrolling="no"></iframe>
-            <img src="img/climi1.png" alt="" height="150px" width="150px">
+            <h3>Make Suggestion</h3>
+            <p>You can make a suggestion or ask question. By sending us an email. And Subscribe to our Newsletter</p>
+            
+           <iframe src="https://hacth.substack.com/embed?transparent=1" width="100%" height="150" style="border: 0; background: transparent; color:#ffcc00" frameborder="0" scrolling="no"></iframe>
+           <img src="img/robert.png" alt="" height="100px" width="200px">
         </div>
          
+          
     </section>
     <div class="copyright">
-        <p>Al-Ayan copyright@</p>
+        <p>All right reserved Nexo Girls©2026</p>
     </div>
     </footer>
+
     <script src="script.js"></script>
     <!-- Donation Popup -->
 <div class="donation-popup" id="donationPopup">
@@ -1690,6 +2136,26 @@ closeBtn.addEventListener("click", () => {
     sessionStorage.setItem("popupClosed","true");
 
 });
+
+function showVolunteers(groupClass, btn){
+
+    // Hide all volunteer groups
+    document.querySelectorAll('.volunteer-group').forEach(group => {
+        group.style.display = 'none';
+    });
+
+    // Remove active class from buttons
+    document.querySelectorAll('.tab-btn').forEach(button => {
+        button.classList.remove('active');
+    });
+
+    // Show selected group
+    document.querySelector('.' + groupClass).style.display = 'grid';
+
+    // Activate selected button
+    btn.classList.add('active');
+}
+
 </script>
 </body>
 </html>

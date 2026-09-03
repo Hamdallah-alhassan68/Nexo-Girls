@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
@@ -91,6 +91,10 @@ nav ul li a:not(.donate):hover::after {
   height: 100px;
   padding: 10px 15px;
   border-radius: 13px;
+}
+.donate:hover {
+  background: #5d6d3e;
+  color: #ffcc00;
 }
 
 .donate:hover {
@@ -355,58 +359,86 @@ section {
 }
 .footer{
     width: 100%;
-    margin-top: 80px;
     padding: 80px 8%;
     background: #ffcc00;
     color: #274001;
     display: grid;
-     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-}.footer-box h2{
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}.footer-box h3{
     font-size: 20px;
     margin-bottom: 15px;
     color: #274001;
 }
 
 .footer-box p{
-    font-size: 15px;
+    
     line-height: 1.7;
     color: #274001;
 }
 
 .footer-box a{
-    display: block;
+    display: inline-block;
     color: #274001;
     margin: 8px 0;
     text-decoration: none;
     transition: 0.3s;
 }
+h2 {
+    color: #ffcc00;
+}
+.title {
+    color: #274001;
+}
+.footer-box{
+    display: flex;
+    flex-direction: column;
+   
+}
+.footer-box a{
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: #274001;
+    margin: 10px 0;
+}
+
+
+.footer-box a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: #274001;
+    transition: width 0.3s ease;
+}
+
+.footer-box a:hover::after{
+    width: 100%;
+}
 
 .footer-box a:hover{
-    color: #ccff66;
+    color: #274001;
     padding-left: 5px;
 }
-.socials {
-     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
-}.socials a{
-    font-size: 20px;
-    color: #274001;
-    margin-right: 10px;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#ready-to-rise {
+    color: #ffcc00;
+   
 }
-.socials a i{
-    font-size: 25px;
-    color: #274001;
+.social {
+    margin-top: 10px;
     align-items: center;
+    column-gap: 0.5rem;
+}.social a{
+    font-size: 30px;
+    color: #274001;
     margin-right: 10px;
-    justify-content: center;
     transition: 0.3s;
+}
+.social a i {
+    font-size: 25px;
 }
 
 .social a:hover{
@@ -431,41 +463,31 @@ section {
     background: transparent;
     color: #274001;
 }
-.footer-box{
-    display: flex;
-    flex-direction: column;
-   
-}
-.footer-box a{
-    display: inline-block;
-    position: relative;
-    text-decoration: none;
+.footer-box h3 {
     color: #274001;
-    margin: 10px 0;
+}
+.footer-box li {
+    list-style: none;
 }
 
-.footer-box a::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -3px;
-    width: 0;
-    height: 2px;
+.footer-box form i{
+    color: #274001;
+    margin: 0 10px;
+}
+.copyright{
+    text-align: center;
+    padding: 20px;
     background: #274001;
-    transition: width 0.3s ease;
-}
-
-.footer-box a:hover::after{
-    width: 100%;
-}
-
-.footer-box a:hover{
-    color: #274001;
-    padding-left: 5px;
+    color: #aaa;
+    font-size: 14px;
 }
 #ready-to-rise {
     color: #ffcc00;
 }
+.footer-box li {
+    list-style: none;
+}
+
 .socials {
     margin-top: 10px;
     align-items: center;
@@ -492,13 +514,18 @@ section {
 }
 .footer-box li {
     list-style: none;
+
+}.footer-box h3{
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #274001;
 }
 
-.footer-box h1{
-    font-size: 2em;
-    margin-bottom: 20px;
+.footer-box p{
+    
+    line-height: 1.7;
+    color: #274001;
 }
-
 .footer-box form i{
     color: #274001;
     margin: 0 10px;
@@ -545,6 +572,24 @@ section {
 .menubutton {
     visibility: hidden;
 }
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    align-items: center;
+    column-gap: 0.5rem;
+}.socials a{
+    font-size: 25px;
+    color: #274001;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.socials a:hover{
+    color: darkgreen;
+}
+
 /* ===========================
       Floating Donation Popup
 =========================== */
@@ -655,113 +700,11 @@ section {
 .donate-btn:hover{
     background:#274001;
 }
-
-@media(max-width: 1000px){
-     .footer-box form {
-        width: 270px;
-        
-    }
-    .footer {
-        justify-content: center;
-        align-items: center;
-    }
-    .footer-box {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-}
-@media (max-width: 992px){
-
-    .footer{
-        grid-template-columns: repeat(2,1fr);
-        gap: 2rem;
-        padding: 50px 40px;
-    }
-
-    .footer-box{
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    .footer-box form{
-        width:100%;
-    }
-
-    .footer-box img{
-        width:130px;
-        height:auto;
-    }
-
-}
-@media (max-width:768px){
-
-    .footer{
-        grid-template-columns: 1fr;
-        padding:40px 25px;
-        gap:35px;
-    }
-
-    .footer-box{
-        width:100%;
-        text-align:left;
-        align-items:flex-start;
-        border-bottom:1px solid rgba(39,64,1,.15);
-        padding-bottom:25px;
-    }
-
-    .footer-box:last-child{
-        border-bottom:none;
-    }
-
-    .footer-box h1,
-    .footer-box h2{
-        font-size:24px;
-        margin-bottom:15px;
-    }
-
-    .footer-box a{
-        margin:8px 0;
-    }
-
-    .footer-box form{
-        width:100%;
-        max-width:100%;
-    }
-
-    .footer-box input{
-        width:100%;
-    }
-
-    .footer-box img{
-        width:120px;
-        height:auto;
-        margin-top:20px;
-    }
-
-    .socials{
-        display:flex;
-        justify-content:flex-start;
-        flex-wrap:wrap;
-        gap:15px;
-        margin-top:15px;
-    }
-
-}
 @media (max-width: 1024px) {
-
-    .footer {
-        grid-template-columns: repeat(2, 1fr);
-    }
    
     .button {
         transform: translate(-50%, -50%);
-        left: 50%;
-    }
-     .footer-box h1{
-    font-size: 1.5em;
-    margin-bottom: 20px;
+        left: 50%''
 }
 }
 @media (max-width: 800px) {
@@ -774,59 +717,9 @@ section {
     .menubutton {
         display: block;
         visibility: visible;
-    }
-     .footer-box h1{
-    font-size: 1em;
-    margin-bottom: 20px;
-}
- .footer-box li{
-    font-size: 1em;
-    margin-bottom: 20px;
+ }
 }
 @media (max-width: 800px){
-
-    .footer{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-        padding: 40px 20px;
-    }
-
-    .footer-box{
-        margin-bottom: 20px;
-    }
-
-    .footer-box h1,
-    .footer-box h2{
-        font-size: 22px;
-    }
-
-    .footer-box ul li{
-        margin: 8px 0;
-    }
-
-    .socials{
-        display: flex;
-        gap: 15px;
-        margin-top: 15px;
-    }
-
-    .footer-box form{
-        width: 100%;
-    }
-
-    .footer-box input{
-        width: 100%;
-        padding: 12px;
-    }
-
-    .footer-box img{
-        width: 120px;
-        height: auto;
-        margin-top: 20px;
-    }
-
-}
-
     nav ul {
         position: absolute;
         top: 20px;
@@ -853,64 +746,6 @@ section {
     }
 }
 @media (max-width:400px){
-
-.footer{
-
-    grid-template-columns:1fr;
-    padding:50px 20px;
-    gap:35px;
-
-}
-
-.footer-box{
-
-    width:100%;
-    text-align:center;
-    align-items:center;
-
-}
-
-.footer-box h1{
-
-    font-size:24px;
-
-}
-
-.footer-box p,
-.footer-box li,
-.footer-box a{
-
-    font-size:15px;
-
-}
-
-.footer-box ul{
-
-    padding:0;
-    margin:0;
-
-}
-
-.footer-box form{
-
-    width:100%;
-    max-width:280px;
-
-}
-
-.footer-box input{
-
-    width:100%;
-
-}
-
-.footer-box img{
-
-    width:110px;
-    height:auto;
-
-}
-
 .social{
 
     justify-content:center;
@@ -1071,6 +906,179 @@ section {
         padding: 5px 11px;
     }
 }
+@media(max-width: 900px){
+    .text{
+        width: 100%;
+        max-width: 350px;
+    }
+    .footer-box form {
+        width: 270px;
+       
+    }
+    .footer {
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+}
+
+@media(max-width: 1240px){
+    .footer-box h3{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+}
+@media (max-width: 1024px) {
+
+    .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .button {
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+      .footer-box h3    {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+.footer-box li{
+    font-size: 1em;
+   
+}
+.footer-box .social a{
+    font-size: 1em;
+}
+.footer-box form{
+    width: 300px;
+}
+.footer-box p {
+    font-size: 0.8em;
+}
+}
+@media (max-width: 800px) {
+
+    .hideOnMobile {
+        display:  none;
+        visibility: hidden;
+
+    }
+    .menubutton {
+        display: block;
+        visibility: visible;
+    }
+
+
+    nav ul {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        width: 100%;
+        display: flex;
+        background: white;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        height: auto;
+        padding: 20px 30px;
+        padding-bottom: 40px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+       
+    }
+    .footer1 h2 {
+        font-size: 2em;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .footer-box form {
+        width: 300px;
+    }
+
+   
+   
+
+    nav ul.active {
+        display: flex;
+    }
+}
+@media (max-width:400px){
+
+.footer{
+
+    grid-template-columns:1fr;
+    padding:50px 20px;
+    gap:35px;
+
+}
+
+.footer-box{
+
+    width:100%;
+    text-align:center;
+    align-items:center;
+
+}
+
+.footer-box h1{
+
+    font-size:24px;
+
+}
+
+.footer-box p,
+.footer-box li,
+.footer-box a{
+
+    font-size:15px;
+
+}
+
+.footer-box ul{
+
+    padding:0;
+    margin:0;
+
+}
+
+.footer-box form{
+
+    width:100%;
+    max-width:280px;
+
+}
+
+.footer-box input{
+
+    width:100%;
+
+}
+
+.footer-box img{
+
+    width:110px;
+    height:auto;
+
+}
+
+.socials{
+
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+
+}
+
+}
+ 
+
     </style>
 </head>
 <body>
@@ -1116,7 +1124,7 @@ section {
 
 
 <li><a href="getinvolve.html">Get Involved</a></li>
-        <li><a href="donate.html">Donate</a></li>
+       
 
 
 
@@ -1124,7 +1132,6 @@ section {
 
 
 
-        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
 
 
 
@@ -1173,15 +1180,12 @@ section {
 
 
 <li><a href="getinvolve.html">Get Involved</a></li>
-        <li><a href="donate.html">Donate</a></li>
+       
 
 
 
         <li><a href="partnership.html">Partners</a></li>
 
-
-
-        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
 
 
 
@@ -1273,7 +1277,7 @@ section {
     </div>
 
     <div class="program-card tech">
-        <img src="img/upskills.jpg" alt="Upskills 2.0">
+        <img src="img/Upskill 2.0 YT Thumbnail.png" alt="Upskills 2.0">
         <div class="program-content">
             <span class="tag">Tech</span>
             <h3>Upskills 2.0</h3>
@@ -1295,6 +1299,16 @@ section {
             </p>
         </div>
     </div>
+     <div class="program-card tech">
+        <img src="img/hackimapct.jpg" alt="Upskills 3.0">
+        <div class="program-content">
+            <span class="tag">Tech</span>
+            <h3>Girls Hack for Impact</h3>
+            <p>
+                An initiative that empowers young women to use technology to solve community challenges, build innovative solutions, gain practical skills, and receive mentorship throughout the program.
+            </p>
+        </div>
+    </div>
 
 
     <div class="program-card tech">
@@ -1310,7 +1324,7 @@ section {
     </div>
 
     <div class="program-card tech">
-        <img src="img/tech1.png" alt="Girls in STEM">
+        <img src="img/summercamp.jpg" alt="Girls in STEM">
         <div class="program-content">
             <span class="tag">Tech</span>
             <h3>Girls in STEM</h3>
@@ -1339,18 +1353,6 @@ section {
 
 
     <!-- ================= ADVOCACY ================= -->
-
-    <div class="program-card advocacy">
-        <img src="img/raise-her-voice-68.jpg" alt="Raise Her Voice">
-        <div class="program-content">
-            <span class="tag">Advocacy</span>
-            <h3>Raise Her Voice</h3>
-            <p>
-                Empowering girls and young women to confidently advocate
-                for themselves, their rights, and their communities.
-            </p>
-        </div>
-    </div>
 
   <!-- ================= ADVOCACY ================= -->
 
@@ -1432,21 +1434,6 @@ section {
 
 
 
-<div class="program-card advocacy">
-    <img src="img/GenderBased.jpg" alt="Gender Equality Campaigns">
-
-    <div class="program-content">
-        <span class="tag">Advocacy</span>
-
-        <h3>Gender Equality Campaigns</h3>
-
-        <p>
-            Raising awareness on gender equality through community
-            engagement, education, and digital advocacy initiatives that
-            encourage inclusion and equal opportunities.
-        </p>
-    </div>
-</div>
 
 
 
@@ -1456,7 +1443,7 @@ section {
         <img src="img/free.jpg" alt="Free Write">
         <div class="program-content">
             <span class="tag">Community Project</span>
-            <h3>Free Write</h3>
+            <h3>Feel Free Write (FF2WRITE)</h3>
             <p>
                 A volunteer-led literacy initiative encouraging reading,
                 writing, creativity, and self-expression among children.
@@ -1465,41 +1452,31 @@ section {
     </div>
 
     <div class="program-card community">
-        <img src="img/feel.jpg" alt="School Outreach">
+        <img src="img/dash&tell.jpg" alt="School Outreach">
         <div class="program-content">
             <span class="tag">Community Project</span>
-            <h3>School Outreach</h3>
+            <h3>Dash & Tell</h3>
             <p>
-                Volunteers engage schools through mentorship, educational
-                talks, and interactive learning experiences.
+               Guides participants through the essentials of data analytics,
+               helping beginners turn their Excel skills into a real-world project.
             </p>
         </div>
     </div>
 
 
     <div class="program-card community">
-        <img src="img/gski.jpg" alt="Community Engagement">
+        <img src="img/owitrsyndrome.png" alt="Community Engagement">
         <div class="program-content">
             <span class="tag">Community Project</span>
-            <h3>Community Engagement</h3>
+            <h3>The "Only woman in the Room" Syndrome Webinar</h3>
             <p>
-                Bringing volunteers and communities together to create
-                sustainable and inclusive social impact.
+                Empower women in sciece, Technology, Engineering, Arts and Mathematics (STEAM) fields
+                to combat isolation, build confidence,and discover strategies for thriving in their careers.
             </p>
         </div>
     </div>
 
-    <div class="program-card community">
-        <img src="img/FF2Write Nexo Girls - CRF.jpg" alt="Book Drive">
-        <div class="program-content">
-            <span class="tag">Community Project</span>
-            <h3>Book & Learning Materials Drive</h3>
-            <p>
-                Collecting and donating books and educational materials to
-                improve learning opportunities for children.
-            </p>
-        </div>
-    </div>
+   
 
 
 
@@ -1511,7 +1488,7 @@ section {
         <img src="img/slide5.JPG" alt="ProperHer">
         <div class="program-content">
             <span class="tag">Mentorship</span>
-            <h3>ProperHer</h3>
+            <h3>PropelHer</h3>
             <p>
                 Connecting girls with mentors who provide career guidance,
                 leadership development, and personal growth support.
@@ -1523,7 +1500,7 @@ section {
         <img src="img/gski.jpg" alt="GS Kimironko">
         <div class="program-content">
             <span class="tag">Mentorship</span>
-            <h3>GS Kimironko</h3>
+            <h3>High School Mentorship </h3>
             <p>
                 Supporting girls through mentorship, innovation,
                 leadership, and educational opportunities.
@@ -1531,17 +1508,7 @@ section {
         </div>
     </div>
 
-    <div class="program-card mentorship">
-        <img src="img/slide4.jpeg" alt="Career Mentorship">
-        <div class="program-content">
-            <span class="tag">Mentorship</span>
-            <h3>Career Mentorship</h3>
-            <p>
-                Helping girls explore career pathways through professional
-                guidance, networking, and skills development.
-            </p>
-        </div>
-    </div>
+    
 
    
 
@@ -1549,17 +1516,16 @@ section {
 </section>
 <footer>
         
-            
        <section class="footer" id="footer">
          <div class="footer-box">
-            <a href="#" class="logo"><i class="bx bxs-basket"></i></a>
-            <h1>Contact & Location</h1>
+          
+            <h3>Contact</h3>
             <ul>
          <li> <a href=""><i class="fa-solid fa-phone"></i> +233245210865</a> </li>
            <li>  <a href="#"><i class="fa-solid fa-envelope"></i>info@nexogirls.org</a></li>
           <li> <a href="https://lnk.bio/nexogirls "><i class="fa-solid fa-globe"></i>www.nexogirls.org</a> </li> 
-          </ul><a href="#"><strong>Follow Us On Social Media</strong><Br></Br>
-            <li> <div class="social">
+          <strong>Follow Us On Social Media</strong><Br>
+           <li> <div class="socials">
              <a href="https://www.facebook.com/nexogirls"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.instagram.com/nexogirls"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/company/nexogirls/posts/"><i class="fa-brands fa-linkedin"></i></a>
@@ -1569,8 +1535,8 @@ section {
             <li>
     </ul>
         </div>
-       <div class="footer-box">
-            <h1>About Us</h1>
+        <div class="footer-box">
+            <h3>About Us</h3>
           <ul>
              <li>  <a href="about.html#ourstory">Our Story</a></li>
               <li> <a href="home.html#impact">Our Impact</a></li>
@@ -1580,7 +1546,7 @@ section {
             </ul>
         </div>
         <div class="footer-box">
-            <h1>Useful Links</h1>
+            <h3>Useful Links</h3>
          <ul>
          <li> <a href="donate.html">Donating To us</a> </li> 
           <li> <a href="volunteer.html">Applying to Volunteer</a> </li> 
@@ -1590,20 +1556,21 @@ section {
             </ul> 
         </div>
         <div class="footer-box">
-            <h1>Make Suggestion</h1>
-            <p>You can make a suggestion or ask question<br>By sending us an email</p>
-                      <iframe src="https://hacth.substack.com/embed?transparent=1" width="100%" height="150" style="border: 0; background: transparent; color:#ffcc00" frameborder="0" scrolling="no"></iframe>
-            <img src="img/climi1.png" alt="" height="150px" width="150px">
+            <h3>Make Suggestion</h3>
+            <p>You can make a suggestion or ask question. By sending us an email. And Subscribe to our Newsletter</p>
+            
+           <iframe src="https://hacth.substack.com/embed?transparent=1" width="100%" height="150" style="border: 0; background: transparent; color:#ffcc00" frameborder="0" scrolling="no"></iframe>
+            <img src="img/robert.png" alt="" height="100px" width="200px">
         </div>
-         
          
           
     </section>
     <div class="copyright">
-        <p>Al-Ayan copyright@</p>
+        <p>All right reserved Nexo Girls©2026</p>
     </div>
     </footer>
-    
+
+
 <script>
     const filterButtons = document.querySelectorAll(".program-filters button");
 const cards = document.querySelectorAll(".program-card");

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Nexo Girls</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -92,10 +92,9 @@ nav ul li a:not(.donate):hover::after {
   padding: 10px 15px;
   border-radius: 13px;
 }
-
 .donate:hover {
   background: #5d6d3e;
-  color: #274001;
+  color: #ffcc00;
 }
  /* HERO SECTION */
 
@@ -207,7 +206,8 @@ nav ul li a:not(.donate):hover::after {
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 section {
-    padding: 40px 0;
+    padding: 20px 0;
+  
 }
 .btn {
     padding: 15px 35px;
@@ -269,7 +269,6 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
-    margin-top: 10px;
 }
 
 /* CARD */
@@ -318,8 +317,7 @@ section {
  
 .team-section{
     width: 100%;
-    padding: 70px 0;
-    margin-bottom: 20px;
+    padding: 30px 0;
     box-sizing: border-box;
 }
 .team-container{
@@ -444,7 +442,7 @@ section {
 }
 .Aboutus{
     width: 100%;
-    padding: 80px 8%;
+    padding: 40px 8%;
    
 }
 
@@ -600,7 +598,7 @@ section {
 #impact {
      width: 100%;
     padding: 80px 8%;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
     text-align: center;
     background: linear-gradient(to bottom, #fcfbf4, #dfdf9e);
      display: flex;
@@ -615,7 +613,7 @@ section {
     border-radius: 5rem;
     margin-top: 2rem;
     position: absolute;
-    bottom: 8%;
+    bottom: 2%;
     display: none;
 }
 .impact-cards .card .bx:hover{
@@ -627,7 +625,7 @@ section {
     transition: 0,2s all linear;
 }
 .story-section{
-    padding: 50px 5%;
+    padding: 30px 5%;
     color: white;
 }
 
@@ -646,7 +644,7 @@ section {
     background-color: white;
     border: 5px solid #ffcc00;
     line-height: 50px;
-    font-size: 1.6em;
+    font-size: 1.4em;
     border-radius: 15px;
     
 }
@@ -655,11 +653,15 @@ section {
      line-height: 1.9;
      background-color: #274001;
      padding: 15px;
-     font-size: 1em;
+   
 }
 .core  strong {
     color: #ffcc00;
     border-radius: 10px;
+}
+.core  p {
+   
+    font-size:0.7em;
 }
 
 /* VIDEO */
@@ -673,7 +675,6 @@ section {
 
 .video-container img{
     width: 100%;
-    height: 100%;
     object-fit: cover;
     display: block;
 }
@@ -681,6 +682,8 @@ footer {
     background-color: #fcfbf4;
     width: 100%;
     margin: 0;
+    margin-top: 0;
+    padding: 0;
     height: 50px;
 }
 .footer1{
@@ -698,7 +701,7 @@ footer {
     margin: auto;
 }
 
-.footer1 h2{
+.footer1 h3{
     font-size: 38px;
     color: #ffcc00;
     margin-bottom: 15px;
@@ -728,19 +731,43 @@ footer {
 
 .footer{
     width: 100%;
-    margin-top: 80px;
+     margin-top: 0;
     padding: 80px 8%;
     background: #ffcc00;
     color: #274001;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 40px;
-}.footer-box h2{
+}.footer-box h3{
     font-size: 20px;
     margin-bottom: 15px;
     color: #274001;
 }
 
+.footer-box p{
+    font-size: 15px;
+    line-height: 1.7;
+    color: #274001;
+}
+
+.footer-box a{
+    display: inline-block;
+    color: #274001;
+    margin: 8px 0;
+    text-decoration: none;
+    transition: 0.3s;
+}
+h2 {
+    color: #ffcc00;
+}
+.title {
+    color: #274001;
+}
+.footer-box{
+    display: flex;
+    flex-direction: column;
+   
+}
 .footer-box a{
     display: inline-block;
     position: relative;
@@ -748,6 +775,7 @@ footer {
     color: #274001;
     margin: 10px 0;
 }
+
 
 .footer-box a::after{
     content: "";
@@ -783,8 +811,7 @@ footer {
     transition: 0.3s;
 }
 .social a i{
-    color: #ffcc00;
-    transition: 0.3s;
+    font-size: 25px;
 }
 
 .social a:hover{
@@ -802,6 +829,19 @@ footer {
     border-radius: 15px;
     margin-top: 10px;
 }
+.social a{
+    font-size: 30px;
+    color: #274001;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+.social a i {
+    font-size: 25px;
+}
+
+.social a:hover{
+    color: darkgreen;
+}
 
 .footer-box form input{
     flex: 1;
@@ -811,9 +851,20 @@ footer {
     background: transparent;
     color: #274001;
 }
-.footer-box h2 {
+ .footer-box p {
+    line-height: 1.8;
+    margin-top: 20px;
+    font-size: 1em;
+    text-align: justify;
+ }
+.footer-box h3{
     color: #274001;
 }
+.footer-box li {
+    list-style: none;
+}
+
+
 
 .footer-box form i{
     color: #274001;
@@ -829,8 +880,18 @@ footer {
     border-radius: 15px;
     margin-top: 10px;
 }
-
-
+.footer-box li {
+    list-style: none;
+}
+.bttn{
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+}
+.footer-box h1{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
 .copyright{
     text-align: center;
     padding: 20px;
@@ -896,7 +957,7 @@ footer {
 
 /* PARAGRAPH */
 .text p{
-    font-size: 15px;
+    font-size: 0.8em;
     color: #333;
     line-height: 1.8;
     margin-bottom: 20px;
@@ -948,6 +1009,9 @@ footer {
 .Partners{
     width: 100%;
     overflow: hidden;
+    margin-top: 0;
+    margin-bottom: -1px;
+    padding-bottom: 0;
      background: linear-gradient(to bottom, #fcfbf4, #dfdf9e);
 }
 #ostory .Award {
@@ -975,8 +1039,11 @@ footer {
     transition: transform 0.3s ease;
 }
 .parts {
-    margin: 5;
-    padding: 5;
+    margin: 5px;
+    padding: 5px;
+}
+.footer-box li {
+    list-style: none;
 }
 
 .parts img:hover {
@@ -1216,6 +1283,34 @@ footer {
 .donate-btn:hover{
     background:#274001;
 }
+@media(max-width:480px){
+    .footer1 h2 {
+        font-size: 1.2em;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .footer-box form {
+        width: 300px;
+    }
+     .footer {
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}  
+@media(max-width: 900px){
+    .footer-box form {
+        width: 270px;
+    }
+}
+
 
      
     @media(max-width: 1240px){ 
@@ -1230,19 +1325,33 @@ footer {
                 height: 350px;
                 
             } 
+             .footer-box h3{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
             .core {
                 font-size: 0.8em;
             }
             .image-container{ height: 350px; 
             } 
-            .footer-box h1{
+              .footer-box h3{
     font-size: 1.5em;
     margin-bottom: 20px;
-        }
+}
+
         .team-container, #ostory p, #ostory h2 {
             max-width: 700px;
         }
+        #ostory h2 {
+            font-size: 2.5em;
+        }
+        .overlay h1{
+    padding: 0 10px;
+    font-size: 3em;
+    font-weight: 800;       
     }
+}
 
  @media (max-width: 1024px) {
 
@@ -1254,13 +1363,13 @@ footer {
         transform: translate(-50%, -50%);
         left: 50%;
     }
-      .footer-box h1{
-    font-size: 1.2em;
+     .footer-box h3{
+    font-size: 1.3em;
     margin-bottom: 20px;
 }
-.footer-box h1{
-    font-size: 1.3em;
-    
+.footer-box li{
+    font-size: 1em;
+   
 }
 .footer-box .social a{
     font-size: 1em;
@@ -1269,8 +1378,9 @@ footer {
     width: 300px;
 }
 .footer-box p {
-    font-size: 0.9em;
+    font-size: 0.8em;
 }
+
 .problems-container{
     display: flex;
     justify-content: center;
@@ -1301,6 +1411,9 @@ footer {
     .footer-box form {
         width: 300px;
     }
+    #ostory h2 {
+        font-size: 2em;
+    }
 
     nav ul {
         position: absolute;
@@ -1320,11 +1433,26 @@ footer {
         justify-content: center;
         
     }
-    .footer-box form{
-    width: 250px;
-    gap: 0;
-    padding: 0;
-}
+     .footer h2 {
+        font-size: 2em;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .footer-box form {
+        width: 300px;
+    }
+    .overlay h1{
+    padding: 0 10px;
+    font-size: 2.1em;
+    font-weight: 800;
+    }
+    .overlay p{
+    padding: 0 10px;
+    font-size: 0.9em;
+    
+    }
    
     .nav ul.active {
         display: flex;
@@ -1332,7 +1460,7 @@ footer {
  }
  @media (max-width:400px){
 
-.footer{
+footer{
 
     grid-template-columns:1fr;
     padding:50px 20px;
@@ -1349,7 +1477,6 @@ footer {
 }
 
 .footer-box h1{
-
     font-size:24px;
 
 }
@@ -1361,23 +1488,32 @@ footer {
     font-size:15px;
 
 }
-.overlay h1{
-    padding: 0 10px;
-    font-size: 3em;
-    font-weight: 900;
 
-}
 .footer-box ul{
 
     padding:0;
     margin:0;
 
 }
+#ostory h2 {
+    font-size: 1.7em;
+}
 
 .footer-box form{
 
     width:100%;
     max-width:280px;
+
+}
+.overlay p{
+    padding: 0 10px;
+    font-size: 0.8em;
+    
+}
+.overlay h1{
+    padding: 0 10px;
+    font-size: 1.8em;
+    font-weight: 700;
 
 }
 
@@ -1394,7 +1530,7 @@ footer {
 
 }
 
-.social{
+.socials{
 
     justify-content:center;
     flex-wrap:wrap;
@@ -1411,6 +1547,72 @@ footer {
 
 }
 }
+@media(max-width: 900px){
+    .footer-box form {
+        width: 270px;
+       
+    }
+    footer {
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .overlay h1{
+    padding: 0 10px;
+    font-size: 2.3em;
+    font-weight: 800;
+}
+.overlay p{
+    padding: 0 10px;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+}
+@media (max-width: 1024px) {
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .button {
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+      .footer-box h3    {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+.footer-box li{
+    font-size: 1em;
+   
+}
+.footer-box .social a{
+    font-size: 1em;
+}
+.footer-box form{
+    width: 300px;
+}
+.footer-box p {
+    font-size: 0.8em;
+}
+.overlay h1{
+    padding: 0 10px;
+    font-size: 2.5em;
+    font-weight: 800;
+}
+.overlay p{
+    padding: 0 10px;
+    font-size: 1em;
+    
+}
+}
+
+
+
     
         
 </style>
@@ -1439,9 +1641,9 @@ footer {
 Get Involved <i class="fa-solid fa-chevron-down"></i></a>
     <ul class="dropdown-menu">
 <li><a href="getinvolve.html">Get Involved</a></li>
-        <li><a href="donate.html">Donate</a></li>
+     
         <li><a href="partnership.html">Partners</a></li>
- <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
+
 
     </ul>
 </li>
@@ -1485,15 +1687,12 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
 
 <li><a href="#">Get Involved</a></li>
 
-        <li><a href="donate.html">Donate</a></li>
+        <li><a href="getinvolve.html">Get Involved</a></li>
 
 
 
         <li><a href="partnership.html">Partners</a></li>
 
-
-
-        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
 
 
 
@@ -1521,7 +1720,7 @@ Get Involved <i class="fa-solid fa-chevron-down"></i></a>
             digital skills, mentorship, and leadership development.
         </p>
 
-    <a class="btn" href="getinvolve.html">Get Invovled</a>
+    <a class="btn" href="getinvolve.html">Get Involved</a>
     </div>
 
 </div>
@@ -1732,7 +1931,7 @@ global awareness campaigns, etc.
 
                 <span class="overline"></span>
                 <p class="mission-text">
-                     At NAEXO GIRLS, we believe every girl deserves the opportunity to dream, grow, and lead with confidence. 
+                     At Nexo Girls, we believe every girl deserves the opportunity to dream, grow, and lead with confidence. 
         We are committed to creating a supportive space where young girls are empowered through education, mentorship, 
         technology, and leadership opportunities that help them unlock their full potential and create lasting impact 
         in their communities.
@@ -1770,7 +1969,7 @@ global awareness campaigns, etc.
         </section>
                 <div id="ostory">
 
-                <h2>Our Core Programmatic Sectors' Secton</h2>
+                <h2>Our Core Programmatic Sectors'</h2>
 
                 <span class="overline"></span>
                 
@@ -1833,7 +2032,7 @@ global awareness campaigns, etc.
 
     <div class="story-grid">
         <div class="video-container">
-            <img src="img/slide4.jpeg" alt="">
+            <img src="img/indian.jpg" alt="">
         </div>
 
 
@@ -1906,23 +2105,22 @@ global awareness campaigns, etc.
         
 
     </div>
-     <a class="getinvolve" href="https://drive.google.com/file/d/18QyU3zIxZne1oY2RP1CHoJ0DKHgvEjU9/view"> View more here</a>
+     <a class="getinvolve" href="https://drive.google.com/file/d/18QyU3zIxZne1oY2RP1CHoJ0DKHgvEjU9/view"> View more here</a> <br><br>
 
         </section>
        
 <footer>
-        
-            
-       <section class="footer" id="footer">
-          <div class="footer-box">
-            <a href="#" class="logo"><i class="bx bxs-basket"></i></a>
-            <h1>Contact & Location</h1>
+             
+         <section class="footer" id="footer">
+         <div class="footer-box">
+          
+            <h3>Contact</h3>
             <ul>
          <li> <a href=""><i class="fa-solid fa-phone"></i> +233245210865</a> </li>
            <li>  <a href="#"><i class="fa-solid fa-envelope"></i>info@nexogirls.org</a></li>
           <li> <a href="https://lnk.bio/nexogirls "><i class="fa-solid fa-globe"></i>www.nexogirls.org</a> </li> 
-          </ul><a href="#"><strong>Follow Us On Social Media</strong><Br></Br>
-            <li> <div class="social">
+          <strong>Follow Us On Social Media</strong><Br>
+           <li> <div class="socials">
              <a href="https://www.facebook.com/nexogirls"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.instagram.com/nexogirls"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/company/nexogirls/posts/"><i class="fa-brands fa-linkedin"></i></a>
@@ -1933,9 +2131,9 @@ global awareness campaigns, etc.
     </ul>
         </div>
         <div class="footer-box">
-            <h1>About Us</h1>
+            <h3>About Us</h3>
           <ul>
-            <li>  <a href="about.html#ourstory">Our Story</a></li>
+             <li>  <a href="about.html#ourstory">Our Story</a></li>
               <li> <a href="home.html#impact">Our Impact</a></li>
              <li> <a href="home.html#Partners">Our Patners</a> </li> 
              <li> <a href="meet_team.html">Meet the Team</a> </li>  
@@ -1943,7 +2141,7 @@ global awareness campaigns, etc.
             </ul>
         </div>
         <div class="footer-box">
-            <h1>Useful Links</h1>
+            <h3>Useful Links</h3>
          <ul>
          <li> <a href="donate.html">Donating To us</a> </li> 
           <li> <a href="volunteer.html">Applying to Volunteer</a> </li> 
@@ -1953,17 +2151,22 @@ global awareness campaigns, etc.
             </ul> 
         </div>
         <div class="footer-box">
-            <h1>Make Suggestion</h1>
-            <p>You can make a suggestion or ask question<br>By sending us an email</p>
-                      <iframe src="https://hacth.substack.com/embed?transparent=1" width="100%" height="150" style="border: 0; background: transparentco; color:#ffcc00" frameborder="0" scrolling="no"></iframe>
-            <img src="img/climi1.png" alt="" height="150px" width="150px">
+            <h3>Make Suggestion</h3>
+            <p>You can make a suggestion or ask question. By sending us an email. And Subscribe to our Newsletter</p>
+            
+           <iframe src="https://hacth.substack.com/embed?transparent=1" width="100%" height="150" style="border: 0; background: transparent; color:#ffcc00" frameborder="0" scrolling="no"></iframe>
+           <img src="img/robert.png" alt="" height="100px" width="200px">
         </div>
          
+          
     </section>
     <div class="copyright">
-        <p>Al-Ayan copyright@</p>
+        <p>All right reserved Nexo Girls©2026</p>
     </div>
     </footer>
+
+
+  
     <script src="script.js"></script>
     <!-- Donation Popup -->
 <div class="donation-popup" id="donationPopup">

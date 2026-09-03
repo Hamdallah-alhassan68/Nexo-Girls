@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Involve</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
-    <style>
+<style>
         * {
   margin: 0;
   padding: 0;
@@ -90,10 +90,9 @@ nav ul li a:not(.donate):hover::after {
   padding: 10px 15px;
   border-radius: 13px;
 }
-
 .donate:hover {
   background: #5d6d3e;
-  color: #274001;
+  color: #ffcc00;
 }
 .dropdown{
     position:relative;
@@ -164,7 +163,7 @@ nav ul li a:not(.donate):hover::after {
 
 .hero{
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background:
     linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
     url("img/slide4.jpeg");
@@ -192,15 +191,31 @@ nav ul li a:not(.donate):hover::after {
 /* TEXT */
 
 .overlay p{
-    font-size: 1.1em;
+    font-size: 1em;
     color: #ffcc00;
     line-height: 1.7;
     margin-bottom: 35px;
     text-align: center;
-    max-width: 600px;
+    max-width: 800px;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
-
+.btn {
+    padding: 15px 35px;
+    border: none;
+    text-decoration: none;
+    border-radius: 40px;
+    background: darkgreen;
+    color:#ffcc00;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+.btn:hover{
+    background: #ffcc00;
+    color: #274001;
+    transform: translateY(-5px);
+}
 #ostory{
     text-align: center;
     margin-bottom: 3px;
@@ -721,13 +736,21 @@ section {
 .final-cta{
     width:100%;
     padding:120px 8%;
-    background:#ffcc00;
     text-align:center;
+    width: 100%; 
+    background: linear-gradient(rgba(24, 23, 23, 0.6), rgba(14, 13, 13, 0.6)),
+    url("img/bbgy.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 8%;
+    text-align: center;
+    height: 30vh;
 }
 
 .final-cta h2{
-    color:#274001;
-    font-size:48px;
+    color:#ffcc00;
+    font-size:3em;
     max-width:900px;
     margin:auto;
     line-height:1.4;
@@ -735,7 +758,7 @@ section {
 }
 
 .final-cta p{
-    color:#274001;
+    color:white;
     max-width:750px;
     margin:auto;
     line-height:1.8;
@@ -840,9 +863,14 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 40px;
-}.footer-box h1{
+}.footer-box h3{
     font-size: 20px;
     margin-bottom: 15px;
+    color: #274001;
+}
+
+.footer-box p{
+    line-height: 1.7;
     color: #274001;
 }
 
@@ -903,6 +931,7 @@ section {
 }
 .social a i{
     color: #ffcc00;
+     font-size: 25px;
     transition: 0.3s;
 }
 
@@ -958,6 +987,24 @@ section {
     color: #aaa;
     font-size: 14px;
 }
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    align-items: center;
+    column-gap: 0.5rem;
+}.socials a{
+    font-size: 25px;
+    color: #274001;
+    margin-right: 10px;
+    transition: 0.3s;
+}
+
+.socials a:hover{
+    color: darkgreen;
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -1176,6 +1223,21 @@ section {
 
       
 /* RESPONSIVE */
+
+
+@media(max-width:480px){
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-box form {
+        width: 300px;
+    }
+ 
+   
+}  
+
 @media(max-width: 900px){
     .text{
         width: 100%;
@@ -1191,6 +1253,13 @@ section {
         justify-content: center;
         align-items: center;
     }
+      .footer-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
 }
 @media(max-width: 1240px){
 
@@ -1233,6 +1302,10 @@ section {
     .founder-quote h3 {
         font-size: 60px;
     }
+      .footer-box h3{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
 }
 @media (max-width: 1024px) {
 
@@ -1320,6 +1393,31 @@ section {
     .text {
         width: 270px;
     }
+       .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .button {
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+      .footer-box h3{
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+.footer-box li{
+    font-size: 1em;
+   
+}
+.footer-box .social a{
+    font-size: 1em;
+}
+.footer-box form{
+    width: 300px;
+}
+.footer-box p {
+    font-size: 0.8em;
+}
+
 
 }
 @media (max-width: 800px) {
@@ -1427,6 +1525,14 @@ section {
     nav ul.active {
         display: flex;
     }
+     .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .footer-box form {
+        width: 300px;
+    }
+
 }
 @media (max-width:600px){
 
@@ -1732,6 +1838,84 @@ section {
     .founder-quote h3 {
         font-size: 36px;
     }
+    .footer{
+
+    grid-template-columns:1fr;
+    padding:50px 20px;
+    gap:35px;
+}
+.btn-primary {
+        padding: 10px 10px;
+        font-size: 10px;
+    }
+
+.footer-box{
+
+    width:100%;
+    text-align:center;
+    align-items:center;
+
+}
+
+.footer-box h1{
+
+    font-size:24px;
+
+}
+
+.footer-box p,
+.footer-box li,
+.footer-box a{
+
+    font-size:15px;
+
+}
+
+.footer-box ul{
+
+    padding:0;
+    margin:0;
+
+}
+
+.footer-box form{
+
+    width:100%;
+    max-width:280px;
+
+}
+
+.footer-box input{
+
+    width:100%;
+
+}
+
+.footer-box img{
+
+    width:110px;
+    height:auto;
+
+}
+.btn-primary {
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+
+.socials{
+
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:12px;
+
+}
+.text1 h2{
+    font-size: 0.6em;
+}
+.footer1 .text1 #ready-to-rise {
+        font-size: 1.2em;
+    }
+
 }
 
 
@@ -1777,10 +1961,9 @@ section {
 
 
     <ul class="dropdown-menu">
-<li><a href="getinvolve.html">Get Involved</a></li>
+<li><a href="#">Get Involved</a></li>
 
 
-        <li><a href="donate.html">Donate</a></li>
 
        <li><a href="getinvolve.html">Get Involved</a></li>
 
@@ -1788,7 +1971,6 @@ section {
 
 
 
-        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
 
 
 
@@ -1837,15 +2019,10 @@ section {
 
 
 <li><a href="getinvolve.html">Get Involved</a></li>
-        <li><a href="donate.html">Donate</a></li>
 
 
 
         <li><a href="partnership.html">Partners</a></li>
-
-
-
-        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
 
 
 
@@ -1869,12 +2046,10 @@ section {
     <div class="overlay">
        
 
-         <p class="join">
-                Empowering girls through mentorship, technology, leadership, and community impact to create opportunities for the next generation.
+         <p>
+                Empowering girls through mentorship, technology, leadership, and community impact to create opportunities for the next generation. </p>
                 
-
-        
-                <a href="#impact" class="btn secondary-btn">See Our Impact</a>
+                <a href="#impact" class="btn">See Our Impact</a>
     </div>
     </div>
     </section>
@@ -1906,6 +2081,7 @@ section {
                 <li>Laptops</li>
                 <li>Internet Access</li>
                 <li>Books & Learning Materials</li>
+                <li>Hygiene products</li>
                 
             </ul>
 
@@ -1919,7 +2095,7 @@ section {
             <h3>Volunteer</h3>
 
             <ul>
-                <li>Community Management</li>
+                <li>Community Mgt</li>
                 <li>People & Culture</li>
                 <li>Content Curation</li>
                 <li>Media & Documentation</li>
@@ -2067,43 +2243,7 @@ input from young women.
 
 </section>
 
-<!-- ================= TESTIMONIALS ================= -->
 
-<div id="ostory">
-
-                <h2>Testimonial</h2>
-                <span class="overline"></span>
-                <p class="mission-text">
-             Hear from the girls and mentors who have experienced growth,
-              transformation, and impact through our programs.
-                </p>
-
-                
-            </div>
-   <section class="testimonials-section">
-    <div class="testimonial">
-        <div class="text">
-            <p>Being sponsored by Nexo Girls to attend the 2024 She Code Africa Summit was a turning point for me. The experience refueled my confidence, giving me the motivation to actively bring my skills and ideas to life. I highly recommend joining the Nexo Girls Metaverse for every Nexo Girlie. </p>
-                <div class="display">
-                <h3><svg xmlns="http://www.w3.org/2000/svg" height="18x" viewBox="0 -960 960 960" width="18px" fill="#314D1C"><path d="M240-440v-80h480v80H240Z"/></svg>  Peace Roberts</h3></div>
-                <i class="bx bx-right-arrow-alt"></i>
-        </div>
-
-        <div class="text">
-            <p>Through the FYG Opski program, I gained valuable skills in web development, freelancing, and content writing. It strengthened my passion for technology, boosted my confidence, and showed me how to turn my skills into meaningful opportunities for personal and professional growth.</p>
-                <div class="display">
-                <h3> <svg xmlns="http://www.w3.org/2000/svg" height="18x" viewBox="0 -960 960 960" width="18px" fill="#314D1C"><path d="M240-440v-80h480v80H240Z"/></svg>Deborah Russell</h3></div>
-                <i class="bx bx-right-arrow-alt"></i>
-        </div>
-
-        <div class="text">
-            <p>The Upskill program introduced me to freelancing, web development, and LinkedIn optimization. It strengthened my professional skills, boosted my confidence, and helped me build a solid foundation for long-term growth and success in the digital workspace.</p>
-                <div class="display">
-                <h3><svg xmlns="http://www.w3.org/2000/svg" height="18x" viewBox="0 -960 960 960" width="18px" fill="#314D1C"><path d="M240-440v-80h480v80H240Z"/></svg>Akaakase Grace Msendoo</h3></div>
-                <i class="bx bx-right-arrow-alt"></i>
-        </div>
-    </div>
-  </section>
 
   <section class="gallery">
     <div class="gallery-title">
@@ -2117,9 +2257,6 @@ input from young women.
             <img src="img/S1 (2).jpg" alt="Gallery Image 1">
         </div>
 
-        <div class="gallery-item">
-            <img src="img/S2.jpg" alt="Gallery Image 2">
-        </div>
 
         <div class="gallery-item">
             <img src="img/S3.PNG" alt="Gallery Image 3">
@@ -2131,6 +2268,9 @@ input from young women.
 
         <div class="gallery-item">
             <img src="img/S5.PNG" alt="Gallery Image 5">
+        </div>
+         <div class="gallery-item">
+            <img src="img/slide4.jpeg" alt="Gallery Image 4">
         </div>
 
         <div class="gallery-item">
@@ -2191,17 +2331,23 @@ input from young women.
 </section>
 
 <!-- ================= FINAL CTA ================= -->
+ 
+    <div class="final-cta">
+        <h2>Join Us in Empowering the Next Generation
+            </h2>
+    </div>
+<footer>
 
  <section class="footer" id="footer">
-        <div class="footer-box">
-            <a href="#" class="logo"><i class="bx bxs-basket"></i></a>
-            <h1>Contact & Location</h1>
+         <div class="footer-box">
+          
+            <h3>Contact</h3>
             <ul>
          <li> <a href=""><i class="fa-solid fa-phone"></i> +233245210865</a> </li>
            <li>  <a href="#"><i class="fa-solid fa-envelope"></i>info@nexogirls.org</a></li>
           <li> <a href="https://lnk.bio/nexogirls "><i class="fa-solid fa-globe"></i>www.nexogirls.org</a> </li> 
-          </ul><a href="#"><strong>Follow Us On Social Media</strong><Br></Br>
-            <li> <div class="social">
+          <strong>Follow Us On Social Media</strong><Br>
+           <li> <div class="socials">
              <a href="https://www.facebook.com/nexogirls"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.instagram.com/nexogirls"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/company/nexogirls/posts/"><i class="fa-brands fa-linkedin"></i></a>
@@ -2211,10 +2357,10 @@ input from young women.
             <li>
     </ul>
         </div>
-      <div class="footer-box">
-            <h1>About Us</h1>
+        <div class="footer-box">
+            <h3>About Us</h3>
           <ul>
-               <li>  <a href="about.html#ourstory">Our Story</a></li>
+             <li>  <a href="about.html#ourstory">Our Story</a></li>
               <li> <a href="home.html#impact">Our Impact</a></li>
              <li> <a href="home.html#Partners">Our Patners</a> </li> 
              <li> <a href="meet_team.html">Meet the Team</a> </li>  
@@ -2222,7 +2368,7 @@ input from young women.
             </ul>
         </div>
         <div class="footer-box">
-            <h1>Useful Links</h1>
+            <h3>Useful Links</h3>
          <ul>
          <li> <a href="donate.html">Donating To us</a> </li> 
           <li> <a href="volunteer.html">Applying to Volunteer</a> </li> 
@@ -2232,20 +2378,20 @@ input from young women.
             </ul> 
         </div>
         <div class="footer-box">
-            <h1>Make Suggestion</h1>
-            <p>You can make a suggestion or ask question<br>By sending us an email</p>
-                       <iframe src="https://hacth.substack.com/embed?transparent=1" width="100%" height="150" style="border: 0; background: transparent; color:#ffcc00" frameborder="0" scrolling="no"></iframe>
-            <img src="img/climi1.png" alt="" height="150px" width="150px">
+            <h3>Make Suggestion</h3>
+            <p>You can make a suggestion or ask question. By sending us an email. And Subscribe to our Newsletter</p>
+            
+           <iframe src="https://hacth.substack.com/embed?transparent=1" width="100%" height="150" style="border: 0; background: transparent; color:#ffcc00" frameborder="0" scrolling="no"></iframe>
+            <img src="img/robert.png" alt="" height="100px" width="200px">
         </div>
          
           
     </section>
     <div class="copyright">
-        <p>Al-Ayan copyright@</p>
+        <p>All right reserved Nexo Girls©2026</p>
     </div>
     </footer>
 
-</div>
 <script src="script.js"></script>
 <!-- Donation Popup -->
 <div class="donation-popup" id="donationPopup">

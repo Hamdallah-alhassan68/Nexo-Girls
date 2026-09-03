@@ -8,11 +8,11 @@
 
     <title>Donate | Nexo Girls</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">+
         <style>
     * {
   margin: 0;
@@ -101,10 +101,9 @@ nav ul li a:not(.donate):hover::after {
   padding: 10px 15px;
   border-radius: 13px;
 }
-
 .donate:hover {
   background: #5d6d3e;
-  color: #274001;
+  color: #ffcc00;
 }
 .dropdown{
     position:relative;
@@ -200,25 +199,16 @@ z-index:2;
 }
 
 .dropdown-menu{
-
     position:absolute;
-
     border-radius:10px;
-     display: flex;
+    display: flex;
     flex-direction: column;
-
     box-shadow:0 10px 30px rgba(0,0,0,.15);
-
     list-style:none;
-
     opacity:0;
     visibility:hidden;
-
     transform:translateY(15px);
-
     transition:.3s;
-
-    
     top:100%;
     left:0;
     background:#fff;
@@ -226,48 +216,35 @@ z-index:2;
     padding:8px 0;
     border-radius:10px;
     z-index:9999;
-
 }
 
 .dropdown:hover .dropdown-menu{
-
     opacity:1;
     visibility:visible;
     transform:translateY(0);
-
 }
 
 .dropdown-menu li{
-
     width:100%;
-
 }
 
 .dropdown-menu li a{
-
     display:block;
-
     padding:15px 20px;
-
     color:#274001;
-
     text-decoration:none;
 
 }
 
 .dropdown-menu li a:hover{
-
     background:#274001;
-
     color:#ffcc00;
-
 }
 
 .hero-image{
     position:relative;
     z-index:5;
 }
-
 .next-section{
     position: relative;
     z-index: 1;
@@ -279,86 +256,56 @@ z-index:2;
     background:
         linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
         url("img/slide6.PNG");
-
     background-size:cover;
     background-position:center;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     padding:140px 8% 80px;
     position:relative;
-
     overflow:visible;
 }
 .hero-content{
     display:grid;
     grid-template-columns:1fr 1fr;
-
     align-items:center;
-
     gap:60px;
-
     width:100%;
     max-width:1300px;
-
     margin:auto;
 }
 
 .tag{
-
     display:inline-flex;
-
     gap:10px;
-
     align-items:center;
-
     background:#274001;
-
     color:#ffcc00;
-
     padding:12px 20px;
-
     border-radius:40px;
-
     font-weight:600;
-
     box-shadow:0 10px 25px rgba(0,0,0,.08);
 
 }
 
 .hero h1{
-
     font-size:64px;
-
     line-height:1.1;
-
     margin:25px 0;
     color: #ffcc00;
-
 }
 
 .hero p{
-
     font-size:18px;
-
-    color:#ffcc00;
-
+    color: white;
     line-height:1.8;
-
     margin-bottom:35px;
-
 }
 
 .hero-buttons{
-
     display:flex;
-
     gap:20px;
-
     flex-wrap:wrap;
-
 }
 
 .btn-primary{
@@ -672,7 +619,7 @@ z-index:2;
 .card1 h3,
 .card2 h3,
 .card5 h3 {
-    color: #ffcc00;
+    color: #274001;
 }
 
 /* Heading inside paragraph */
@@ -875,7 +822,7 @@ z-index:2;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 40px;
-}.footer-box h2{
+}.footer-box h3{
     font-size: 20px;
     margin-bottom: 15px;
     color: #274001;
@@ -944,6 +891,7 @@ h2 {
     font-size: 30px;
     color: #274001;
     margin-right: 10px;
+     font-size: 25px;
     transition: 0.3s;
 }
 .social a i {
@@ -1005,6 +953,7 @@ h2 {
     align-items: flex-start;
     justify-content: flex-start;
 }
+
 .footer-box li {
     list-style: none;
 }
@@ -1031,6 +980,36 @@ h2 {
 .gallery-container{
     grid-template-columns:repeat(3,1fr);
 }
+ .text{
+        width: 100%;
+        max-width: 350px;
+    }
+    .footer-box form {
+        width: 270px;
+       
+    }
+    .service{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .partners h2{
+        font-size: 32px;
+    }
+
+    .services h2{
+        font-size: 34px;
+    }
+    .footer {
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
 .gallery-item img{
     height:190px;
@@ -1141,6 +1120,13 @@ h2 {
     }
     
 }
+@media(max-width: 1240px){
+    .footer-box h3{
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+}
+
 @media (max-width: 1024px) {
 
     .button {
@@ -1224,6 +1210,31 @@ h2 {
     .card p {
         font-size: 0.9em;
     }
+      .footer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .button {
+        transform: translate(-50%, -50%);
+        left: 50%;
+    }
+      .footer-box h3    {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+.footer-box li{
+    font-size: 1em;
+   
+}
+.footer-box .social a{
+    font-size: 1em;
+}
+.footer-box form{
+    width: 300px;
+}
+.footer-box p {
+    font-size: 0.8em;
+}
+
     .footer {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1353,6 +1364,14 @@ h2 {
         font-size: 0.85em;
         line-height: 1.4;
     }
+      .footer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .footer-box form {
+        width: 300px;
+    }
+
 }
 @media (max-width: 800px) {
 
@@ -1536,7 +1555,7 @@ flex-direction:column;
 
 }
 
-.social{
+.socials{
 
     justify-content:center;
     flex-wrap:wrap;
@@ -1933,15 +1952,11 @@ flex-direction:column;
 
 
 <li><a href="getinvolve.html">Get Involved</a></li>
-        <li><a href="donate.html">Donate</a></li>
-
-
+       
 
         <li><a href="partnership.html">Partners</a></li>
 
 
-
-        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
 
 
 
@@ -1990,15 +2005,9 @@ flex-direction:column;
 
 
      <li><a href="getinvolve.html">Get Involved</a></li>
-        <li><a href="donate.html">Donate</a></li>
-
-
-
+     
         <li><a href="partnership.html">Partners</a></li>
 
-
-
-        <li><a href="volunteer.html">Volunteer</a></li><li><a href="ambassador.html">Ambassador</a></li> 
 
 
 
@@ -2210,17 +2219,17 @@ flex-direction:column;
 
 <!-- Donation section starts here in Part 2 -->
 <footer>
-<script src="donate.js"></script>
- <section class="footer" id="footer">
-        <div class="footer-box">
-            <a href="#" class="logo"><i class="bx bxs-basket"></i></a>
-            <h1>Contact & Location</h1>
+
+  <section class="footer" id="footer">
+         <div class="footer-box">
+          
+            <h3>Contact</h3>
             <ul>
          <li> <a href=""><i class="fa-solid fa-phone"></i> +233245210865</a> </li>
            <li>  <a href="#"><i class="fa-solid fa-envelope"></i>info@nexogirls.org</a></li>
           <li> <a href="https://lnk.bio/nexogirls "><i class="fa-solid fa-globe"></i>www.nexogirls.org</a> </li> 
-          </ul><a href="#"><strong>Follow Us On Social Media</strong><Br></Br>
-            <li> <div class="social">
+          <strong>Follow Us On Social Media</strong><Br>
+           <li> <div class="socials">
              <a href="https://www.facebook.com/nexogirls"><i class="fa-brands fa-facebook"></i></a>
                 <a href="https://www.instagram.com/nexogirls"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://www.linkedin.com/company/nexogirls/posts/"><i class="fa-brands fa-linkedin"></i></a>
@@ -2230,20 +2239,18 @@ flex-direction:column;
             <li>
     </ul>
         </div>
-        
         <div class="footer-box">
-            <h1>About Us</h1>
+            <h3>About Us</h3>
           <ul>
              <li>  <a href="about.html#ourstory">Our Story</a></li>
               <li> <a href="home.html#impact">Our Impact</a></li>
              <li> <a href="home.html#Partners">Our Patners</a> </li> 
              <li> <a href="meet_team.html">Meet the Team</a> </li>  
             
-            
             </ul>
         </div>
         <div class="footer-box">
-            <h1>Useful Links</h1>
+            <h3>Useful Links</h3>
          <ul>
          <li> <a href="donate.html">Donating To us</a> </li> 
           <li> <a href="volunteer.html">Applying to Volunteer</a> </li> 
@@ -2253,20 +2260,20 @@ flex-direction:column;
             </ul> 
         </div>
         <div class="footer-box">
-            <h1>Make Suggestion</h1>
-            <p>You can make a suggestion or ask question<br>By sending us an email</p>
-                       <iframe src="https://hacth.substack.com/embed?transparent=1" width="100%" height="150" style="border: 0; background: transparent; color:#ffcc00" frameborder="0" scrolling="no"></iframe>
-            <img src="img/climi1.png" alt="" height="150px" width="150px">
+            <h3>Make Suggestion</h3>
+            <p>You can make a suggestion or ask question. By sending us an email. And Subscribe to our Newsletter</p>
+            
+           <iframe src="https://hacth.substack.com/embed?transparent=1" width="100%" height="150" style="border: 0; background: transparent; color:#ffcc00" frameborder="0" scrolling="no"></iframe>
+            <img src="img/robert.png" alt="" height="100px" width="200px">
         </div>
          
           
     </section>
     <div class="copyright">
-        <p>Al-Ayan copyright@</p>
+        <p>All right reserved Nexo Girls©2026</p>
     </div>
     </footer>
 
-</div>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
 
