@@ -1,0 +1,315 @@
+/* ===================================================
+   MEET TEAM PAGE STYLES (MeetTeamPage.css)
+   Exact original team, volunteer tabs & card layouts.
+   Refined responsiveness for 1024px - 600px.
+=================================================== */
+
+.meet-team-page {
+  width: 100%;
+  background-color: #274001;
+  color: white;
+}
+
+/* ================= HERO ================= */
+.meet-team-page .hero {
+  width: 100%;
+  min-height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("/img/slide6.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.meet-team-page .overlay {
+  max-width: 850px;
+}
+
+.meet-team-page .overlay h1 {
+  font-size: clamp(32px, 5.5vw, 56px);
+  color: #ffcc00;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+.meet-team-page .overlay p {
+  font-size: clamp(16px, 2.2vw, 20px);
+  color: #ffcc00;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* ================= HEADINGS ================= */
+.meet-team-page #ostory {
+  text-align: center;
+  margin: 40px auto 20px;
+  padding: 0 20px;
+  max-width: 900px;
+}
+
+.meet-team-page #ostory h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  color: white;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.meet-team-page .overline {
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: #ffcc00;
+  border-radius: 20px;
+  margin: 0 auto 15px;
+}
+
+.meet-team-page .mission-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #c2c1c1;
+  max-width: 760px;
+  margin: 0 auto 15px;
+  text-align: center;
+}
+
+/* ================= BOARD MEMBERS (team-section) ================= */
+.meet-team-page .team-section {
+  width: 100%;
+  padding: 30px 8%;
+}
+
+.meet-team-page .team-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 30px auto;
+}
+
+.meet-team-page .team-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  height: 460px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.meet-team-page .team-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.meet-team-page .team-details {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: #ffcc00;
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.meet-team-page .team-details h3 {
+  color: #274001;
+  font-size: 22px;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.meet-team-page .team-details h4 {
+  color: #274001;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.meet-team-page .team-story {
+  position: absolute;
+  inset: 0;
+  background: #ffcc00;
+  color: #274001;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.meet-team-page .team-story p {
+  line-height: 1.8;
+  font-size: 14.5px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.meet-team-page .team-story .link .social {
+  font-size: 28px;
+  color: #274001;
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
+.meet-team-page .team-story .link .social:hover {
+  transform: scale(1.15);
+}
+
+.meet-team-page .team-card:hover .team-story {
+  opacity: 1;
+}
+
+.meet-team-page .team-card:hover img {
+  transform: scale(1.05);
+}
+
+.meet-team-page .team-card:hover .team-details {
+  opacity: 0;
+}
+
+/* ================= VOLUNTEERS SECTION ================= */
+.team-section1 {
+  width: 100%;
+  padding: 40px 8% 70px;
+}
+
+.volunteer-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 30px 0 40px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 12px 28px;
+  border: none;
+  border-radius: 30px;
+  background: #ffffff;
+  color: #274001;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn:hover {
+  background: #ffcc00;
+  color: #274001;
+  transform: translateY(-2px);
+}
+
+.tab-btn.active {
+  background: #ffcc00;
+  color: #274001;
+  box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
+}
+
+.volunteer-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.member-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.2);
+}
+
+.member-card img {
+  width: 100%;
+  height: 270px;
+  object-fit: cover;
+  display: block;
+}
+
+.member-info {
+  padding: 18px 14px 20px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.member-info h3 {
+  font-size: 18px;
+  color: #274001;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.member-info p {
+  font-size: 13.5px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* ===================================================
+   RESPONSIVENESS: 1024px to 600px
+=================================================== */
+
+@media (max-width: 1024px) {
+  .meet-team-page .team-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .volunteer-group {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  .volunteer-group {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .member-card img {
+    height: 240px;
+  }
+}
+
+@media (max-width: 600px) {
+  .meet-team-page .team-container {
+    grid-template-columns: 1fr;
+  }
+  .meet-team-page .team-card {
+    height: 400px;
+  }
+  .volunteer-group {
+    grid-template-columns: 1fr;
+    max-width: 320px;
+  }
+  .meet-team-page .team-section,
+  .team-section1 {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}

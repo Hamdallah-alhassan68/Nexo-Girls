@@ -1,0 +1,231 @@
+/* ===================================================
+   PROGRAMS PAGE STYLES (ProgramsPage.css)
+   Exact original program card, tag & filter styles.
+   Refined responsiveness for 1024px - 600px.
+=================================================== */
+
+.programs-page {
+  width: 100%;
+  background-color: #274001;
+  color: white;
+}
+
+/* ================= HERO ================= */
+.programs-page .hero {
+  width: 100%;
+  min-height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("/img/slide7.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.programs-page .overlay {
+  max-width: 850px;
+}
+
+.programs-page .overlay h1 {
+  font-size: clamp(34px, 5.5vw, 60px);
+  color: #ffcc00;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+.programs-page .overlay p {
+  font-size: clamp(18px, 2.5vw, 24px);
+  color: #ffcc00;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.programs-page .btn {
+  padding: 14px 35px;
+  border: none;
+  text-decoration: none;
+  border-radius: 40px;
+  background: #274001;
+  color: #ffcc00 !important;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.programs-page .btn:hover {
+  background: #ffcc00;
+  color: #589103 !important;
+  transform: translateY(-4px);
+}
+
+/* ================= SECTION HEADINGS ================= */
+.programs-page #ostory {
+  text-align: center;
+  margin: 30px auto 10px;
+  padding: 0 20px;
+  max-width: 900px;
+}
+
+.programs-page #ostory h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  color: white;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.programs-page .overline {
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: #ffcc00;
+  border-radius: 20px;
+  margin: 0 auto 15px;
+}
+
+/* ================= PROGRAMS SECTION ================= */
+.programs-section {
+  width: 100%;
+  padding: 40px 8% 80px;
+  background: #274001;
+}
+
+/* FILTER BUTTONS */
+.program-filters {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 25px 0 45px;
+}
+
+.filter-btn {
+  padding: 12px 26px;
+  border: none;
+  border-radius: 30px;
+  background: #e9e9e9;
+  color: #274001;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.filter-btn:hover {
+  background: #ffcc00;
+  color: #274001;
+  transform: translateY(-2px);
+}
+
+.filter-btn.active {
+  background: #ffcc00;
+  color: #274001;
+  box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
+}
+
+/* PROGRAM GRID */
+.programs-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* CARD */
+.program-card {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
+}
+
+.program-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+}
+
+.program-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.programs-page .tag {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 6px 14px;
+  background: #ffe5c2;
+  color: #c47600;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.program-content h3 {
+  font-size: 22px;
+  color: #274001;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.program-content p {
+  font-size: 14.5px;
+  color: #555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ===================================================
+   RESPONSIVENESS: 1024px to 600px
+=================================================== */
+
+@media (max-width: 1024px) {
+  .programs-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .programs-section {
+    padding: 30px 5% 60px;
+  }
+  .program-card img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .programs-container {
+    grid-template-columns: 1fr;
+  }
+  .program-filters {
+    gap: 10px;
+  }
+  .filter-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}

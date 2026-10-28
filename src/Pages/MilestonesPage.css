@@ -1,0 +1,269 @@
+/* ===================================================
+   MILESTONES PAGE STYLES (MilestonesPage.css)
+   Exact original timeline structure, styling & colors.
+   Refined responsiveness for 1024px - 600px.
+=================================================== */
+
+.milestones-page {
+  width: 100%;
+  background-color: #274001;
+  color: white;
+}
+
+/* ================= HERO ================= */
+.milestones-page .hero {
+  width: 100%;
+  min-height: 75vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("/img/slide7.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.milestones-page .overlay {
+  max-width: 850px;
+}
+
+.milestones-page .overlay h1 {
+  font-size: clamp(32px, 5.5vw, 56px);
+  color: #ffcc00;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+.milestones-page .overlay p {
+  font-size: clamp(16px, 2.2vw, 20px);
+  color: #ffcc00;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.milestones-page .btn {
+  padding: 14px 35px;
+  border: none;
+  text-decoration: none;
+  border-radius: 40px;
+  background: #274001;
+  color: #ffcc00 !important;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.milestones-page .btn:hover {
+  background: #ffcc00;
+  color: #589103 !important;
+  transform: translateY(-4px);
+}
+
+/* ================= TIMELINE SECTION ================= */
+.nexo-timeline {
+  width: min(1400px, 92%);
+  margin: 0 auto;
+  padding: 60px 0 80px;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: 1fr 0.95fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.timeline-side {
+  display: grid;
+  gap: 36px;
+}
+
+.story-card {
+  position: relative;
+  border-radius: 22px;
+  overflow: hidden;
+  min-height: 230px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  background: #1a2c01;
+}
+
+.story-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 230px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.story-card:hover img {
+  transform: scale(1.05);
+}
+
+.card-overlay {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 18px 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.05));
+  color: #fff;
+}
+
+.card-overlay h3 {
+  margin: 8px 0 0;
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.9);
+  color: #274001;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+/* ================= TIMELINE CENTER ================= */
+.timeline-center {
+  position: relative;
+  padding-top: 10px;
+}
+
+.timeline-center::before {
+  content: "";
+  position: absolute;
+  left: 116px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #ffcc00;
+  border-radius: 999px;
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 92px 38px 1fr;
+  gap: 0;
+  align-items: start;
+  padding-bottom: 40px;
+}
+
+.timeline-item .year {
+  color: #ffcc00;
+  font-size: 1.35rem;
+  font-weight: 800;
+  text-align: right;
+  padding-right: 14px;
+  line-height: 1.2;
+}
+
+.timeline-item .node {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 3px solid #274001;
+  background: #ffcc00;
+  z-index: 1;
+  margin-top: 2px;
+}
+
+.timeline-item .content {
+  padding-left: 14px;
+}
+
+.timeline-item .content h3 {
+  margin: 0 0 8px;
+  color: #ffcc00;
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.timeline-item .content p {
+  margin: 0;
+  color: #f1f1f1;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+/* ===================================================
+   RESPONSIVENESS: 1024px to 600px
+=================================================== */
+
+@media (max-width: 1024px) and (min-width: 851px) {
+  .timeline-grid {
+    gap: 20px;
+  }
+  .timeline-center::before {
+    left: 100px;
+  }
+  .timeline-item {
+    grid-template-columns: 80px 32px 1fr;
+  }
+  .timeline-item .year {
+    font-size: 1.15rem;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 850px) {
+  .timeline-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .timeline-side.left,
+  .timeline-side.right {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+  }
+  .timeline-center {
+    order: -1;
+    margin: 20px 0;
+  }
+  .timeline-center::before {
+    left: 92px;
+  }
+  .timeline-item {
+    grid-template-columns: 80px 30px 1fr;
+    padding-bottom: 30px;
+  }
+  .timeline-item .year {
+    font-size: 1.1rem;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .timeline-side.left,
+  .timeline-side.right {
+    grid-template-columns: 1fr;
+  }
+  .timeline-center::before {
+    left: 78px;
+  }
+  .timeline-item {
+    grid-template-columns: 70px 24px 1fr;
+    padding-bottom: 25px;
+  }
+  .timeline-item .year {
+    font-size: 0.95rem;
+    padding-right: 6px;
+  }
+  .timeline-item .node {
+    width: 16px;
+    height: 16px;
+  }
+  .nexo-timeline {
+    padding: 40px 0 60px;
+  }
+}

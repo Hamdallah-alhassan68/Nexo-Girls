@@ -1,0 +1,335 @@
+/* ===================================================
+   FOOTER STYLES (Footer.css)
+   Compressed height, consistent brand colors (#ffcc00, #274001),
+   well-aligned robot image, and 1024px-600px responsiveness.
+=================================================== */
+
+/* PRE-FOOTER CTA SECTION (footer1) */
+
+/* MAIN FOOTER (Compressed & Neat) */
+.footer {
+  width: 100%;
+  padding: 40px 6% 32px;
+  background: #ffcc00;
+  color: #274001;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.footer-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-box h3 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  color: #274001;
+  font-weight: 800;
+}
+
+.footer-box p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #274001;
+  margin-bottom: 10px;
+}
+
+.footer-box strong {
+  color: #274001;
+  font-size: 17px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.footer-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-box li {
+  list-style: none;
+  margin-bottom: 8px;
+}
+
+.footer-box a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #274001;
+  text-decoration: none;
+  position: relative;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
+.footer-box a i {
+  font-size: 16px;
+  color: #274001;
+}
+
+.footer-box a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: #274001;
+  transition: width 0.3s ease;
+}
+
+.footer-box a:hover::after {
+  width: 100%;
+}
+
+.footer-box a:hover {
+  color: #274001;
+  padding-left: 3px;
+}
+
+/* SOCIAL ICONS */
+.footer-box .social {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-box .social a i {
+  font-size: 23px;
+  color: #274001;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.footer-box .social a::after {
+  display: none !important;
+}
+
+.footer-box .social a i:hover {
+  color: #3f7c02;
+  transform: translateY(-2px);
+  padding-left: 0;
+}
+
+/* SUBSTACK EMBED IFRAME */
+
+/* Main yellow container */
+.subscribe-section {
+  width: 100%;
+
+  padding-top: 20px;
+  padding-bottom: 2 0px;
+  box-sizing: border-box;
+ 
+}
+
+/* Form container */
+.subscribe-form {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Input and button */
+.subscribe-input-group {
+  display: flex;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #777;
+  border-radius: 8px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.subscribe-input-group input {
+  flex: 1;
+  min-width: 0;
+  width: 0;
+  padding: 0 12px;
+  border: none;
+  outline: none;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.subscribe-input-group input::placeholder {
+  color: #aaa;
+}
+
+.subscribe-input-group button {
+  flex-shrink: 0;
+  width: 104px;
+  border: none;
+  background-color: #274001;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.subscribe-input-group button:hover {
+  background-color: #484d00;
+  color: #ffcc00;
+}
+
+/* Terms and privacy text */
+.subscribe-terms {
+  margin: 17px 8px 0;
+  color: #8b6d00;
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.subscribe-terms a {
+  color: #8b6d00;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.subscribe-terms a:hover {
+  color: #594700;
+}
+
+/* Substack branding */
+.subscribe-brand {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3px;
+  margin-top: 1px;
+  color: #a18a00;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.subscribe-brand-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+  .subscribe-section {
+    padding: 26px 24px 14px;
+  }
+
+  .subscribe-form {
+    max-width: 100%;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+  .subscribe-section {
+    padding: 24px 16px 12px;
+  }
+
+  .subscribe-input-group {
+    height: 42px;
+  }
+
+  .subscribe-input-group input {
+    padding: 0 10px;
+    font-size: 13px;
+  }
+
+  .subscribe-input-group button {
+    width: 92px;
+    font-size: 12px;
+  }
+
+  .subscribe-terms {
+    margin: 14px 2px 0;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .subscribe-brand {
+    margin-top: 5px;
+    font-size: 15px;
+  }
+}
+
+/* Very small mobile screens */
+@media (max-width: 320px) {
+  .subscribe-section {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  .subscribe-input-group button {
+    width: 82px;
+  }
+}
+
+
+/* ROBOT IMAGE IN FOOTER (Well-Aligned) */
+.footer-box .footer-robot-img {
+  margin-top: 12px;
+  width: 300px;
+  height: auto;
+  max-height: 80px;
+  object-fit: contain;
+  display: block;
+  align-self: flex-start;
+}
+
+/* COPYRIGHT BAR */
+.copyright {
+  text-align: center;
+  padding: 16px 20px;
+  background: #274001;
+  color: #e5e5e5;
+  font-size: 13px;
+}
+
+.copyright p {
+  margin: 0;
+}
+
+/* ===================================================
+   RESPONSIVENESS: 1024px to 600px
+=================================================== */
+
+@media (max-width: 1024px) {
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 35px 5% 25px;
+    gap: 28px;
+  }
+  .footer1 {
+    padding: 35px 5%;
+  }
+  .footer1 .text1 #ready-to-rise {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    grid-template-columns: 1fr;
+    padding: 30px 20px;
+    gap: 24px;
+  }
+  .footer-box .footer-robot-img {
+    width: 110px;
+    max-height: 70px;
+  }
+  .footer1 {
+    padding: 30px 20px;
+  }
+  .footer1 .text1 #ready-to-rise {
+    font-size: 1.35em;
+  }
+
+}

@@ -1,0 +1,635 @@
+/* ===================================================
+   HOMEPAGE STYLES (HomePage.css)
+   Preserves original structure, animations & colors.
+   Refined responsiveness for 1024px - 600px.
+=================================================== */
+
+/* ================= SLIDER ================= */
+.slider {
+  width: 100%;
+  height: 100vh;
+  min-height: 550px;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  animation: fade 30s infinite;
+  z-index: 1;
+}
+
+.slide1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/women.jpg");
+  animation-delay: 0s;
+}
+
+.slide2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/bbgy.jpg");
+  animation-delay: 5s;
+}
+
+.slide3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/slide7.PNG");
+  animation-delay: 10s;
+}
+
+.slide4 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/slide4.jpeg");
+  animation-delay: 15s;
+}
+
+.slide5 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/slide5.JPG");
+  animation-delay: 20s;
+}
+
+.slide6 {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/img/advocacy.heic");
+  animation-delay: 25s;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.overlay h1 {
+  font-size: clamp(32px, 5.5vw, 65px);
+  color: #ffcc00;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+  max-width: 950px;
+  line-height: 1.2;
+}
+
+.overlay p {
+  font-size: clamp(16px, 2.5vw, 24px);
+  color: #ffcc66;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  max-width: 750px;
+}
+
+.getinvolve {
+  text-decoration: none;
+  display: inline-block;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 40px;
+  background: #274001;
+  color: #ffcc00 !important;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.4s ease;
+  text-align: center;
+}
+
+.getinvolve:hover {
+  background: #ffcc00;
+  color: #599202 !important;
+  transform: translateY(-5px);
+}
+
+@keyframes fade {
+  0% { opacity: 0; }
+  5% { opacity: 1; }
+  15% { opacity: 1; }
+  20% { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* ================= STORY SECTION ================= */
+.story-section {
+  padding: 60px 8%;
+  color: white;
+  background-color: #274001;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.founder-quote {
+  background-color: white;
+  padding: 2.5rem;
+  color: #274001;
+  width: 100%;
+  border-left: 10px solid #ffcc00;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  border-radius: 4px;
+}
+
+.video-container {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  overflow: hidden;
+  border-radius: 13px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ================= HEADINGS ================= */
+#ostory {
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 40px;
+}
+
+#ostory h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  color: white;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+#ostory h2.title {
+  color: #274001;
+}
+
+.overline {
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: #ffcc00;
+  margin: 0 auto 20px;
+  border-radius: 20px;
+}
+
+.mission-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #e0e0e0;
+  max-width: 720px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+/* ================= ABOUT US (MISSION & VISION) ================= */
+.Aboutus {
+  width: 100%;
+  padding: 60px 8%;
+  background: #274001;
+}
+
+.Aboutus-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  background: #ffcc00;
+  width: 480px;
+  max-width: 100%;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  transition: 0.4s ease;
+  padding-bottom: 30px;
+}
+
+.box:hover {
+  transform: translateY(-8px);
+}
+
+.box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.box h2 {
+  font-size: 26px;
+  color: darkgreen;
+  margin: 20px;
+  font-weight: 700;
+}
+
+.box p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+  margin: 0 20px 20px;
+}
+
+/* ================= IMPACT SECTION ================= */
+#impact {
+  padding: 70px 8%;
+  background: linear-gradient(to bottom, #fcfbf4, #e2e2d5);
+  color: #274001;
+}
+
+.impact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 35px;
+}
+
+.card {
+  position: relative;
+  background: #fff;
+  border: 1px solid #ececec;
+  border-radius: 22px;
+  padding: 30px 25px;
+  min-height: 270px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.35s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.card svg {
+  width: 50px;
+  height: 50px;
+  padding: 12px;
+  border: 1px solid #e8e8e8;
+  border-radius: 50%;
+  background: #fff;
+  margin-bottom: 20px;
+}
+
+.card::before {
+  content: "IMPACT";
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: #f3f3f3;
+  color: #555;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.70rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.card1::before { content: "ADVOCACY"; }
+.card2::before { content: "COMMUNITY"; }
+.card3::before { content: "EMPOWERMENT"; }
+.card4::before { content: "TRAINING"; }
+
+.card h3 {
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #274001;
+}
+
+.card p strong {
+  display: block;
+  font-size: 0.95em;
+  color: #222;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.85em;
+}
+
+/* ================= FEATURED PROGRAMS ================= */
+.featured {
+  width: 100%;
+  padding: 70px 8%;
+  background: #274001;
+  text-align: center;
+}
+
+.service-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.service {
+  width: 320px;
+  max-width: 100%;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.4s ease;
+  text-align: left;
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.service:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.service img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.service h3 {
+  font-size: 24px;
+  color: darkgreen;
+  margin: 18px 20px 10px;
+}
+
+.service p {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.7;
+  margin: 0 20px 20px;
+  flex-grow: 1;
+}
+
+.donate2 {
+  display: inline-block;
+  margin-left: 20px;
+  align-self: flex-start;
+  padding: 10px 22px;
+  background: darkgreen;
+  color: #ffcc00 !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.donate2:hover {
+  background: orange;
+  color: darkgreen !important;
+}
+
+.btn-primary1 {
+  display: inline-block;
+  margin: 40px auto 0;
+  padding: 14px 32px;
+  background: white;
+  border: 2px solid #ffcc00;
+  color: #274001 !important;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-primary1:hover {
+  background: #ffcc00;
+  color: #274001 !important;
+  transform: translateY(-3px);
+}
+
+/* ================= PARTNERS CAROUSEL ================= */
+.partners {
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+  background: white;
+  text-align: center;
+}
+
+.partners h2.title {
+  color: #274001;
+  font-size: 36px;
+  margin-bottom: 25px;
+}
+
+.partners-track {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.partners-track:hover {
+  animation-play-state: paused;
+}
+
+.parts img {
+  width: 160px;
+  height: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.parts img:hover {
+  transform: scale(1.1);
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ================= TESTIMONIALS ================= */
+.testimonials-section {
+  width: 100%;
+  padding: 70px 8%;
+  background: #274001;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 38px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.testimonial {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.text {
+  width: 340px;
+  max-width: 100%;
+  background: white;
+  border-radius: 20px;
+  text-align: left;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.4s ease;
+}
+
+.text:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.text p {
+  font-size: 14.5px;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.display h3 {
+  font-size: 17px;
+  color: #314D1C;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+}
+.footer1 {
+  width: 100%;
+  background: linear-gradient(rgba(24, 23, 23, 0.65), rgba(14, 13, 13, 0.65)),
+    url("/img/bbgy.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px 6%;
+  text-align: center;
+  min-height: auto;
+}
+
+.footer1 .text1 {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.footer1 .text1 #ready-to-rise {
+  font-size: 1.85em;
+  color: #ffcc00;
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+
+.footer1 p {
+  font-size: 0.95em;
+  color: #f1f1f1;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.footer1 .btn-primary {
+  display: inline-block;
+  padding: 15px 26px;
+  background: white;
+  color: #274001;
+  border: 2px solid #274001;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 17px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.footer1 .btn-primary:hover {
+  background: #ffcc00;
+  color: #274001 !important;
+  transform: translateY(-2px);
+}
+
+/* ===================================================
+   RESPONSIVENESS: 1024px to 600px
+=================================================== */
+
+@media (max-width: 1024px) {
+  .story-grid {
+    gap: 30px;
+  }
+  .founder-quote {
+    padding: 2rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .impact-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+   .footer1 {
+    padding: 35px 5%;
+  }
+  .footer1 .text1 #ready-to-rise {
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 850px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+  }
+  .video-container {
+    min-height: 260px;
+  }
+  .Aboutus-container {
+    gap: 25px;
+  }
+  .service-list {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .impact-cards {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    min-height: auto;
+    padding: 25px 20px;
+  }
+  .service {
+    width: 100%;
+  }
+  .text {
+    width: 100%;
+  }
+  .story-section,
+  .Aboutus,
+  #impact,
+  .featured,
+  .testimonials-section {
+    padding: 50px 5%;
+  }
+  .footer1 {
+    padding: 30px 20px;
+  }
+  .footer1 .text1 #ready-to-rise {
+    font-size: 1.35em;
+  }
+}

@@ -1,0 +1,422 @@
+/* ===================================================
+   GET INVOLVED PAGE STYLES (GetInvolvedPage.css)
+   Exact original structure, colors & card designs.
+   Refined responsiveness for 1024px - 600px.
+=================================================== */
+
+.get-involved-page {
+  width: 100%;
+  background-color: #274001;
+  color: white;
+}
+
+/* ================= HERO ================= */
+.get-involved-page .hero {
+  width: 100%;
+  min-height: 70vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("/img/slide6.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.get-involved-page .overlay {
+  max-width: 850px;
+}
+
+.get-involved-page .overlay p {
+  font-size: clamp(20px, 3.2vw, 32px);
+  color: #ffcc00;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.get-involved-page .btn {
+  padding: 14px 35px;
+  border: none;
+  text-decoration: none;
+  border-radius: 40px;
+  background: #274001;
+  color: #ffcc00 !important;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.get-involved-page .btn:hover {
+  background: #ffcc00;
+  color: #589103 !important;
+  transform: translateY(-4px);
+}
+
+/* ================= SECTION HEADINGS ================= */
+.get-involved-page #ostory {
+  text-align: center;
+  margin: 40px auto 20px;
+  padding: 0 20px;
+  max-width: 900px;
+}
+
+.get-involved-page #ostory h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  color: white;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.get-involved-page .overline {
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: #ffcc00;
+  border-radius: 20px;
+  margin: 0 auto 15px;
+}
+
+.get-involved-page .mission-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #c2c1c1;
+  max-width: 680px;
+  margin: 0 auto 15px;
+  text-align: center;
+}
+
+/* ================= GET INVOLVED CARDS ================= */
+.get-involved-section {
+  width: 100%;
+  padding: 40px 6% 70px;
+  background: #274001;
+}
+
+.involve-grid {
+  width: 100%;
+  max-width: 1250px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.involve-card {
+  width: 100%;
+  background: #ffcc00;
+  color: #274001;
+  padding: 35px 28px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.involve-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.2);
+}
+
+.involve-card h3 {
+  color: #274001;
+  font-size: 24px;
+  line-height: 1.3;
+  margin-bottom: 14px;
+  font-weight: 800;
+}
+
+.involve-card p {
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.involve-card ul {
+  padding-left: 20px;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.involve-card ul li {
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.involve-card .program-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 46px;
+  padding: 12px 18px;
+  background: #274001;
+  color: #ffcc00 !important;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  margin-top: auto;
+  transition: 0.3s ease;
+}
+
+.involve-card .program-btn:hover {
+  background: #5d6d3e;
+  color: #ffcc00 !important;
+}
+
+/* ================= IMPACT STORY SECTION ================= */
+.get-involved-page .story-section {
+  width: 100%;
+  padding: 0;
+  background: #fcfbf4;
+}
+
+.get-involved-page .story-grid {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: 25px;
+  align-items: stretch;
+  background: linear-gradient(to bottom, #fcfbf4, #dfdf9e);
+  padding: 20px;
+}
+
+.get-involved-page .video-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.get-involved-page .video-container img {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  object-fit: cover;
+  display: block;
+  border-radius: 20px;
+}
+
+.get-involved-page .story-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.get-involved-page .founder-quote {
+  width: 100%;
+  padding: 10px;
+  color: #274001;
+  font-size: 17px;
+  line-height: 1.8;
+  text-align: center;
+  margin: 0;
+  background: transparent;
+  border: none;
+}
+
+.get-involved-page .founder-quote h3 {
+  font-size: clamp(48px, 6vw, 72px);
+  line-height: 1;
+  font-weight: 900;
+  color: #274001;
+  margin-bottom: 20px;
+}
+
+/* ================= UPCOMING OPPORTUNITIES ================= */
+.opportunities-section {
+  width: 100%;
+  padding: 60px 8%;
+  background: #1f3200;
+}
+
+.opportunity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 35px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.opportunity-card {
+  background: #ffcc00;
+  padding: 30px 25px;
+  border-radius: 20px;
+  transition: 0.4s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.opportunity-card:hover {
+  transform: translateY(-8px);
+}
+
+.opportunity-card h3 {
+  color: #274001;
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 800;
+}
+
+.opportunity-card p {
+  color: #333;
+  line-height: 1.6;
+  font-size: 14.5px;
+}
+
+/* ================= GALLERY ================= */
+.gallery {
+  padding: 60px 8%;
+  background: #274001;
+}
+
+.gallery-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-title h2 {
+  font-size: clamp(28px, 4vw, 42px);
+  color: white;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.gallery-title p {
+  color: #e5e5e5;
+  font-size: 16px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 18px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-6px);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+/* ================= FAQ SECTION ================= */
+.faq-section {
+  width: 100%;
+  padding: 60px 8% 80px;
+  background: #1f3200;
+}
+
+.faq-container {
+  max-width: 850px;
+  margin: 30px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.faq-item {
+  background: #ffffff;
+  padding: 24px 28px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h3 {
+  color: #274001;
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.faq-item p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 14.5px;
+  margin: 0;
+}
+
+/* ===================================================
+   RESPONSIVENESS: 1024px to 600px
+=================================================== */
+
+@media (max-width: 1024px) {
+  .involve-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+}
+
+@media (max-width: 850px) {
+  .get-involved-page .story-grid {
+    grid-template-columns: 1fr;
+  }
+  .get-involved-page .video-container img {
+    min-height: 250px;
+  }
+  .opportunity-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .involve-grid {
+    grid-template-columns: 1fr;
+  }
+  .opportunity-grid {
+    grid-template-columns: 1fr;
+  }
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-item img {
+    height: 150px;
+  }
+  .get-involved-section,
+  .opportunities-section,
+  .gallery,
+  .faq-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}

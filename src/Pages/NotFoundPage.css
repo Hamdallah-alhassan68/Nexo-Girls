@@ -1,0 +1,87 @@
+/* ============================================================
+   NOT FOUND (404) PAGE STYLES
+   Theme: #274001, #ffcc00
+   Font: Montserrat
+   ============================================================ */
+
+.not-found-wrapper {
+  min-height: 75vh;
+  width: 100%;
+  background: #274001;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 120px 20px 80px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.not-found-content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.not-found-icon {
+  font-size: 70px;
+  color: #ffcc00;
+  margin-bottom: 20px;
+}
+
+.not-found-content h1 {
+  font-size: 96px;
+  font-weight: 900;
+  color: #ffcc00;
+  line-height: 1;
+  margin-bottom: 15px;
+  text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.not-found-content h2 {
+  font-size: 28px;
+  color: #ffffff;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.not-found-content p {
+  font-size: 16px;
+  color: #d8d8d8;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.not-found-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 34px;
+  border-radius: 40px;
+  background: #ffcc00;
+  color: #274001;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.not-found-btn:hover {
+  background: #ffffff;
+  color: #274001;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 600px) {
+  .not-found-content h1 {
+    font-size: 72px;
+  }
+  .not-found-content h2 {
+    font-size: 22px;
+  }
+  .not-found-content p {
+    font-size: 14px;
+  }
+}

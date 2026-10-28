@@ -1,0 +1,520 @@
+/* ===================================================
+   ABOUT PAGE STYLES (AboutPage.css)
+   Exact original structure, coloring and typography.
+   Refined responsiveness for 1024px - 600px.
+=================================================== */
+
+.about-page {
+  width: 100%;
+  background-color: #274001;
+  color: white;
+}
+
+/* ================= HERO ================= */
+.about-page .hero {
+  width: 100%;
+  min-height: 75vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("/img/slide6.PNG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+.about-page .hero .overlay {
+  max-width: 850px;
+}
+
+.about-page .hero .overlay h1 {
+  font-size: clamp(32px, 5.5vw, 56px);
+  color: #ffcc00;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.7);
+}
+
+.about-page .hero .overlay p {
+  font-size: clamp(16px, 2.2vw, 20px);
+  color: #ffcc00;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.about-page .btn {
+  padding: 14px 35px;
+  border: none;
+  text-decoration: none;
+  border-radius: 40px;
+  background: #274001;
+  color: #ffcc00 !important;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-block;
+  transition: 0.3s ease;
+}
+
+.about-page .btn:hover {
+  background: #ffcc00;
+  color: #589103 !important;
+  transform: translateY(-4px);
+}
+
+/* ================= SECTION HEADINGS ================= */
+.about-page #ostory {
+  text-align: center;
+  margin: 40px auto 20px;
+  padding: 0 20px;
+  max-width: 900px;
+}
+
+.about-page #ostory h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  color: white;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.about-page #ostory h2.Award {
+  color: #274001;
+}
+
+.about-page .overline {
+  display: block;
+  width: 120px;
+  height: 4px;
+  background: #ffcc00;
+  border-radius: 20px;
+  margin: 0 auto 15px;
+}
+
+.about-page .mission-text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #c2c1c1;
+  max-width: 900px;
+  margin: 0 auto 15px;
+  
+}
+
+.about-page .mission-text strong {
+  color: #ffcc00;
+}
+
+/* ================= PROBLEMS WE ADDRESS ================= */
+.problems-section {
+  width: 100%;
+  padding: 30px 8%;
+}
+
+.problems-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.problem-card {
+  background: rgb(214, 214, 214);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.problem-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+}
+
+.problem-card img {
+  width: 90px;
+  height: 90px;
+  object-fit: contain;
+  margin: 25px 25px 0;
+}
+
+.problem-content {
+  padding: 20px 25px 25px;
+}
+
+.problem-content h3 {
+  font-size: 20px;
+  color: #274001;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.problem-content p {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* ================= MEET OUR TEAM (BOARD) ================= */
+.about-page .team-section {
+  width: 100%;
+  padding: 40px 8%;
+}
+
+.about-page .team-container {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 30px auto;
+}
+
+.about-page .team-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  height: 460px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.about-page .team-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.about-page .team-details {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  background: #ffcc00;
+  text-align: center;
+  transition: 0.4s ease;
+}
+
+.about-page .team-details h3 {
+  color: #274001;
+  font-size: 22px;
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.about-page .team-details h4 {
+  color: #274001;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.about-page .team-story {
+  position: absolute;
+  inset: 0;
+  background: #ffcc00;
+  color: #274001;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  text-align: center;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.about-page .team-story p {
+  line-height: 1.8;
+  font-size: 14.5px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.about-page .team-story .link .social {
+  font-size: 28px;
+  color: #274001;
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.about-page .team-story .link .social:hover {
+  transform: scale(1.15);
+}
+
+.about-page .team-card:hover .team-story {
+  opacity: 1;
+}
+
+.about-page .team-card:hover img {
+  transform: scale(1.05);
+}
+
+.about-page .team-card:hover .team-details {
+  opacity: 0;
+}
+
+/* ================= ABOUT US (MISSION & VISION) ================= */
+.about-page .Aboutus {
+  width: 100%;
+  padding: 40px 8%;
+}
+
+.about-page .Aboutus-container {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-page .box {
+  background: #ffcc00;
+  width: 480px;
+  max-width: 100%;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.4s ease;
+  padding-bottom: 30px;
+}
+
+.about-page .box:hover {
+  transform: translateY(-8px);
+}
+
+.about-page .box img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.about-page .box h2 {
+  font-size: 26px;
+  color: darkgreen;
+  margin: 18px 20px 10px;
+  font-weight: 700;
+}
+
+.about-page .box p {
+  font-size: 15px;
+  color: #444;
+  line-height: 1.7;
+  margin: 0 20px 15px;
+}
+
+/* ================= CORE PROGRAMMATIC SECTORS ================= */
+.about-page .testimonials-section {
+  width: 100%;
+  padding: 30px 8%;
+  background: #274001;
+  text-align: center;
+}
+
+.about-page .testimonial {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.about-page .testimonial .text {
+  width: 270px;
+  max-width: 100%;
+  background: white;
+  border-radius: 18px;
+  text-align: left;
+  padding: 24px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: 0.4s ease;
+}
+
+.about-page .testimonial .text:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.about-page .testimonial .text h3 {
+  font-size: 19px;
+  color: darkgreen;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.about-page .testimonial .text p {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ================= CORE VALUES SECTION ================= */
+.about-page .story-section {
+  padding: 40px 8%;
+  color: white;
+  background-color: #274001;
+}
+
+.about-page .story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.about-page .video-container {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-page .video-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-page .values {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: transparent;
+  border: none;
+}
+
+.about-page .core {
+  border: 2px solid #ffcc00;
+  line-height: 1.7;
+  background-color: #274001;
+  padding: 16px 20px;
+  border-radius: 12px;
+}
+
+.about-page .core strong {
+  color: #ffcc00;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.about-page .core p {
+  font-size: 14px;
+  color: #e5e5e5;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ================= AWARDS & RECOGNITION ================= */
+.about-page .Partners {
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0 50px;
+  background: white;
+  text-align: center;
+}
+
+.about-page .Partners #ostory h2 {
+  color: #274001;
+}
+
+.about-page .partners-track {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  width: max-content;
+  animation: scroll 25s linear infinite;
+  margin-bottom: 30px;
+}
+
+.about-page .partners-track:hover {
+  animation-play-state: paused;
+}
+
+.about-page .parts img {
+  width: 200px;
+  height: 130px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.about-page .parts img:hover {
+  transform: scale(1.08);
+}
+
+.about-page .getinvolve {
+  text-decoration: none;
+  display: inline-block;
+  padding: 14px 34px;
+  border-radius: 40px;
+  background: darkgreen;
+  color: #ffcc00 !important;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.3s ease;
+}
+
+.about-page .getinvolve:hover {
+  background: #ffcc00;
+  color: #274001 !important;
+}
+
+/* ===================================================
+   RESPONSIVENESS: 1024px to 600px
+=================================================== */
+
+@media (max-width: 1024px) {
+  .about-page .team-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+  .about-page .story-grid {
+    gap: 30px;
+  }
+  .problems-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .about-page .story-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-page .video-container {
+    min-height: 260px;
+  }
+  .about-page .Aboutus-container {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-page .team-container {
+    grid-template-columns: 1fr;
+  }
+  .about-page .team-card {
+    height: 400px;
+  }
+  .problems-container {
+    grid-template-columns: 1fr;
+  }
+  .about-page .testimonial .text {
+    width: 100%;
+  }
+  .about-page .hero,
+  .problems-section,
+  .about-page .team-section,
+  .about-page .Aboutus,
+  .about-page .testimonials-section,
+  .about-page .story-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
